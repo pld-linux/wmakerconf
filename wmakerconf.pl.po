@@ -4,24 +4,24 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: wmakerconf 2.4\n"
-"POT-Creation-Date: 1999-12-05 18:36+0100\n"
-"PO-Revision-Date: 1999-12-06 17:24+0200\n"
+"Project-Id-Version: wmakerconf 2.5\n"
+"POT-Creation-Date: 2000-01-23 15:28+0100\n"
+"PO-Revision-Date: 2000-01-25 17:24+0100\n"
 "Last-Translator: Piotr Czerwiñski <pius@pld.org.pl>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=iso-8859-2\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/dialog.c:74 src/window.c:1111
+#: src/dialog.c:74 src/window.c:950
 msgid "No"
 msgstr "Nie"
 
-#: src/dialog.c:74 src/window.c:1100
+#: src/dialog.c:74 src/window.c:939
 msgid "Yes"
 msgstr "Tak"
 
-#: src/dialog.c:77 src/menu.c:325 src/menu.c:407 src/wmconfig.c:327
+#: src/dialog.c:77 src/menu.c:334 src/menu.c:416 src/wmconfig.c:331
 msgid "Close"
 msgstr "Zamknij"
 
@@ -41,7 +41,33 @@ msgstr "Ostrze¿enie"
 msgid "Error"
 msgstr "B³±d"
 
-#: src/keys.c:172
+#: src/error.c:81
+#, c-format
+msgid ""
+"%s: line %d:\n"
+"Error: %s\n"
+msgstr ""
+"%s: linia %d:\n"
+"B³±d: %s\n"
+
+#: src/error.c:105
+#, c-format
+msgid ""
+"%s: line %d:\n"
+"Warning: %s\n"
+msgstr ""
+"%s: linia %d:\n"
+"Ostrze¿enie: %s\n"
+
+#: src/keys.c:135 src/keys.c:170
+msgid "Control"
+msgstr ""
+
+#: src/keys.c:141 src/keys.c:181
+msgid "Shift"
+msgstr ""
+
+#: src/keys.c:255
 msgid ""
 "Press this button to activate capture mode - then press the desired key "
 "sequence."
@@ -49,7 +75,7 @@ msgstr ""
 "Naci¶nij ten przycisk, aby uaktywniæ tryb przechwytywania - nastêpnie "
 "wprowad¼ ¿±dan± sekwencjê klawiszy."
 
-#: src/menu.c:122 src/themes.c:834
+#: src/menu.c:122 src/themes.c:884
 msgid "Save"
 msgstr "Zapisz"
 
@@ -73,81 +99,81 @@ msgstr "Zakoñcz"
 msgid "Tooltips"
 msgstr "Podpowiedzi"
 
-#: src/menu.c:166 src/menu.c:317
+#: src/menu.c:166 src/menu.c:326
 msgid "About"
 msgstr "O programie"
 
-#: src/menu.c:171 src/menu.c:399
+#: src/menu.c:171 src/menu.c:408
 msgid "Manual"
 msgstr "Podrêcznik"
 
-#: src/menu.c:176 src/wmconfig.c:319
+#: src/menu.c:176 src/wmconfig.c:323
 msgid "Messages"
 msgstr "Wiadomo¶ci"
 
-#: src/menu.c:182 src/previews.c:162 src/themes.c:606 src/themes.c:614
-#: src/themes.c:2428
+#: src/menu.c:184 src/previews.c:162 src/themes.c:614 src/themes.c:622
+#: src/themes.c:2589
 msgid "Update previews"
 msgstr "Uaktualnij podgl±dy"
 
-#: src/menu.c:192
+#: src/menu.c:197
 msgid "wm.themes.org"
 msgstr "wm.themes.org"
 
-#: src/menu.c:197
+#: src/menu.c:202
 msgid "Linuxberg themes"
 msgstr "Tematy z Linuxberg"
 
-#: src/menu.c:203
+#: src/menu.c:208
 msgid "Largo's themes"
 msgstr "Tematy z Largo"
 
-#: src/menu.c:212
+#: src/menu.c:218
 msgid "Homepage"
 msgstr "Strona domowa"
 
-#: src/menu.c:220
+#: src/menu.c:226
 msgid "File"
 msgstr "Plik"
 
-#: src/menu.c:224
+#: src/menu.c:232
 msgid "Themes"
 msgstr "Tematy"
 
-#: src/menu.c:228
+#: src/menu.c:237
 msgid "Help"
 msgstr "Pomoc"
 
-#: src/menu.c:251
+#: src/menu.c:260
 msgid "Exit wmakerconf"
 msgstr "Koñczy program wmakerconf"
 
-#: src/menu.c:258
+#: src/menu.c:267
 msgid "Save WindowMaker file"
 msgstr "Zapisuje plik WindowMaker"
 
-#: src/menu.c:267
+#: src/menu.c:276
 msgid "Documentation"
 msgstr "Dokumentacja"
 
-#: src/menu.c:275
+#: src/menu.c:284
 msgid "Upgrade wmakerconf-data package via HTTP."
 msgstr "Uaktualnia pakiet wmakerconf-data przez HTTP."
 
-#: src/menu.c:283
+#: src/menu.c:292
 msgid "Wmakerconf homepage"
 msgstr "Strona domowa programu wmakerconf"
 
-#: src/menu.c:487 src/previews.c:239 src/themes.c:849 src/themes.c:1446
-#: src/themes.c:1545 src/themes.c:1984 src/window.c:1117
+#: src/menu.c:496 src/previews.c:239 src/themes.c:899 src/themes.c:1602
+#: src/themes.c:1701 src/themes.c:2140 src/window.c:956
 msgid "Cancel"
 msgstr "Anuluj"
 
-#: src/menu.c:487 src/previews.c:229 src/themes.c:1437
+#: src/menu.c:496 src/previews.c:229 src/themes.c:1593
 msgid "OK"
 msgstr "OK"
 
-#: src/menu.c:488
+#: src/menu.c:497
 msgid ""
 "Revert to backupfile of `WindowMaker' \n"
 "and `WMRootMenu' and exit wmakerconf?"
@@ -155,7 +181,7 @@ msgstr ""
 "Odtworzyæ z kopii zapasowej plik `WindowMaker' \n"
 "oraz `WMRootMenu' i zakoñczyæ program wmakerconf?"
 
-#: src/menu.c:501
+#: src/menu.c:510
 msgid ""
 "Can't revert to backupfile of `WindowMaker'. Please manually revert from "
 "file WindowMaker.bak."
@@ -163,7 +189,7 @@ msgstr ""
 "Nie mo¿na odtworzyæ pliku `WindowMaker' z kopii zapasowej. Przywróæ ten plik "
 "rêcznie z pliku WindowMaker.bak."
 
-#: src/menu.c:504
+#: src/menu.c:513
 msgid ""
 "Can't revert to backupfile of `WMRootMenu'. Please manually revert from file "
 "WMRootMenu.bak."
@@ -171,11 +197,11 @@ msgstr ""
 "Nie mo¿na odtworzyæ pliku `WMRootMenu' z kopii zapasowej. Przywróæ ten plik "
 "rêcznie z pliku WMRootMenu.bak."
 
-#: src/menu.c:564
+#: src/menu.c:573
 msgid "Can't open selected file."
 msgstr "Nie mo¿na otworzyæ zaznaczonego pliku."
 
-#: src/menu.c:579
+#: src/menu.c:588
 msgid "Open a style, theme, or WindowMaker file."
 msgstr "Otwiera styl, temat lub plik WindowMakera."
 
@@ -192,26 +218,26 @@ msgstr ""
 "Nie mo¿na znale¼æ wpisu w passwd\n"
 "do rozwiniêcia `~' w nazwie pliku %s"
 
-#: src/path.c:154 src/rootmenu.c:774
+#: src/path.c:154 src/rootmenu.c:776
 msgid "Insert..."
 msgstr "Wstaw..."
 
-#: src/path.c:157 src/rootmenu.c:755 src/rootmenu.c:777
+#: src/path.c:157 src/rootmenu.c:757 src/rootmenu.c:779
 msgid "Insert new directory."
 msgstr "Wstawia nowy katalog."
 
-#: src/path.c:162 src/rootmenu.c:782 src/texture.c:1113 src/themes.c:1536
+#: src/path.c:162 src/rootmenu.c:784 src/texture.c:1113 src/themes.c:1692
 msgid "Remove"
 msgstr "Usuñ"
 
-#: src/path.c:166 src/rootmenu.c:785
+#: src/path.c:166 src/rootmenu.c:787
 msgid "Remove selected directory."
 msgstr "Usuwa zaznaczony katalog."
 
 #.
 #. *  Fileselection dialog window
 #.
-#: src/path.c:257 src/rootmenu.c:2026 src/themes.c:1304
+#: src/path.c:257 src/rootmenu.c:2126 src/themes.c:1460
 msgid "Choose directory"
 msgstr "Wybierz katalog"
 
@@ -227,45 +253,45 @@ msgstr "¦cie¿ka przeszukiwania piksmap"
 msgid "Filename:"
 msgstr "Nazwa pliku:"
 
-#: src/rootmenu.c:261
+#: src/rootmenu.c:263
 msgid "Application menu configuration requires that your menu file"
 msgstr "Konfiguracja menu aplikacji wymaga, aby twój pliku menu"
 
-#: src/rootmenu.c:268
+#: src/rootmenu.c:270
 msgid "is in the new format."
 msgstr "by³ w nowym formacie."
 
-#: src/rootmenu.c:281
+#: src/rootmenu.c:283
 msgid "Convert current menu"
 msgstr "Konwertuj bie¿±ce menu"
 
-#: src/rootmenu.c:284
+#: src/rootmenu.c:286
 msgid "Convert current menu file to new format."
 msgstr "Konwertuje bie¿±cy plik menu do nowego formatu."
 
-#: src/rootmenu.c:291
+#: src/rootmenu.c:293
 msgid "Start with empty menu"
 msgstr "Rozpocznij z pustym menu"
 
-#: src/rootmenu.c:294
+#: src/rootmenu.c:296
 msgid "Replace current menu file with an empty one."
 msgstr "Zastêpuje bie¿±cy plik menu pustym."
 
-#: src/rootmenu.c:299
+#: src/rootmenu.c:301
 msgid "Use predefined menu"
 msgstr "U¿yj predefiniowanego menu"
 
-#: src/rootmenu.c:302
+#: src/rootmenu.c:304
 msgid "Use one of Window Maker's predefined menus as a starting point."
 msgstr ""
 "Wykorzystuje jedno z predefiniowanych menu WindowMakera jako punkt wyj¶cia."
 
-#: src/rootmenu.c:356
+#: src/rootmenu.c:358
 #, c-format
 msgid "Window Maker root menu file '%s' saved."
 msgstr "Plik g³ównego menu Window Makera '%s' zapisany."
 
-#: src/rootmenu.c:363
+#: src/rootmenu.c:365
 #, c-format
 msgid ""
 "Can't write to menu file\n"
@@ -274,23 +300,23 @@ msgstr ""
 "Nie mo¿na zapisaæ pliku menu\n"
 "`%s'"
 
-#: src/rootmenu.c:515
+#: src/rootmenu.c:517
 msgid "Menu(item) label"
 msgstr "Etykieta (pozycji) menu"
 
-#: src/rootmenu.c:539
+#: src/rootmenu.c:541
 msgid "Command"
 msgstr "Polecenie"
 
-#: src/rootmenu.c:563
+#: src/rootmenu.c:565
 msgid "Show confirm panel"
 msgstr "Poka¿ panel potwierdzenia"
 
-#: src/rootmenu.c:579 src/rootmenu.c:608 src/rootmenu.c:731
+#: src/rootmenu.c:581 src/rootmenu.c:610 src/rootmenu.c:733
 msgid "Command:"
 msgstr "Polecenie:"
 
-#: src/rootmenu.c:587
+#: src/rootmenu.c:589
 msgid ""
 "Commandline of application to execute. A %s directive is replaced by the "
 "current selection, %w by the XID of the focused window, and "
@@ -302,15 +328,15 @@ msgstr ""
 "wywo³uje okno wstawiania o okre¶lonym tytule, z (opcjonalnym) zg³oszeniem i "
 "wprowadzonym tekstem."
 
-#: src/rootmenu.c:615
+#: src/rootmenu.c:617
 msgid "Commandline to generate dynamic menu."
 msgstr "Polecenie generuj±ce dynamiczne menu."
 
-#: src/rootmenu.c:623 src/rootmenu.c:689
+#: src/rootmenu.c:625 src/rootmenu.c:691
 msgid "Import"
 msgstr "Importuj"
 
-#: src/rootmenu.c:629
+#: src/rootmenu.c:631
 msgid ""
 "Import output of command. The 'include dynamic menu' item is removed "
 "afterwards."
@@ -318,25 +344,25 @@ msgstr ""
 "Importuje wynik polecenia. Pozycja 'do³±cz dynamiczne menu' jest pó¼niej "
 "usuwana."
 
-#: src/rootmenu.c:648
+#: src/rootmenu.c:650
 msgid "Name:"
 msgstr "Nazwa:"
 
-#: src/rootmenu.c:656
+#: src/rootmenu.c:658
 msgid "Name of window manager to start. If omitted, restart Window Maker."
 msgstr ""
 "Nazwa zarz±dcy okien do uruchomienia. Je¶li pominiêto, Window Maker zostanie "
 "uruchomiony ponownie."
 
-#: src/rootmenu.c:674
+#: src/rootmenu.c:676
 msgid "File:"
 msgstr "Plik:"
 
-#: src/rootmenu.c:681
+#: src/rootmenu.c:683
 msgid "Filename of menu to include."
 msgstr "Nazwa pliku menu do do³±czenia."
 
-#: src/rootmenu.c:695
+#: src/rootmenu.c:697
 msgid ""
 "Import contents of selected menu file. The 'include menu file' item is "
 "removed afterwards."
@@ -344,20 +370,20 @@ msgstr ""
 "Importuje zawarto¶æ wybranego pliku menu. Pozycja 'do³±cz plik menu' jest "
 "pó¼niej usuwana."
 
-#: src/rootmenu.c:702 src/simple.c:256 src/texture.c:607 src/texture.c:684
-#: src/themes.c:788 src/themes.c:1897 src/themes.c:1919
+#: src/rootmenu.c:704 src/simple.c:256 src/texture.c:607 src/texture.c:684
+#: src/themes.c:804 src/themes.c:2053 src/themes.c:2075
 msgid "Browse..."
 msgstr "Przegl±daj..."
 
-#: src/rootmenu.c:705
+#: src/rootmenu.c:707
 msgid "Open file browser to select include file."
 msgstr "Otwórz przegl±darkê plików, aby zaznaczyæ plik do do³±czenia."
 
-#: src/rootmenu.c:721
+#: src/rootmenu.c:723
 msgid "Directory list"
 msgstr "Lista katalogów"
 
-#: src/rootmenu.c:738
+#: src/rootmenu.c:740
 msgid ""
 "Recursively, a submenu with all files and subdirectories of the given "
 "directory list is generated - each file is then used as argument for "
@@ -369,148 +395,152 @@ msgstr ""
 "u¿yty jako argument dla `polecenia'. Je¶li `polecenie' jest pominiête to "
 "generowane jest podmenu zawieraj±ce wszystkie pliki wykonywalne."
 
-#: src/rootmenu.c:796
+#: src/rootmenu.c:798
 msgid "Strip suffix of filenames"
 msgstr "Usuñ koñcówki w nazwach plików"
 
-#: src/rootmenu.c:810 src/shortcuts.c:146
+#: src/rootmenu.c:812 src/shortcuts.c:144
 msgid "Shortcut"
 msgstr "Skrót"
 
-#: src/rootmenu.c:883
+#: src/rootmenu.c:885
 msgid "Submenu"
 msgstr "Podmenu"
 
-#: src/rootmenu.c:885
+#: src/rootmenu.c:887
 msgid "Include menu file"
 msgstr "Do³±cz plik menu"
 
-#: src/rootmenu.c:887
+#: src/rootmenu.c:889
 msgid "Include dynamic menu"
 msgstr "Do³±cz dynamiczne menu"
 
-#: src/rootmenu.c:889
+#: src/rootmenu.c:891
 msgid "Include directory menu"
 msgstr "Do³±cz menu z katalogu"
 
-#: src/rootmenu.c:891
+#: src/rootmenu.c:893
 msgid "Execute application"
 msgstr "Uruchom aplikacjê"
 
-#: src/rootmenu.c:893
+#: src/rootmenu.c:895
 msgid "Execute shell command"
 msgstr "Wykonaj polecenie pow³oki"
 
-#: src/rootmenu.c:895
+#: src/rootmenu.c:897
 msgid "Refresh screen"
 msgstr "Od¶wie¿ ekran"
 
-#: src/rootmenu.c:897
+#: src/rootmenu.c:899
 msgid "(Re)start window manager"
 msgstr "Uruchom (ponownie) zarz±dcê okien"
 
-#: src/rootmenu.c:899
+#: src/rootmenu.c:901
 msgid "Exit Window Maker"
 msgstr "Zakoñcz Window Makera"
 
-#: src/rootmenu.c:901
+#: src/rootmenu.c:903
 msgid "Exit session"
 msgstr "Zakoñcz sesjê"
 
-#: src/rootmenu.c:903
+#: src/rootmenu.c:905
 msgid "Workspace menu"
 msgstr "Menu pulpitu"
 
-#: src/rootmenu.c:905
+#: src/rootmenu.c:907
 msgid "Arrange miniwindows"
 msgstr "Rozmieszczaj miniokna"
 
-#: src/rootmenu.c:907
+#: src/rootmenu.c:909
 msgid "Hide other windows"
 msgstr "Ukryj inne okna"
 
-#: src/rootmenu.c:909
+#: src/rootmenu.c:911
 msgid "Show all windows"
 msgstr "Poka¿ wszystkie okna"
 
-#: src/rootmenu.c:911
+#: src/rootmenu.c:913
 msgid "Save session"
 msgstr "Zapisz sesjê"
 
-#: src/rootmenu.c:913
+#: src/rootmenu.c:915
 msgid "Discard session data"
 msgstr "Zignoruj dane sesji"
 
-#: src/rootmenu.c:915
+#: src/rootmenu.c:917
 msgid "Show info panel"
 msgstr "Poka¿ panel informacyjny"
 
-#: src/rootmenu.c:917
+#: src/rootmenu.c:919
 msgid "Show legal panel"
 msgstr "Poka¿ panel o prawach autorskich"
 
-#: src/rootmenu.c:1521
+#: src/rootmenu.c:1523
 msgid "Insert new command"
 msgstr "Wstaw nowe polecenie"
 
-#: src/rootmenu.c:1527
+#: src/rootmenu.c:1529
 msgid "Insert new submenu"
 msgstr "Wstaw nowe podmenu"
 
-#: src/rootmenu.c:1534
+#: src/rootmenu.c:1539
+msgid "Insert WMAKERCONF menu"
+msgstr "Wstaw menu WMAKERCONF"
+
+#: src/rootmenu.c:1546
 msgid "Insert GNOME menu"
 msgstr "Wstaw menu GNOME"
 
-#: src/rootmenu.c:1543
+#: src/rootmenu.c:1555
 msgid "Insert KDE menu"
 msgstr "Wstaw menu KDE"
 
-#: src/rootmenu.c:1551
+#: src/rootmenu.c:1563
 msgid "Insert RedHat menu"
 msgstr "Wstaw menu RedHata"
 
-#: src/rootmenu.c:1559
+#: src/rootmenu.c:1571
 msgid "Insert Debian menu"
 msgstr "Wstaw menu Debiana"
 
-#: src/rootmenu.c:1567
+#: src/rootmenu.c:1579
 msgid "Insert default menu"
 msgstr "Wstaw domy¶lne menu"
 
-#: src/rootmenu.c:1577
+#: src/rootmenu.c:1589
 msgid "Cut item/submenu"
 msgstr "Wytnij pozycjê/podmenu"
 
-#: src/rootmenu.c:1583
+#: src/rootmenu.c:1595
 msgid "Paste item/submenu"
 msgstr "Wklej pozycjê/podmenu"
 
-#: src/rootmenu.c:1593
+#: src/rootmenu.c:1605
 msgid "Expand submenus"
 msgstr "Rozwiñ wszystkie podmenu"
 
-#: src/rootmenu.c:1599
+#: src/rootmenu.c:1611
 msgid "Collapse submenus"
 msgstr "Zwiñ wszystkie podmenu"
 
 #.
 #. *  Fileselection dialog window
 #.
-#: src/rootmenu.c:1776
+#: src/rootmenu.c:1788
 msgid "Menu file selection"
 msgstr "Wybór pliku menu"
 
-#: src/rootmenu.c:1885
+#: src/rootmenu.c:1897
 #, c-format
 msgid "Output of command '%s'"
 msgstr "Wynik polecenia '%s'"
 
-#: src/rootmenu.c:1888
+#: src/rootmenu.c:1900
 #, c-format
 msgid "Imported file '%s'"
 msgstr "Importowany plik '%s'"
 
-#: src/rootmenu.c:2001
+#: src/rootmenu.c:2101
 msgid ""
 "Can't execute dynamic menu command.\n"
 "Please check `stderr' for more details."
@@ -518,12 +548,12 @@ msgstr ""
 "Nie mo¿na wykonaæ polecenia dynamicznego menu.\n"
 "Sprawd¼ `stderr', aby uzyskaæ wiêcej szczegó³ów."
 
-#: src/rootmenu.c:2178 src/wmconfig.c:130
+#: src/rootmenu.c:2278 src/wmconfig.c:134
 #, c-format
 msgid "Can't read file '%s'"
 msgstr "Nie mo¿na odczytaæ pliku '%s'"
 
-#: src/rootmenu.c:2204
+#: src/rootmenu.c:2304
 #, c-format
 msgid ""
 "Can't convert old style menu\n"
@@ -536,7 +566,7 @@ msgstr ""
 "do nowego formatu.\n"
 "Sprawd¼ `stderr', aby uzyskaæ wiêcej szczegó³ów."
 
-#: src/rootmenu.c:2217
+#: src/rootmenu.c:2317
 #, c-format
 msgid ""
 "Can't parse generated menu file\n"
@@ -551,7 +581,7 @@ msgstr ""
 msgid "Color of title text"
 msgstr "Kolor tekstu na pasku tytu³owym"
 
-#: src/simple.c:328 src/texture.c:2794
+#: src/simple.c:328 src/texture.c:2798
 msgid "Solid color"
 msgstr "Jednolity kolor"
 
@@ -563,28 +593,28 @@ msgstr "Cieniowany"
 msgid "A solid color or a drop shadow."
 msgstr "Jednolity kolor lub cieniowany."
 
-#: src/simple.c:349
+#: src/simple.c:346
 msgid "Foreground"
 msgstr "Pierwszy plan"
 
-#: src/simple.c:353
+#: src/simple.c:350
 msgid "Shadow 1"
 msgstr "Cieñ 1"
 
-#: src/simple.c:357
+#: src/simple.c:354
 msgid "Shadow 2"
 msgstr "Cieñ 2"
 
-#: src/simple.c:408
+#: src/simple.c:404
 #, c-format
 msgid "Undefined boolean value '%s' converted to true."
 msgstr "Niezdefiniowana warto¶æ logiczna '%s' zmieniona na 'prawda'."
 
-#: src/simple.c:696
+#: src/simple.c:692
 msgid "Font selection"
 msgstr "Wybór fontu"
 
-#: src/shortcuts.c:114
+#: src/shortcuts.c:112
 msgid "Actions"
 msgstr "Akcje"
 
@@ -621,14 +651,14 @@ msgid ""
 "A solid color, a pixmap, or a gradient. If 'None' is selected, then the root "
 "background is not changed by Window Maker."
 msgstr ""
-"Jednolity kolor, piksmapa lub gradient. Je¶li wybrano 'Brak', g³ówne t³o "
-"nie jest zmieniane przez Window Makera."
+"Jednolity kolor, piksmapa lub gradient. Je¶li wybrano 'Brak', g³ówne t³o nie "
+"jest zmieniane przez Window Makera."
 
 #: src/texture.c:299
 msgid "Type"
 msgstr "Rodzaj"
 
-#: src/texture.c:508 src/texture.c:2796
+#: src/texture.c:508 src/texture.c:2800
 msgid "Pixmap"
 msgstr "Piksmapa"
 
@@ -674,7 +704,7 @@ msgstr "Podgl±dy..."
 msgid "Use preview browser to select pixmap."
 msgstr "U¿yj przegl±darki podgl±dów, aby wybraæ piksmapê."
 
-#: src/texture.c:717 src/texture.c:1056 src/texture.c:2795
+#: src/texture.c:717 src/texture.c:1056 src/texture.c:2799
 msgid "Gradient"
 msgstr "Wype³nienie gradientowe"
 
@@ -724,7 +754,7 @@ msgstr ""
 "Kolor u¿yty jako jednolity kolor, w przypadku gdy nie zosta³o u¿yte "
 "wype³nienie gradientowe lub w trakcie skalowania/rozmieszczania piksmap."
 
-#: src/texture.c:836 src/texture.c:2801
+#: src/texture.c:836 src/texture.c:2805
 msgid "Bilinear gradient"
 msgstr "Dwuliniowe wype³nienie gradientowe"
 
@@ -756,7 +786,7 @@ msgstr "Pierwszy kolor wype³nienia gradientowego."
 msgid "Last color of gradient."
 msgstr "Ostatni kolor wype³nienia gradientowego."
 
-#: src/texture.c:961 src/texture.c:2803
+#: src/texture.c:961 src/texture.c:2807
 msgid "Waves gradient"
 msgstr "Faliste wype³nienie gradientowe"
 
@@ -812,58 +842,58 @@ msgstr ""
 "argumentów.\n"
 "Zmieniam na (jednolity, czarny) ..."
 
-#: src/texture.c:1833
+#: src/texture.c:1837
 msgid "Color selection"
 msgstr "Wybór koloru"
 
 #.
 #. *  Fileselection dialog window
 #.
-#: src/texture.c:2297
+#: src/texture.c:2301
 msgid "Pixmap file browser"
 msgstr "Przegl±darka piksmap"
 
-#: src/texture.c:2797
+#: src/texture.c:2801
 msgid "Textured gradient"
 msgstr "Teksturowane wype³nienie gradientowe"
 
-#: src/texture.c:2798
+#: src/texture.c:2802
 msgid "None"
 msgstr "Brak"
 
-#: src/texture.c:2799
+#: src/texture.c:2803
 msgid "Default"
 msgstr "Domy¶lny"
 
-#: src/texture.c:2802
+#: src/texture.c:2806
 msgid "Fading gradient"
 msgstr "Zanikaj±ce wype³niene gradientowe"
 
-#: src/texture.c:2806
+#: src/texture.c:2810
 msgid "Scaled"
 msgstr "Skalowana"
 
-#: src/texture.c:2807
+#: src/texture.c:2811
 msgid "Tiled"
 msgstr "S±siaduj±ca"
 
-#: src/texture.c:2808
+#: src/texture.c:2812
 msgid "Centered"
 msgstr "Wy¶rodkowana"
 
-#: src/texture.c:2809
+#: src/texture.c:2813
 msgid "Scaled (x:y)"
 msgstr "Skalowana (x:y)"
 
-#: src/texture.c:2811
+#: src/texture.c:2815
 msgid "Horizontal"
 msgstr "Poziomo"
 
-#: src/texture.c:2812
+#: src/texture.c:2816
 msgid "Vertical"
 msgstr "Pionowo"
 
-#: src/texture.c:2813
+#: src/texture.c:2817
 msgid "Diagonal"
 msgstr "Uko¶nie"
 
@@ -875,56 +905,56 @@ msgstr "Temat"
 msgid "Path"
 msgstr "¦cie¿ka"
 
-#: src/themes.c:240 src/themes.c:2370
+#: src/themes.c:242 src/themes.c:2531
 msgid "Open"
 msgstr "Otwórz"
 
-#: src/themes.c:242
+#: src/themes.c:244
 msgid "Open selected theme."
 msgstr "Otwiera zaznaczony temat."
 
-#: src/themes.c:248 src/themes.c:2379
+#: src/themes.c:253 src/themes.c:2540
 msgid "Save..."
 msgstr "Zapisz..."
 
-#: src/themes.c:251
+#: src/themes.c:255
 msgid "Save current wmakerconf settings as a theme pack."
 msgstr "Zapisuje aktualne ustawienia wmakerconfa jako zestaw tematyczny."
 
-#: src/themes.c:258 src/themes.c:2387
+#: src/themes.c:264 src/themes.c:2548
 msgid "Set"
 msgstr "Ustaw"
 
-#: src/themes.c:261
+#: src/themes.c:267
 msgid "Open selected theme, update wmakerconf, and save wmakerconf settings."
 msgstr ""
 "Otwiera zaznaczony temat, uaktualnia i zapisuje ustawienia wmakerconfa."
 
-#: src/themes.c:267 src/themes.c:2395
+#: src/themes.c:274 src/themes.c:2556
 msgid "Preview"
 msgstr "Podgl±d"
 
-#: src/themes.c:269
+#: src/themes.c:276
 msgid "Preview the selected theme."
 msgstr "Podgl±d zaznaczonego tematu."
 
-#: src/themes.c:279 src/themes.c:2405
+#: src/themes.c:285 src/themes.c:2566
 msgid "Remove..."
 msgstr "Usuñ..."
 
-#: src/themes.c:282
+#: src/themes.c:288
 msgid "Remove themes with associated files and directories."
 msgstr "Usuwa tematy ³±cznie z powi±zanymi z nimi plikami i katalogami."
 
-#: src/themes.c:288 src/themes.c:2420
+#: src/themes.c:294 src/themes.c:2581
 msgid "Install..."
 msgstr "Instaluj..."
 
-#: src/themes.c:291
+#: src/themes.c:297
 msgid "Install themes (local or via WWW request)."
 msgstr "Instaluje tematy (lokalnie lub przez WWW)."
 
-#: src/themes.c:386 src/themes.c:1082
+#: src/themes.c:394 src/themes.c:1236
 msgid ""
 "Can't write temporary theme file.\n"
 "Please check `stderr' for more details."
@@ -932,7 +962,7 @@ msgstr ""
 "Nie mo¿na zapisaæ tymczasowego pliku tematu.\n"
 "Sprawd¼ `stderr', aby uzyskaæ wiêcej szczegó³ów."
 
-#: src/themes.c:394
+#: src/themes.c:402
 msgid ""
 "Can't open temporary theme file.\n"
 "Please check `stderr' for more details."
@@ -940,24 +970,48 @@ msgstr ""
 "Nie mo¿na otworzyæ tymczasowego pliku tematu.\n"
 "Sprawd¼ `stderr', aby uzyskaæ wiêcej szczegó³ów."
 
-#: src/themes.c:514 src/themes.c:517
+#: src/themes.c:522 src/themes.c:525
 #, c-format
 msgid "Attribute %s not yet supported."
 msgstr "Atrybut %s nie jest jeszcze wspierany."
 
-#: src/themes.c:778
+#: src/themes.c:794
 msgid "Save a theme"
 msgstr "Zapisz temat"
 
-#: src/themes.c:790 src/themes.c:1899
+#: src/themes.c:806 src/themes.c:2055
 msgid "Install path"
 msgstr "¦cie¿ka instalacji"
 
-#: src/themes.c:811
+#: src/themes.c:829
+msgid "Output format"
+msgstr "Format wyj¶ciowy"
+
+#: src/themes.c:838
+msgid "Window Maker theme folder (.themed)"
+msgstr "Katalog tematów Window Makera (.themed)"
+
+#: src/themes.c:844
+msgid "http://wm.themes.org theme archive (.tar.gz)"
+msgstr "http://wm.themes.org archiwum tematu (.tar.gz)"
+
+#: src/themes.c:846
+msgid "http://wm.themes.org theme archive (.tar)"
+msgstr "http://wm.themes.org archiwum tematu (.tar)"
+
+#: src/themes.c:861
 msgid "Theme name"
 msgstr "Nazwa tematu"
 
-#: src/themes.c:932 src/themes.c:991 src/themes.c:1016 src/themes.c:1034
+#: src/themes.c:985 src/themes.c:1003 src/themes.c:1019
+msgid ""
+"Can't create theme directory.\n"
+"Please check `stderr' for more details."
+msgstr ""
+"Nie mo¿na utworzyæ katalogu dla tematu.\n"
+"Sprawd¼ `stderr', aby uzyskaæ wiêcej szczegó³ów."
+
+#: src/themes.c:1090 src/themes.c:1115 src/themes.c:1133
 msgid ""
 "Can't write theme.\n"
 "Please check `stderr' for more details."
@@ -965,7 +1019,15 @@ msgstr ""
 "Nie mo¿na zapisaæ tematu.\n"
 "Sprawd¼ `stderr', aby uzyskaæ wiêcej szczegó³ów."
 
-#: src/themes.c:1123
+#: src/themes.c:1183
+msgid ""
+"Can't create theme archive.\n"
+"Please check `stderr' for more details."
+msgstr ""
+"Nie mo¿na utworzyæ archiwum tematu.\n"
+"Sprawd¼ `stderr', aby uzyskaæ wiêcej szczegó³ów."
+
+#: src/themes.c:1278
 #, c-format
 msgid ""
 "Can't show preview of theme `%s'.\n"
@@ -974,7 +1036,7 @@ msgstr ""
 "Nie mo¿na wy¶wietliæ podgl±du tematu `%s'.\n"
 "Sprawd¼ `stderr', aby uzyskaæ wiêcej szczegó³ów."
 
-#: src/themes.c:1127
+#: src/themes.c:1282
 msgid ""
 "Can't revert to old theme.\n"
 "Please check `stderr' for more details."
@@ -982,52 +1044,57 @@ msgstr ""
 "Nie mo¿na przywróciæ poprzedniego tematu.\n"
 "Sprawd¼ `stderr', aby uzyskaæ wiêcej szczegó³ów."
 
-#: src/themes.c:1144
+#: src/themes.c:1300
 msgid "Show next preview"
 msgstr "Poka¿ nastêpny podgl±d"
 
-#: src/themes.c:1145
+#: src/themes.c:1301
 msgid "Leave preview mode"
 msgstr "Opu¶æ tryb podgl±du"
 
-#: src/themes.c:1366
+#: src/themes.c:1302
+#, c-format
+msgid "Preview of `%s'"
+msgstr "Podgl±d `%s'"
+
+#: src/themes.c:1522
 msgid "Can't open selected theme."
 msgstr "Nie mo¿na otworzyæ zaznaczonego tematu."
 
-#: src/themes.c:1404
+#: src/themes.c:1560
 msgid "Rename theme"
 msgstr "Zmieñ nazwê tematu"
 
-#: src/themes.c:1415
+#: src/themes.c:1571
 msgid "New theme name: "
 msgstr "Nowa nazwa tematu: "
 
-#: src/themes.c:1470
+#: src/themes.c:1626
 #, c-format
 msgid "Can't rename `%s' to `%s'."
 msgstr "Nie mo¿na zmieniæ nazwy `%s' na '%s'."
 
-#: src/themes.c:1489
+#: src/themes.c:1645
 msgid "Remove themes"
 msgstr "Usuñ tematy"
 
-#: src/themes.c:1500
+#: src/themes.c:1656
 msgid "Remove selected theme files"
 msgstr "Usuñ zaznaczone pliki tematów"
 
-#: src/themes.c:1679
+#: src/themes.c:1835
 msgid "Theme pixmaps"
 msgstr "Piksmapy tematu"
 
-#: src/themes.c:1888 src/themes.c:2065
+#: src/themes.c:2044 src/themes.c:2221
 msgid "Install themes"
 msgstr "Instaluj tematy"
 
-#: src/themes.c:1921
+#: src/themes.c:2077
 msgid "List of themes"
 msgstr "Lista tematów"
 
-#: src/themes.c:1955
+#: src/themes.c:2111
 msgid ""
 "Select themes with a file selection dialog (or use drag and drop with your "
 "file manager and WWW browser)."
@@ -1035,23 +1102,23 @@ msgstr ""
 "Wybierz temat przy pomocy dialogu wyboru (albo 'przeci±gnij i upu¶æ' plik ze "
 "swojego zarz±dcy plików i przegl±darki WWW."
 
-#: src/themes.c:1971
+#: src/themes.c:2127
 msgid "Install"
 msgstr "Instaluj"
 
-#: src/themes.c:2010
+#: src/themes.c:2166
 msgid "Choose themes to install"
 msgstr "Wybierz temat do zainstalowania"
 
-#: src/themes.c:2055
+#: src/themes.c:2211
 msgid "No installation prefix given."
 msgstr "Nie podano prefiksu instalacji."
 
-#: src/themes.c:2091
+#: src/themes.c:2247
 msgid "Skip"
 msgstr "Pomiñ"
 
-#: src/themes.c:2257 src/themes.c:2268
+#: src/themes.c:2418 src/themes.c:2429
 msgid ""
 "Can't unpack theme file.\n"
 "Please check `stderr' for more details."
@@ -1059,11 +1126,11 @@ msgstr ""
 "Nie mo¿na rozpakowaæ pliku tematu.\n"
 "Sprawd¼ `stderr', aby uzyskaæ wiêcej szczegó³ów."
 
-#: src/themes.c:2413
+#: src/themes.c:2574
 msgid "Rename..."
 msgstr "Zmieñ nazwê..."
 
-#: src/themes.c:2647
+#: src/themes.c:2813
 #, c-format
 msgid ""
 "Can't make directory `%s'.\n"
@@ -1072,7 +1139,7 @@ msgstr ""
 "Nie mo¿na utworzyæ katalogu `%s'.\n"
 "Sprawd¼ `stderr', aby uzyskaæ wiêcej szczegó³ów."
 
-#: src/themes.c:2670
+#: src/themes.c:2841
 #, c-format
 msgid ""
 "Can't generate preview `%s'.\n"
@@ -1081,20 +1148,17 @@ msgstr ""
 "Nie mo¿na wygenerowæ podgl±du dla `%s'.\n"
 "Sprawd¼ `stderr', aby uzyskaæ wiêcej szczegó³ów."
 
-#: src/window.c:290 src/wmconfig.c:134 src/wmconfig.c:138
+#: src/window.c:312 src/wmconfig.c:138 src/wmconfig.c:142
 #, c-format
 msgid "'%s': parse error."
 msgstr "'%s': b³±d interpretacji."
 
-#: src/window.c:449
-msgid "Colors"
-msgstr "Kolory"
+#: src/window.c:421
+#, c-format
+msgid "Invalid section '%s' specified on command line."
+msgstr ""
 
-#: src/window.c:468
-msgid "Texture"
-msgstr "Tekstury"
-
-#: src/window.c:832
+#: src/window.c:674
 msgid ""
 "Directory $HOME/.wmakerconf does not exist yet.\n"
 "This directory is used to store the previews of all images.\n"
@@ -1104,7 +1168,7 @@ msgstr ""
 "Katalog ten jest wykorzystywany do przechowywania podgl±dów obrazków.\n"
 "Stworzyæ teraz ten katalog i wygenerowaæ podgl±dy obrazków?"
 
-#: src/window.c:936
+#: src/window.c:778
 #, c-format
 msgid ""
 "Can't find pixmap\n"
@@ -1117,7 +1181,7 @@ msgstr ""
 "w PixmapPath. Uaktualnij\n"
 "zawarto¶æ PixmapPath."
 
-#: src/window.c:1013
+#: src/window.c:852
 #, c-format
 msgid ""
 "Unable to display pixmap\n"
@@ -1130,12 +1194,12 @@ msgstr ""
 "(format nie obs³ugiwany).\n"
 "Zobacz `stderr', aby uzyskaæ pozosta³e informacje."
 
-#: src/window.c:1019
+#: src/window.c:858
 #, c-format
 msgid "Can't display pixmap '%s`."
 msgstr "Nie mo¿na wy¶wietliæ piksmapy '%s`."
 
-#: src/window.c:1048
+#: src/window.c:887
 msgid ""
 "Some values are modified.\n"
 "Do you want to save them before quitting?"
@@ -1143,16 +1207,16 @@ msgstr ""
 "Niektóre ustawienia zosta³y zmienione.\n"
 "Czy chcesz je zapisaæ przed zakoñczeniem?"
 
-#: src/window.c:1079
+#: src/window.c:918
 msgid "Save before quitting?"
 msgstr "Zapisaæ przed zakoñczeniem?"
 
-#: src/window.c:1169
+#: src/window.c:1008
 #, c-format
 msgid "Window Maker config file '%s' saved."
 msgstr "Plik konfiguracyjny Window Makera '%s' zapisany."
 
-#: src/window.c:1175
+#: src/window.c:1014
 #, c-format
 msgid ""
 "Can't write to Window Maker file\n"
@@ -1161,27 +1225,43 @@ msgstr ""
 "Nie mo¿na zapisaæ pliku Window Makera\n"
 "`%s'."
 
-#: src/wmconfig.c:162 src/wmconfig.c:251
+#: src/window.c:1131
+msgid "Colors"
+msgstr "Kolory"
+
+#: src/window.c:1150
+msgid "Texture"
+msgstr "Tekstury"
+
+#: src/wmconfig.c:114
+#, c-format
+msgid ""
+"usage: %s [section]\n"
+"If 'section' is specified then only show wmakerconf panel 'section'.\n"
+msgstr ""
+"u¿ycie: %s [sekcja]\n"
+"Je¶li 'sekcja' jest podana, pokazuje tylko panel wmakerconfa 'sekcja'.\n"
+
+#: src/wmconfig.c:166 src/wmconfig.c:255
 #, c-format
 msgid "Backupfile `%s' generated."
 msgstr "Kopia zapasowa `%s' utworzona."
 
-#: src/wmconfig.c:164 src/wmconfig.c:253
+#: src/wmconfig.c:168 src/wmconfig.c:257
 #, c-format
 msgid "Can't write backupfile `%s'."
 msgstr "Nie mo¿na zapisaæ kopii zapasowej `%s'."
 
-#: src/wmconfig.c:222
+#: src/wmconfig.c:226
 msgid "Can't open global WindowMaker configuration file."
 msgstr "Nie mo¿na otworzyæ globalnego pliku konfiguracyjnego WindowMakera."
 
-#: src/wmconfig.c:231
+#: src/wmconfig.c:235
 #, c-format
 msgid "New WindowMaker configuration file `%s' created."
 msgstr "Nowy plik konfiguracyjny WindowMakera `%s' utworzony."
 
-#: src/wmconfig.c:233
+#: src/wmconfig.c:237
 #, c-format
 msgid "Can't generate configuration file `%s'."
 msgstr "Nie mo¿na wygenerowaæ pliku konfiguracyjnego `%s'."
-

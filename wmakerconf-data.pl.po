@@ -3,9 +3,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: wmakerconf-data 0.61.0\n"
-"POT-Creation-Date: 1999-12-06 16:38+0100\n"
-"PO-Revision-Date: 1999-10-11 13:54+0200\n"
+"Project-Id-Version: wmakerconf-data 0.61.1\n"
+"POT-Creation-Date: 2000-01-25 15:17+0100\n"
+"PO-Revision-Date: 2000-02-01 13:54+0100\n"
 "Last-Translator: Piotr Czerwiñski <pius@pld.org.pl>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -141,8 +141,7 @@ msgid ""
 "Open dialog windows on the workspace of the owner rather than on the current "
 "workspace"
 msgstr ""
-"Otwieraj okna przej¶ciowe na pulpicie, na którym jest uruchomiony proces, do "
-"którego te okna nale¿±, zamiast na aktualnym pulpicie"
+"Otwieraj okna dialogowe na pulpicie w³a¶ciciela, zamiast na aktualnym pulpicie"
 
 #. Title: CirculateRaise
 #: WMWmakerconf.gettext:166
@@ -155,8 +154,8 @@ msgid ""
 "Use the Windoze style when cycling through windows with the »focus next "
 "window« shortcut"
 msgstr ""
-"U¿ywaj stylu Windoze przy przechodzeniu z jednego okna na nastêpne "
-"wykorzystuj±c skrót »uaktywnij nastêpne okno«"
+"U¿ywaj stylu Windoze przy przechodzeniu przez okna wykorzystuj±c skrót "
+"'uaktywnij nastêpne okno'"
 
 #. Title: PopupSwitchMenu
 #: WMWmakerconf.gettext:182
@@ -164,8 +163,8 @@ msgid ""
 "Popup the window list as you cycle through windows (only if Windoze cycling "
 "is enabled)"
 msgstr ""
-"Wy¶wietlaj listê okien przy przechodzeniu z jednego na nastêpne (tylko gdy "
-"opcja WindozeCycling jest w³±czona)"
+"Przy przechodzeniu przez okna wy¶wietlaj ich listê (tylko gdy u¿ywany jest "
+"styl Windoze)"
 
 #. Title: AutoFocus
 #: WMWmakerconf.gettext:190
@@ -188,7 +187,7 @@ msgstr "Aktywne jest okno, na które wskazuje kursor myszy (lu¼ne uaktywnianie)"
 
 #: WMWmakerconf.gettext:202
 msgid "Click on the window to focus it"
-msgstr "Aby uaktuwniæ okno, musisz na nie klikn±æ"
+msgstr "Aktywne jest okno, które zosta³o klikniête mysz±"
 
 #. Title: RaiseDelay
 #: WMWmakerconf.gettext:207
@@ -437,8 +436,8 @@ msgstr "W dolnym prawym rogu"
 #: WMWmakerconf.gettext:357
 msgid "Let application receive the mouse click that causes its window to focus"
 msgstr ""
-"Pozwól aby klikniêcie myszy powoduj±ce uaktywnienie okna by³o przekazane "
-"do aplikacji"
+"Pozwól aby klikniêcie myszy powoduj±ce uaktywnienie okna by³o przekazane do "
+"aplikacji"
 
 #. Title: DisableWSMouseActions
 #: WMWmakerconf.gettext:365
@@ -446,8 +445,8 @@ msgid ""
 "Pass a root window mouse click on to a filemanager rather than to Window "
 "Maker"
 msgstr ""
-"Przekazuj klikniêcie mysz± w g³ównym oknie do zarz±dcy plików zamiast "
-"do Window Makera"
+"Przekazuj klikniêcie mysz± w g³ównym oknie do zarz±dcy plików zamiast do "
+"Window Makera"
 
 #. Title: SelectWindowsMouseButton
 #: WMWmakerconf.gettext:373
@@ -508,9 +507,7 @@ msgstr "Pokazuj dymki dla tytu³ów pomniejszonych okien"
 #. Title: OpaqueMove
 #: WMWmakerconf.gettext:432
 msgid "Show window contents rather than outline only when moving a window"
-msgstr ""
-"Pokazuj zawarto¶æ okna zamiast obrysu tylko w trakcie jego "
-"przesuwania"
+msgstr "Pokazuj zawarto¶æ okna zamiast obrysu tylko w trakcie jego przesuwania"
 
 #. Title: Superfluous
 #: WMWmakerconf.gettext:440
@@ -530,8 +527,7 @@ msgstr "Wyg³adzaj skalowane obrazki stanowi±ce t³o pulpitu"
 #. Title: ResizeDisplay
 #: WMWmakerconf.gettext:464
 msgid "Style of geometry box when resizing the window: "
-msgstr ""
-"Sposób wy¶wietlania panelu z wymiarami podczas zmiany rozmiarów okna: "
+msgstr "Wygl±d panelu z wymiarami podczas zmiany rozmiarów okna: "
 
 #. RangeInfo: ResizeDisplay
 #: WMWmakerconf.gettext:468 WMWmakerconf.gettext:477
@@ -548,13 +544,12 @@ msgstr "Panel jest przypisany do okna"
 
 #: WMWmakerconf.gettext:468 WMWmakerconf.gettext:477
 msgid "No box - use technical drawing like lines"
-msgstr "Zamiast panelu u¿yte zostan± linie przy krawêdziach okna"
+msgstr "Zamiast panelu - linie przy krawêdziach okna"
 
 #. Title: MoveDisplay
 #: WMWmakerconf.gettext:473
 msgid "Style of geometry box when moving the window: "
-msgstr ""
-"Sposób wy¶wietlania panelu ze wspó³rzêdnymi podczas zmiany po³o¿enia okna: "
+msgstr "Wygl±d panelu ze wspó³rzêdnymi podczas zmiany po³o¿enia okna: "
 
 #. Title: IconificationStyle
 #: WMWmakerconf.gettext:482
@@ -594,11 +589,11 @@ msgstr "Oddzielna tekstura dla ka¿dej pozycji menu"
 
 #: WMWmakerconf.gettext:495
 msgid "A single texture spanning the whole menu"
-msgstr "Pojedyncza tekstura obejmuj±ca ca³e menu"
+msgstr "Pojedyñcza tekstura obejmuj±ca ca³e menu"
 
 #: WMWmakerconf.gettext:495
 msgid "A single texture without bevels spanning the whole menu"
-msgstr "Pojedyncza tekstura bez wciêæ rozdzielaj±cych pozycje menu"
+msgstr "Pojedyñcza tekstura bez wciêæ rozdzielaj±cych pozycje menu"
 
 #. Title: TitleJustify
 #: WMWmakerconf.gettext:500
@@ -683,13 +678,12 @@ msgstr ""
 
 #. Title: NewStyle
 #: WMWmakerconf.gettext:560
-#, fuzzy
 msgid ""
 "Use new style titlebar buttons rather than original NeXT buttons (startup "
 "option)"
 msgstr ""
-"U¿ywaj nowego stylu dla przycisków paska tytu³owego zamiast oryginalnych "
-"przycisków w stylu NeXT (opcja startowa)"
+"U¿ywaj nowego stylu przycisków paska tytu³owego zamiast przycisków w stylu "
+"NeXT (opcja startowa)"
 
 #. Title: SaveSessionOnExit
 #: WMWmakerconf.gettext:568
@@ -703,8 +697,8 @@ msgstr "W³±cz tryb buforowania zapisu w tle dla okien"
 
 #. Title: DontConfirmKill
 #: WMWmakerconf.gettext:584
-msgid "Show confirmation panel for the window menu command »Kill«"
-msgstr "Poka¿ panel potwierdzenia dla polecenia »Zabij«"
+msgid "Show confirmation panel for the window menu command `Kill'"
+msgstr "Poka¿ panel potwierdzenia dla polecenia `Zabij'"
 
 #. Title: DisableSound
 #: WMWmakerconf.gettext:592
@@ -716,8 +710,8 @@ msgstr "Wy³±cz d¼wiêk przy starcie bez konieczno¶ci zabijania serwera d¼wiêku"
 msgid ""
 "Dither gradients and pixmaps etc. when in low color mode (startup option)"
 msgstr ""
-"Poddawaj ditheringowi gradienty, piksmapy, etc. w trybie zmniejszonej "
-"liczby kolorów (opcja startowa)"
+"Poddawaj ditheringowi gradienty, piksmapy, etc. w trybie zmniejszonej liczby "
+"kolorów (opcja startowa)"
 
 #. Title: ColormapSize
 #: WMWmakerconf.gettext:608
@@ -955,8 +949,9 @@ msgstr "Prze³±cza na pulpit 10"
 
 #. Title: ModifierKey
 #: WMWmakerconf.gettext:966
-msgid "Modifier to use as »Meta« key"
-msgstr "Klawisz u¿ywany jako »Meta«"
+#, fuzzy
+msgid "Modifier to use as `Meta' key"
+msgstr "Klawisz u¿ywany jako `Meta'"
 
 #. Info: WindowTitleFont
 #: WMWmakerconf.gettext:986
@@ -1098,4 +1093,3 @@ msgstr ""
 #: WMWmakerconf.gettext:1154
 msgid "Text (collapsed)"
 msgstr "Tekst (wygaszony)"
-
