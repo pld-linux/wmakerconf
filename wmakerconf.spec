@@ -118,7 +118,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_datadir}/%{name}/*.pl
 %{_datadir}/%{name}/*.xpm
 %{_datadir}/%{name}/MANUAL
-%{_datadir}/pixmaps/%{name}.xpm
+%{_pixmapsdir}/%{name}.xpm
 
 %files data -f %{name}-data.lang
 %defattr(644,root,root,755)
