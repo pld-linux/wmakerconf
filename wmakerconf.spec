@@ -70,7 +70,7 @@ os atributos. Novos atributos podem ser integrados de forma simples,
 mudando a lista de propriedades do wmakerconf.
 
 %prep
-%setup -q 
+%setup -q
 %patch0 -p0
 %patch1 -p1
 %patch2 -p1
