@@ -24,9 +24,9 @@ BuildRequires:	automake
 BuildRequires:	gettext-devel
 BuildRequires:	gtk+-devel >= 1.2.0
 BuildRequires:	imlib-devel
+BuildRequires:	libPropList-devel >= 0.8.3
 BuildRequires:	libjpeg-devel
 BuildRequires:	libpng >= 1.0.8
-BuildRequires:	libPropList-devel >= 0.8.3
 BuildRequires:	libtiff-devel
 BuildRequires:	libungif-devel
 BuildRequires:	zlib-devel
@@ -99,7 +99,7 @@ cd data
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT/{%{_pixmapsdir},%{_applnkdir}/Settings/WindowMaker}
+install -d $RPM_BUILD_ROOT{%{_pixmapsdir},%{_applnkdir}/Settings/WindowMaker}
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 %{__make} install -C data DESTDIR=$RPM_BUILD_ROOT
