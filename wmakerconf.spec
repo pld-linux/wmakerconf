@@ -3,8 +3,8 @@ Summary(pl):	Oparty na GTK konfigurator dla WindowMakera
 Name:		wmakerconf
 Version:	1.8.3
 Release:	1
-Group:		X11/Window Managers
-Group(pl):	X11/Zarz±dcy Okien
+Group:		X11/Window Managers/Tools
+Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
 Copyright:	GPL
 Source0:	http://www-info2.informatik.uni-wuerzburg.de/staff/ulli/wmakerconf/%{name}-%{version}.tar.bz2
 Source1:	wmakerconf.wmconfig
