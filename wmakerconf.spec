@@ -26,7 +26,7 @@ BuildRequires:	xpm-devel
 BuildRequires:	zlib-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	gettext
+BuildRequires:	gettext-devel
 BuildRequires:	libwmfun
 Requires:	WindowMaker
 Requires:	wmakerconf-data
