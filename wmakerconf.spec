@@ -52,12 +52,12 @@ Umo¿liwia zmianê czcionek, ikon, kolorów i pozosta³ych atrybutów przy
 pomocy prostych narzêdzi dialogowych. 
 
 %package data
-Version:	0.60.0
+Version:	0.61.0
 Summary:	Data files for GTK-based configuration tool for Window Maker
 Summary(pl):	Pliki danych dla opartego na GTK konfiguratora WindowMakera
 Group:          X11/Window Managers/Tools
 Group(pl):      X11/Zarz±dcy Okien/Narzêdzia
-Requires:	WindowMaker >= 0.60.0
+Requires:	WindowMaker = 0.61.0
 
 %description data
 Data files containing information relating to the latest version of
@@ -104,7 +104,7 @@ make install DESTDIR=$RPM_BUILD_ROOT
 make -C data DESTDIR=$RPM_BUILD_ROOT install
 
 install $RPM_SOURCE_DIR/wmakerconf.xpm $RPM_BUILD_ROOT%{_datadir}/pixmaps
-install %{SOURCE1} $RPM_BUILD_ROOT%{_sysconfdir}/applnk/Utilities
+install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Utilities
 
 gzip -9nf AUTHORS ChangeLog NEWS README TODO
 
