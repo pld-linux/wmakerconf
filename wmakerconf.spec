@@ -2,7 +2,6 @@ Summary:	This is a GTK-based configuration tool for WindowMaker
 Summary(pl):	Oparty na GTK konfigurator dla WindowMakera
 Name:		wmakerconf
 Version:	1.99.2
-Release:	1
 Group:		X11/Window Managers/Tools
 Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
 Copyright:	GPL
@@ -10,10 +9,10 @@ Source0:	http://www-info2.informatik.uni-wuerzburg.de/staff/ulli/wmakerconf/%{na
 Source1:	wmakerconf.wmconfig
 Patch0:		wmakerconf-config.patch
 Icon:		wmakerconf.xpm
-Requires:	WindowMaker >= 0.51.2
-Requires:	libPropList >= 0.8.3
-Requires:	gtk+ = 1.2.1 
-Requires:       perl
+BuildPrereq:	libPropList >= 1.8.3
+BuildPrereq:	gtk+-devel >= 1.2.0
+%requires_pkg   gtk+
+%requires_pkg   WindowMaker
 Obsoletes:	wmakerconf-data
 BuildRoot:	/tmp/%{name}-%{version}-root
 
@@ -63,7 +62,6 @@ rm -rf $RPM_BUILD_ROOT
 %config(missingok) /etc/X11/wmconfig/wmakerconf
 
 %attr(755,root,root) /usr/X11R6/bin/*
-
 %dir /usr/X11R6/share/wmakerconf
 %attr(755,root,root) /usr/X11R6/share/wmakerconf/*.sh
 %attr(755,root,root) /usr/X11R6/share/wmakerconf/*.pl
@@ -90,13 +88,27 @@ rm -rf $RPM_BUILD_ROOT
 %lang(ru) /usr/X11R6/share/locale/ru/LC_MESSAGES/*
 %lang(tr) /usr/X11R6/share/locale/tr/LC_MESSAGES/*
 
+%attr(755,root,root) /usr/X11R6/bin/*
+%attr(755,root,root) /usr/X11R6/share/wmakerconf/*.sh
+%attr(755,root,root) /usr/X11R6/share/wmakerconf/*.pl
+/usr/X11R6/share/wmakerconf/*.xpm
+/usr/X11R6/share/wmakerconf/*.jpg
+/usr/X11R6/share/wmakerconf/MANUAL
+/usr/X11R6/share/wmakerconf/WMWmakerconf
+/usr/X11R6/share/wmakerconf/wmaker-version
+/usr/X11R6/share/pixmaps/wmakerconf.xpm
+
 %changelog
+* Mon Apr 19 1999 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
+  [1.99.2-1]
+- recompiles on new rpm.
+
 * Sun Apr 11 1999 Piotr Czerwiñski <pius@pld.org.pl>
   [1.99.0-1]
 - upgraded to 1.99.0,
-- removed --disable-gtktest and --disable-imlibtest 
+- removed --disable-gtktest and --disable-imlibtest
   from configure options by Artur Frysiak <wiget@pld.org.pl>,
-- fixed passing RPM_OPT_FLAGS during compile,
+- fixed passing $RPM_OPT_FLAGS during compile,
 - added '%dir /usr/X11R6/share/wmakerconf' in %files,
 - cosmetic changes for common l&f.
 
