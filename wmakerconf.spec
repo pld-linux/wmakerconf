@@ -12,7 +12,7 @@ Patch0:		wmakerconf-config.patch
 Icon:		wmakerconf.xpm
 BuildPrereq:	libPropList >= 1.8.3
 BuildPrereq:	gtk+-devel >= 1.2.0
-%requires_pkg   gtk+
+Requires:	glib >= 1.2.0
 %requires_pkg   WindowMaker
 Obsoletes:	wmakerconf-data
 BuildRoot:	/tmp/%{name}-%{version}-root
