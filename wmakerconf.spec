@@ -7,7 +7,9 @@ Version:	2.8.1
 Release:	7
 License:	GPL
 Group:		X11/Window Managers/Tools
-Source0:	http://ulli.on.openave.net/wmakerconf/%{name}-%{version}.tar.bz2
+#Source0:	http://www.windowmaker.org/pub/contrib/source/wmakerconf/%{name}-%{version}.tar.bz2
+Source0:	%{name}-%{version}.tar.bz2
+# Source0-md5:	1dbd2a586cfd351a264f84bc544f6b7a
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 Patch0:		%{name}-subdir.patch
@@ -16,7 +18,7 @@ Patch2:		%{name}-charset.patch
 Patch3:		%{name}-misc.patch
 Patch4:		%{name}-ia64+mkstemp.patch
 Icon:		wmakerconf.xpm
-URL:		http://ulli.on.openave.net/wmakerconf/
+#URL:		http://ulli.on.openave.net/wmakerconf/
 BuildRequires:	WindowMaker-devel >= 0.51.0
 BuildRequires:	autoconf
 BuildRequires:	automake
