@@ -1,8 +1,10 @@
 [Desktop Entry]
 Name=WMakerConf
-Comment=WindowMaker configuration tool
-Comment[pl]=Konfigurator WindowMakera
-Icon=wmakerconf.xpm
+Comment=GTK-based configuration tool for WindowMaker
+Comment[es]=Herramienta de configuración basada en GTK para WindowMaker
+Comment[pl]=Oparty na GTK konfigurator dla WindowMakera
+Comment[pt_BR]=Ferramenta de configuração baseada no GTK para o WindowMaker
+Icon=wmakerconf.png
 Exec=wmakerconf
 Terminal=0
 Type=Application
