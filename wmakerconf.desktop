@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=wmakerconf
+Comment=WindowMaker configuration tool
+Comment[pl]=Konfigurator WindowMakera
+Icon=wmakerconf.xpm
+Exec=wmakerconf
+Terminal=0
+Type=Application
