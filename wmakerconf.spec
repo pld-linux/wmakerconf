@@ -1,7 +1,7 @@
 Summary:	This is a GTK-based configuration tool for WindowMaker
 Summary(pl):	Oparty na GTK konfigurator dla WindowMakera
 Name:		wmakerconf
-Version:	1.99.2
+Version:	1.99.4
 Release:	1
 Group:		X11/Window Managers/Tools
 Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
@@ -21,6 +21,7 @@ BuildPrereq:	XFree86-devel
 BuildPrereq:	xpm-devel
 BuildPrereq:	zlib-devel
 BuildPrereq:	autoconf
+BuildPrereq:	automake
 Requires:	WindowMaker
 Obsoletes:	wmakerconf-data
 BuildRoot:	/tmp/%{name}-%{version}-root
@@ -50,7 +51,7 @@ autoconf
 	--with-wmakerprefix=/usr/X11R6 \
 	--with-wmakersysdir=/etc/X11/WindowMaker 
 
-make CFLAGS="$RPM_OPT_FLAGS"
+make CFLAGS="$RPM_OPT_FLAGS" LDFLAGS="-s"
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -70,21 +71,22 @@ rm -rf $RPM_BUILD_ROOT
 %doc {AUTHORS,ChangeLog,NEWS,README,TODO}.gz
 %config(missingok) /etc/X11/wmconfig/wmakerconf
 
-%lang(ca) /usr/X11R6/share/locale/ca/LC_MESSAGES/*
-%lang(cz) /usr/X11R6/share/locale/cz/LC_MESSAGES/*
-%lang(da) /usr/X11R6/share/locale/da/LC_MESSAGES/*
-%lang(de) /usr/X11R6/share/locale/de/LC_MESSAGES/*
-%lang(el) /usr/X11R6/share/locale/el/LC_MESSAGES/*
-%lang(es) /usr/X11R6/share/locale/es/LC_MESSAGES/*
-%lang(fi) /usr/X11R6/share/locale/fi/LC_MESSAGES/*
-%lang(fr) /usr/X11R6/share/locale/fr/LC_MESSAGES/*
-%lang(hu) /usr/X11R6/share/locale/hu/LC_MESSAGES/*
-%lang(it) /usr/X11R6/share/locale/it/LC_MESSAGES/*
-%lang(ja) /usr/X11R6/share/locale/ja/LC_MESSAGES/*
-%lang(ko) /usr/X11R6/share/locale/ko/LC_MESSAGES/*
-%lang(pt) /usr/X11R6/share/locale/pt/LC_MESSAGES/*
-%lang(ru) /usr/X11R6/share/locale/ru/LC_MESSAGES/*
-%lang(tr) /usr/X11R6/share/locale/tr/LC_MESSAGES/*
+%lang(ca)    /usr/X11R6/share/locale/ca/LC_MESSAGES/*
+%lang(cz)    /usr/X11R6/share/locale/cz/LC_MESSAGES/*
+%lang(da)    /usr/X11R6/share/locale/da/LC_MESSAGES/*
+%lang(de)    /usr/X11R6/share/locale/de/LC_MESSAGES/*
+%lang(el)    /usr/X11R6/share/locale/el/LC_MESSAGES/*
+%lang(es)    /usr/X11R6/share/locale/es/LC_MESSAGES/*
+%lang(fi)    /usr/X11R6/share/locale/fi/LC_MESSAGES/*
+%lang(fr)    /usr/X11R6/share/locale/fr/LC_MESSAGES/*
+%lang(hu)    /usr/X11R6/share/locale/hu/LC_MESSAGES/*
+%lang(it)    /usr/X11R6/share/locale/it/LC_MESSAGES/*
+%lang(ja)    /usr/X11R6/share/locale/ja/LC_MESSAGES/*
+%lang(ko)    /usr/X11R6/share/locale/ko/LC_MESSAGES/*
+%lang(pt_BR) /usr/X11R6/share/locale/pt_BR/LC_MESSAGES/*
+%lang(ro)    /usr/X11R6/share/locale/ro/LC_MESSAGES/*
+%lang(ru)    /usr/X11R6/share/locale/ru/LC_MESSAGES/*
+%lang(tr)    /usr/X11R6/share/locale/tr/LC_MESSAGES/*
 
 %attr(755,root,root) /usr/X11R6/bin/*
 %dir /usr/X11R6/share/wmakerconf
@@ -96,7 +98,6 @@ rm -rf $RPM_BUILD_ROOT
 /usr/X11R6/share/wmakerconf/WMWmakerconf
 /usr/X11R6/share/wmakerconf/wmaker-version
 /usr/X11R6/share/pixmaps/wmakerconf.xpm
-
 
 %changelog
 * Mon Apr 19 1999 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
