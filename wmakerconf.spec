@@ -77,7 +77,7 @@ mudando a lista de propriedades do wmakerconf.
 
 %build
 rm -f missing
-gettextize --copy --force
+%{__gettextize}
 aclocal
 %{__autoconf}
 %{__automake}
