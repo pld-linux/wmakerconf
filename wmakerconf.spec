@@ -97,8 +97,8 @@ make
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT/{%{_datadir}/pixmaps,%{_applnkdir}/Utilities}
 
-make install DESTDIR=$RPM_BUILD_ROOT
-make -C data DESTDIR=$RPM_BUILD_ROOT install
+%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} -C data DESTDIR=$RPM_BUILD_ROOT install
 
 install $RPM_SOURCE_DIR/wmakerconf.xpm $RPM_BUILD_ROOT%{_datadir}/pixmaps
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Utilities
