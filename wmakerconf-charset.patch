@@ -1,0 +1,11 @@
+--- wmakerconf-2.8.1/po/no.po.charset	Mon Jun 25 16:11:59 2001
++++ wmakerconf-2.8.1/po/no.po	Mon Jun 25 16:12:39 2001
+@@ -12,7 +12,7 @@
+ "Last-Translator: \n"
+ "Language-Team: Russian\n"
+ "MIME-Version: 1.0\n"
+-"Content-Type: text/plain; charset=koi8-r\n"
++"Content-Type: text/plain; charset=ISO-8859-1\n"
+ "Content-Transfer-Encoding: 8bit\n"
+ 
+ #: src/dialog.c:74 src/window.c:991
