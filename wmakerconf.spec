@@ -10,10 +10,18 @@ Source0:	http://www-info2.informatik.uni-wuerzburg.de/staff/ulli/wmakerconf/%{na
 Source1:	wmakerconf.wmconfig
 Patch0:		wmakerconf-config.patch
 Icon:		wmakerconf.xpm
-BuildPrereq:	libPropList >= 1.8.3
+BuildPrereq:	libPropList-devel >= 0.8.3
 BuildPrereq:	gtk+-devel >= 1.2.0
-Requires:	glib >= 1.2.0
-%requires_pkg   WindowMaker
+BuildPrereq:	libjpeg-devel
+BuildPrereq:	libpng-devel
+BuildPrereq:	libtiff-devel
+BuildPrereq:	libungif-devel
+BuildPrereq:	WindowMaker-devel
+BuildPrereq:	XFree86-devel
+BuildPrereq:	xpm-devel
+BuildPrereq:	zlib-devel
+BuildPrereq:	autoconf
+Requires:	WindowMaker
 Obsoletes:	wmakerconf-data
 BuildRoot:	/tmp/%{name}-%{version}-root
 
@@ -62,17 +70,6 @@ rm -rf $RPM_BUILD_ROOT
 %doc {AUTHORS,ChangeLog,NEWS,README,TODO}.gz
 %config(missingok) /etc/X11/wmconfig/wmakerconf
 
-%attr(755,root,root) /usr/X11R6/bin/*
-%dir /usr/X11R6/share/wmakerconf
-%attr(755,root,root) /usr/X11R6/share/wmakerconf/*.sh
-%attr(755,root,root) /usr/X11R6/share/wmakerconf/*.pl
-/usr/X11R6/share/wmakerconf/*.xpm
-/usr/X11R6/share/wmakerconf/*.jpg
-/usr/X11R6/share/wmakerconf/MANUAL
-/usr/X11R6/share/wmakerconf/WMWmakerconf
-/usr/X11R6/share/wmakerconf/wmaker-version
-/usr/X11R6/share/pixmaps/wmakerconf.xpm
-
 %lang(ca) /usr/X11R6/share/locale/ca/LC_MESSAGES/*
 %lang(cz) /usr/X11R6/share/locale/cz/LC_MESSAGES/*
 %lang(da) /usr/X11R6/share/locale/da/LC_MESSAGES/*
@@ -88,6 +85,18 @@ rm -rf $RPM_BUILD_ROOT
 %lang(pt) /usr/X11R6/share/locale/pt/LC_MESSAGES/*
 %lang(ru) /usr/X11R6/share/locale/ru/LC_MESSAGES/*
 %lang(tr) /usr/X11R6/share/locale/tr/LC_MESSAGES/*
+
+%attr(755,root,root) /usr/X11R6/bin/*
+%dir /usr/X11R6/share/wmakerconf
+%attr(755,root,root) /usr/X11R6/share/wmakerconf/*.sh
+%attr(755,root,root) /usr/X11R6/share/wmakerconf/*.pl
+/usr/X11R6/share/wmakerconf/*.xpm
+/usr/X11R6/share/wmakerconf/*.jpg
+/usr/X11R6/share/wmakerconf/MANUAL
+/usr/X11R6/share/wmakerconf/WMWmakerconf
+/usr/X11R6/share/wmakerconf/wmaker-version
+/usr/X11R6/share/pixmaps/wmakerconf.xpm
+
 
 %changelog
 * Mon Apr 19 1999 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
