@@ -1,0 +1,11 @@
+--- Makefile.am~	Tue Apr 27 18:08:26 1999
++++ Makefile.am	Mon May 17 16:46:58 1999
+@@ -11,7 +11,7 @@
+ AUTOMAKE_OPTIONS = 1.3
+ ACLOCAL_AMFLAGS  = -I /usr/share/aclocal
+ 
+-SUBDIRS = icons intl src scripts po data
++SUBDIRS = icons intl src scripts po
+ 
+ DISTCLEANFILES = intl/libintl.h
+ 
