@@ -43,8 +43,6 @@ autoconf
 	--disable-gtktest \
 	--disable-imlibtest
 
-make CFLAGS="$RPM_OPT_FLAGS" LDFLAGS="-s"
-
 make
 
 %install
@@ -54,7 +52,7 @@ install -d $RPM_BUILD_ROOT/{usr/X11R6/share/pixmaps,etc/X11/wmconfig}
 install $RPM_SOURCE_DIR/wmakerconf.xpm $RPM_BUILD_ROOT/usr/X11R6/share/pixmaps
 install %{SOURCE1} $RPM_BUILD_ROOT/etc/X11/wmconfig/wmakerconf
 
-gzip -9nf AUTHORS ChangeLog NEWS README TODO MANUAL
+gzip -9nf AUTHORS ChangeLog NEWS README TODO
 
 %clean
 rm -rf $RPM_BUILD_ROOT
