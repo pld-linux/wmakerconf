@@ -2,7 +2,7 @@ Summary:	This is a GTK-based configuration tool for WindowMaker
 Summary(pl):	Oparty na GTK konfigurator dla WindowMakera
 Name:		wmakerconf
 Version:	2.5
-Release:	7
+Release:	8
 License:	GPL
 Group:		X11/Window Managers/Tools
 Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
@@ -54,7 +54,7 @@ Summary:	Data files for GTK-based configuration tool for Window Maker
 Summary(pl):	Pliki danych dla opartego na GTK konfiguratora WindowMakera
 Group:		X11/Window Managers/Tools
 Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
-Requires:	WindowMaker = 0.61.1
+Requires:	WindowMaker = 0.62.1
 
 %description data
 Data files containing information relating to the latest version of
