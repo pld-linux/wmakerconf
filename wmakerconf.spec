@@ -1,7 +1,7 @@
 Summary:	This is a GTK-based configuration tool for WindowMaker
 Summary(pl):	Oparty na GTK konfigurator dla WindowMakera
 Name:		wmakerconf
-Version:	1.8
+Version:	1.8.3
 Release:	1
 Group:		X11/Window Managers
 Group(pl):	X11/Zarz±dcy Okien
@@ -89,6 +89,10 @@ rm -rf $RPM_BUILD_ROOT
 %lang(tr) /usr/X11R6/share/locale/tr/LC_MESSAGES/*
 
 %changelog
+* Thu Mar 18 1999 Piotr Czerwiñski <pius@pld.org.pl>
+  [1.8.3-1]
+- upgraded to 1.8.3.
+
 * Wed Mar 17 1999 Piotr Czerwiñski <pius@pld.org.pl>
   [1.8-1]
 - upgraded to 1.8,
