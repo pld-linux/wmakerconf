@@ -1,0 +1,33 @@
+--- wmakerconf-2.8.1/src/rootmenu.c.foo	Mon Oct 15 10:02:23 2001
++++ wmakerconf-2.8.1/src/rootmenu.c	Mon Oct 15 10:03:30 2001
+@@ -28,6 +28,7 @@
+  */
+ 
+ #include "config.h"
++#include "dndtree.h"
+ 
+ #include <stdio.h>
+ #include <stdlib.h>
+--- wmakerconf-2.8.1/src/misc.c.foo	Mon Sep 25 14:15:23 2000
++++ wmakerconf-2.8.1/src/misc.c	Mon Oct 15 10:10:43 2001
+@@ -104,14 +104,12 @@
+ char *
+ get_temporary_file_name (void)
+ {
+-#ifdef HAVE_TEMPNAM
+-   char *name = (char *) tempnam (NULL, "wmcnf");
+-#else  /* not HAVE_TEMPNAM */
+-   char *name = tmpnam (NULL);
+-#endif /* not HAVE_TEMPNAM */
+-
+-   if (name)
+-      return name;
++   char *name = strdup("wmcnfXXXXXX");
++   int fd = mkstemp(name);
++   if (name) {
++	   close(fd);
++	   return name;
++   }
+    else
+       return "/tmp/wmakerconf.tmp";
+ }
