@@ -103,28 +103,15 @@ strip $RPM_BUILD_ROOT%{_bindir}/*
 
 gzip -9nf AUTHORS ChangeLog NEWS README TODO
 
+%find_lang %{name}
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files
+%files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc {AUTHORS,ChangeLog,NEWS,README,TODO}.gz
 %{_sysconfdir}/wmconfig/%{name}
-
-%lang(ca)    %{_datadir}/locale/ca/LC_MESSAGES/%{name}.mo
-%lang(da)    %{_datadir}/locale/da/LC_MESSAGES/%{name}.mo
-%lang(de)    %{_datadir}/locale/de/LC_MESSAGES/%{name}.mo
-%lang(fi)    %{_datadir}/locale/fi/LC_MESSAGES/%{name}.mo
-%lang(fr)    %{_datadir}/locale/fr/LC_MESSAGES/%{name}.mo
-%lang(hu)    %{_datadir}/locale/hu/LC_MESSAGES/%{name}.mo
-%lang(it)    %{_datadir}/locale/it/LC_MESSAGES/%{name}.mo
-%lang(ja)    %{_datadir}/locale/ja/LC_MESSAGES/%{name}.mo
-%lang(ko)    %{_datadir}/locale/ko/LC_MESSAGES/%{name}.mo
-%lang(no)    %{_datadir}/locale/no/LC_MESSAGES/%{name}.mo
-%lang(pl)    %{_datadir}/locale/pl/LC_MESSAGES/%{name}.mo
-%lang(pt_BR) %{_datadir}/locale/pt_BR/LC_MESSAGES/%{name}.mo
-%lang(ru)    %{_datadir}/locale/ru/LC_MESSAGES/%{name}.mo
-%lang(sv)    %{_datadir}/locale/sv/LC_MESSAGES/%{name}.mo
 
 %attr(755,root,root) %{_bindir}/*
 %dir %{_datadir}/%{name}
@@ -139,26 +126,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %{_datadir}/%{name}/WMWmakerconf
 %{_datadir}/%{name}/wmaker-version
-
-%lang(ca)    %{_datadir}/locale/ca/LC_MESSAGES/%{name}-data.mo
-%lang(cz)    %{_datadir}/locale/cz/LC_MESSAGES/%{name}-data.mo
-%lang(da)    %{_datadir}/locale/da/LC_MESSAGES/%{name}-data.mo
-%lang(de)    %{_datadir}/locale/de/LC_MESSAGES/%{name}-data.mo
-%lang(el)    %{_datadir}/locale/el/LC_MESSAGES/%{name}-data.mo
-%lang(es)    %{_datadir}/locale/es/LC_MESSAGES/%{name}-data.mo
-%lang(fi)    %{_datadir}/locale/fi/LC_MESSAGES/%{name}-data.mo
-%lang(fr)    %{_datadir}/locale/fr/LC_MESSAGES/%{name}-data.mo
-%lang(hu)    %{_datadir}/locale/hu/LC_MESSAGES/%{name}-data.mo
-%lang(it)    %{_datadir}/locale/it/LC_MESSAGES/%{name}-data.mo
-%lang(ja)    %{_datadir}/locale/ja/LC_MESSAGES/%{name}-data.mo
-%lang(ko)    %{_datadir}/locale/ko/LC_MESSAGES/%{name}-data.mo
-%lang(no)    %{_datadir}/locale/no/LC_MESSAGES/%{name}-data.mo
-%lang(pl)    %{_datadir}/locale/pl/LC_MESSAGES/%{name}-data.mo
-%lang(pt_BR) %{_datadir}/locale/pt_BR/LC_MESSAGES/%{name}-data.mo
-%lang(ro)    %{_datadir}/locale/ro/LC_MESSAGES/%{name}-data.mo
-%lang(ru)    %{_datadir}/locale/ru/LC_MESSAGES/%{name}-data.mo
-%lang(sv)    %{_datadir}/locale/sv/LC_MESSAGES/%{name}-data.mo
-%lang(tr)    %{_datadir}/locale/tr/LC_MESSAGES/%{name}-data.mo
 
 %changelog
 * Thu May 20 1999 Piotr Czerwiñski <pius@pld.org.pl> 
