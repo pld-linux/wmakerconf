@@ -21,7 +21,6 @@ BuildRequires:	libpng-devel
 BuildRequires:	libtiff-devel
 BuildRequires:	libungif-devel
 BuildRequires:	WindowMaker-devel >= 0.51.0
-BuildRequires:	XFree86-devel
 BuildRequires:	xpm-devel
 BuildRequires:	zlib-devel
 BuildRequires:	autoconf
