@@ -25,6 +25,7 @@ BuildPrereq:	xpm-devel
 BuildPrereq:	zlib-devel
 BuildPrereq:	autoconf
 BuildPrereq:	automake
+BuildPrereq:	gettext
 Requires:	WindowMaker
 Requires:	wmakerconf-data
 BuildRoot:	/tmp/%{name}-%{version}-root
@@ -70,7 +71,7 @@ cp %{SOURCE2} po/pl.po
 cp %{SOURCE3} data/po/pl.po
 
 %build
-%GNUconfigure -- --prefix=/usr/X11R6 --with-wmakerdataprefix=/usr/X11R6/share --with-wmakeretcprefix=/etc/X11 
+%GNUconfigure -- --prefix=/usr/X11R6 --with-wmakerdataprefix=/usr/X11R6/share --with-wmakeretcprefix=/etc/X11 --enable-themes-org
 
 make
 
