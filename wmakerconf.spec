@@ -14,8 +14,8 @@ Patch0:		wmakerconf-pl.patch
 Patch1:		wmakerconf-data-pl.patch
 Patch2:		wmakerconf-subdir.patch
 Icon:		wmakerconf.xpm
-BuildPrereq:	libPropList-devel >= 0.8.3
-BuildPrereq:	gtk+-devel >= 1.2.0
+BuildPrereq:	libPropList-devel
+BuildPrereq:	gtk+-devel
 BuildPrereq:	libjpeg-devel
 BuildPrereq:	libpng-devel
 BuildPrereq:	libtiff-devel
@@ -76,10 +76,7 @@ cp %{SOURCE2} po/pl.po
 cp %{SOURCE3} data/po/pl.po
 
 %build
-%{GNUconfigure} --prefix=%{_prefix} \
-	--with-wmakerdataprefix=%{_datadir} \
-	--with-wmakeretcprefix=%{_sysconfdir} \
-	--enable-themes-org
+%GNUconfigure -- --prefix=%{_prefix} --with-wmakerdataprefix=%{_datadir} --with-wmakeretcprefix=%{_sysconfdir} --enable-themes-org
 
 make
 
@@ -104,6 +101,7 @@ strip $RPM_BUILD_ROOT%{_bindir}/*
 gzip -9nf AUTHORS ChangeLog NEWS README TODO
 
 %find_lang %{name}
+%find_lang %{name}-data
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -122,7 +120,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/%{name}/MANUAL
 %{_datadir}/pixmaps/%{name}.xpm
 
-%files data
+%files data -f %{name}-data.lang
 %defattr(644,root,root,755)
 %{_datadir}/%{name}/WMWmakerconf
 %{_datadir}/%{name}/wmaker-version
