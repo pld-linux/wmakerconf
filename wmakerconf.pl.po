@@ -4,25 +4,24 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: wmakerconf 2.2\n"
-"POT-Creation-Date: 1999-08-19 22:37+0200\n"
-"PO-Revision-Date: 1999-08-29 13:54+0200\n"
+"Project-Id-Version: wmakerconf 2.3\n"
+"POT-Creation-Date: 1999-09-28 22:21+0200\n"
+"PO-Revision-Date: 1999-10-11 13:54+0200\n"
 "Last-Translator: Piotr Czerwiñski <pius@pld.org.pl>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=iso-8859-2\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/dialog.c:73 src/window.c:1086
+#: src/dialog.c:73 src/window.c:1112
 msgid "No"
 msgstr "Nie"
 
-#: src/dialog.c:73 src/window.c:1075
+#: src/dialog.c:73 src/window.c:1101
 msgid "Yes"
 msgstr "Tak"
 
-#: src/dialog.c:76 src/menu.c:306 src/menu.c:388 src/tileofday.c:445
-#: src/wmconfig.c:349
+#: src/dialog.c:76 src/menu.c:324 src/menu.c:406 src/wmconfig.c:349
 msgid "Close"
 msgstr "Zamknij"
 
@@ -50,96 +49,105 @@ msgstr ""
 "Naci¶nij ten przycisk, aby uaktywniæ tryb przechwytywania - nastêpnie "
 "wprowad¼ ¿±dan± sekwencjê klawiszy."
 
-#: src/menu.c:118 src/themes.c:825
+#: src/menu.c:121 src/themes.c:825
 msgid "Save"
-msgstr "Zachowaj"
+msgstr "Zapisz"
 
-#: src/menu.c:124
+#: src/menu.c:127
 msgid "Open..."
 msgstr "Otwórz..."
 
-#: src/menu.c:131
+#: src/menu.c:134
 msgid "Revert..."
 msgstr "Przywróæ..."
 
-#: src/menu.c:142
+#: src/menu.c:145
 msgid "Upgrade"
 msgstr "Uaktualnij"
 
-#: src/menu.c:151
+#: src/menu.c:154
 msgid "Exit"
 msgstr "Zakoñcz"
 
-#: src/menu.c:156 src/menu.c:298
+#: src/menu.c:159
+msgid "Tooltips"
+msgstr "Podpowiedzi"
+
+#: src/menu.c:165 src/menu.c:316
 msgid "About"
 msgstr "O programie"
 
-#: src/menu.c:161 src/menu.c:380
+#: src/menu.c:170 src/menu.c:398
 msgid "Manual"
 msgstr "Podrêcznik"
 
-#: src/menu.c:166 src/wmconfig.c:341
+#: src/menu.c:175 src/wmconfig.c:341
 msgid "Messages"
 msgstr "Wiadomo¶ci"
 
-#: src/menu.c:173
-msgid "wm.themes.org"
-msgstr "wm.themes.org..."
+#: src/menu.c:181 src/previews.c:162 src/themes.c:596 src/themes.c:604
+#: src/themes.c:2315
+msgid "Update previews"
+msgstr "Uaktualnij podgl±dy"
 
-#: src/menu.c:178
+#: src/menu.c:191
+msgid "wm.themes.org"
+msgstr "wm.themes.org"
+
+#: src/menu.c:196
 msgid "Linuxberg themes"
 msgstr "Tematy z Linuxberg"
 
-#: src/menu.c:184
+#: src/menu.c:202
 msgid "Largo's themes"
 msgstr "Tematy z Largo"
 
-#: src/menu.c:193
+#: src/menu.c:211
 msgid "Homepage"
 msgstr "Strona domowa"
 
-#: src/menu.c:201
+#: src/menu.c:219
 msgid "File"
 msgstr "Plik"
 
-#: src/menu.c:205
+#: src/menu.c:223
 msgid "Themes"
 msgstr "Tematy"
 
-#: src/menu.c:209
+#: src/menu.c:227
 msgid "Help"
 msgstr "Pomoc"
 
-#: src/menu.c:232
+#: src/menu.c:250
 msgid "Exit wmakerconf"
 msgstr "Koñczy program wmakerconf"
 
-#: src/menu.c:239
+#: src/menu.c:257
 msgid "Save WindowMaker file"
-msgstr "Zachowuje plik WindowMaker"
+msgstr "Zapisuje plik WindowMaker"
 
-#: src/menu.c:248
+#: src/menu.c:266
 msgid "Documentation"
 msgstr "Dokumentacja"
 
-#: src/menu.c:256
+#: src/menu.c:274
 msgid "Upgrade wmakerconf-data package via HTTP."
 msgstr "Uaktualnia pakiet wmakerconf-data przez HTTP."
 
-#: src/menu.c:264
+#: src/menu.c:282
 msgid "Wmakerconf homepage"
 msgstr "Strona domowa programu wmakerconf"
 
-#: src/menu.c:468 src/previews.c:240 src/themes.c:840 src/themes.c:1441
-#: src/themes.c:1880 src/tileofday.c:996 src/window.c:1092
+#: src/menu.c:486 src/previews.c:239 src/themes.c:840 src/themes.c:1441
+#: src/themes.c:1880 src/window.c:1118
 msgid "Cancel"
 msgstr "Anuluj"
 
-#: src/menu.c:468 src/previews.c:230
+#: src/menu.c:486 src/previews.c:229
 msgid "OK"
 msgstr "OK"
 
-#: src/menu.c:469
+#: src/menu.c:487
 msgid ""
 "Revert to backupfile of `WindowMaker' \n"
 "and `WMRootMenu' and exit wmakerconf?"
@@ -147,7 +155,7 @@ msgstr ""
 "Odtworzyæ z kopii zapasowej plik `WindowMaker' \n"
 "oraz `WMRootMenu' i zakoñczyæ program wmakerconf?"
 
-#: src/menu.c:482
+#: src/menu.c:500
 msgid ""
 "Can't revert to backupfile of `WindowMaker'. Please manually revert from "
 "file WindowMaker.bak."
@@ -155,7 +163,7 @@ msgstr ""
 "Nie mo¿na odtworzyæ pliku `WindowMaker' z kopii zapasowej. Przywróæ ten plik "
 "rêcznie z pliku WindowMaker.bak."
 
-#: src/menu.c:485
+#: src/menu.c:503
 msgid ""
 "Can't revert to backupfile of `WMRootMenu'. Please manually revert from file "
 "WMRootMenu.bak."
@@ -163,11 +171,11 @@ msgstr ""
 "Nie mo¿na odtworzyæ pliku `WMRootMenu' z kopii zapasowej. Przywróæ ten plik "
 "rêcznie z pliku WMRootMenu.bak."
 
-#: src/menu.c:545
+#: src/menu.c:563
 msgid "Can't open selected file."
 msgstr "Nie mo¿na otworzyæ zaznaczonego pliku."
 
-#: src/menu.c:560
+#: src/menu.c:578
 msgid "Open a style, theme, or WindowMaker file."
 msgstr "Otwiera styl, temat lub plik WindowMakera."
 
@@ -175,7 +183,7 @@ msgstr "Otwiera styl, temat lub plik WindowMakera."
 msgid "Out of memory!"
 msgstr "Brak pamiêci!"
 
-#: src/misc.c:203
+#: src/misc.c:213
 #, c-format
 msgid ""
 "Can't find passwd entry to expand\n"
@@ -184,42 +192,38 @@ msgstr ""
 "Nie mo¿na znale¼æ wpisu w passwd\n"
 "do rozwiniêcia `~' w nazwie pliku %s"
 
-#: src/path.c:146 src/rootmenu.c:775
+#: src/path.c:157 src/rootmenu.c:773
 msgid "Insert..."
 msgstr "Wstaw..."
 
-#: src/path.c:149 src/rootmenu.c:756 src/rootmenu.c:778
+#: src/path.c:160 src/rootmenu.c:754 src/rootmenu.c:776
 msgid "Insert new directory."
 msgstr "Wstawia nowy katalog."
 
-#: src/path.c:154 src/rootmenu.c:783 src/texture.c:1158 src/themes.c:1432
+#: src/path.c:165 src/rootmenu.c:781 src/texture.c:1115 src/themes.c:1432
 msgid "Remove"
 msgstr "Usuñ"
 
-#: src/path.c:158 src/rootmenu.c:786
+#: src/path.c:169 src/rootmenu.c:784
 msgid "Remove selected directory."
 msgstr "Usuwa zaznaczony katalog."
 
 #.
 #. *  Fileselection dialog window
 #.
-#: src/path.c:249 src/rootmenu.c:2027 src/themes.c:1295
+#: src/path.c:260 src/rootmenu.c:2025 src/themes.c:1295
 msgid "Choose directory"
 msgstr "Wybierz katalog"
 
-#: src/previews.c:148
+#: src/previews.c:147
 msgid "Pixmap Browser"
-msgstr "Przegl±darka Pixmap"
+msgstr "Przegl±darka Piksmap"
 
-#: src/previews.c:163 src/themes.c:596 src/themes.c:604 src/themes.c:2311
-msgid "Update previews"
-msgstr "Uaktualnij podgl±dy"
-
-#: src/previews.c:185 src/texture.c:2414
+#: src/previews.c:184
 msgid "Window Maker's searchpath for pixmaps"
-msgstr "¦cie¿ka przeszukiwania pixmap"
+msgstr "¦cie¿ka przeszukiwania piksmap"
 
-#: src/previews.c:217
+#: src/previews.c:216
 msgid "Filename:"
 msgstr "Nazwa pliku:"
 
@@ -259,7 +263,7 @@ msgstr ""
 #: src/rootmenu.c:356
 #, c-format
 msgid "Window Maker root menu file '%s' saved."
-msgstr "Plik g³ównego menu Window Makera '%s' zachowany."
+msgstr "Plik g³ównego menu Window Makera '%s' zapisany."
 
 #: src/rootmenu.c:363
 #, c-format
@@ -270,23 +274,23 @@ msgstr ""
 "Nie mo¿na zapisaæ pliku menu\n"
 "`%s'"
 
-#: src/rootmenu.c:517
+#: src/rootmenu.c:515
 msgid "Menu(item) label"
 msgstr "Etykieta (pozycji) menu"
 
-#: src/rootmenu.c:541
+#: src/rootmenu.c:539
 msgid "Command"
 msgstr "Polecenie"
 
-#: src/rootmenu.c:564
+#: src/rootmenu.c:562
 msgid "Show confirm panel"
 msgstr "Poka¿ panel potwierdzenia"
 
-#: src/rootmenu.c:580 src/rootmenu.c:609 src/rootmenu.c:732
+#: src/rootmenu.c:578 src/rootmenu.c:607 src/rootmenu.c:730
 msgid "Command:"
 msgstr "Polecenie:"
 
-#: src/rootmenu.c:588
+#: src/rootmenu.c:586
 msgid ""
 "Commandline of application to execute. A %s directive is replaced by the "
 "current selection, %w by the XID of the focused window, and "
@@ -298,15 +302,15 @@ msgstr ""
 "wywo³uje okno wstawiania o okre¶lonym tytule, z (opcjonalnym) zg³oszeniem i "
 "wprowadzonym tekstem."
 
-#: src/rootmenu.c:616
+#: src/rootmenu.c:614
 msgid "Commandline to generate dynamic menu."
 msgstr "Polecenie generuj±ce dynamiczne menu."
 
-#: src/rootmenu.c:624 src/rootmenu.c:690
+#: src/rootmenu.c:622 src/rootmenu.c:688
 msgid "Import"
 msgstr "Importuj"
 
-#: src/rootmenu.c:630
+#: src/rootmenu.c:628
 msgid ""
 "Import output of command. The 'include dynamic menu' item is removed "
 "afterwards."
@@ -314,25 +318,25 @@ msgstr ""
 "Importuje wynik polecenia. Pozycja 'do³±cz dynamiczne menu' jest pó¼niej "
 "usuwana."
 
-#: src/rootmenu.c:649
+#: src/rootmenu.c:647
 msgid "Name:"
 msgstr "Nazwa:"
 
-#: src/rootmenu.c:657
+#: src/rootmenu.c:655
 msgid "Name of window manager to start. If omitted, restart Window Maker."
 msgstr ""
 "Nazwa zarz±dcy okien do uruchomienia. Je¶li pominiêto, Window Maker zostanie "
 "uruchomiony ponownie."
 
-#: src/rootmenu.c:675
+#: src/rootmenu.c:673
 msgid "File:"
 msgstr "Plik:"
 
-#: src/rootmenu.c:682
+#: src/rootmenu.c:680
 msgid "Filename of menu to include."
 msgstr "Nazwa pliku menu do do³±czenia."
 
-#: src/rootmenu.c:696
+#: src/rootmenu.c:694
 msgid ""
 "Import contents of selected menu file. The 'include menu file' item is "
 "removed afterwards."
@@ -340,20 +344,20 @@ msgstr ""
 "Importuje zawarto¶æ wybranego pliku menu. Pozycja 'do³±cz plik menu' jest "
 "pó¼niej usuwana."
 
-#: src/rootmenu.c:703 src/simple.c:221 src/texture.c:616 src/texture.c:719
+#: src/rootmenu.c:701 src/simple.c:238 src/texture.c:610 src/texture.c:687
 #: src/themes.c:779 src/themes.c:1793 src/themes.c:1815
 msgid "Browse..."
 msgstr "Przegl±daj..."
 
-#: src/rootmenu.c:706
+#: src/rootmenu.c:704
 msgid "Open file browser to select include file."
 msgstr "Otwórz przegl±darkê plików, aby zaznaczyæ plik do do³±czenia."
 
-#: src/rootmenu.c:722
+#: src/rootmenu.c:720
 msgid "Directory list"
 msgstr "Lista katalogów"
 
-#: src/rootmenu.c:739
+#: src/rootmenu.c:737
 msgid ""
 "Recursively, a submenu with all files and subdirectories of the given "
 "directory list is generated - each file is then used as argument for "
@@ -365,148 +369,148 @@ msgstr ""
 "u¿yty jako argument dla `polecenia'. Je¶li `polecenie' jest pominiête to "
 "generowane jest podmenu zawieraj±ce wszystkie pliki wykonywalne."
 
-#: src/rootmenu.c:797
+#: src/rootmenu.c:795
 msgid "Strip suffix of filenames"
-msgstr "Usuñ sufiksy w nazwach plików."
+msgstr "Usuñ koñcówki w nazwach plików"
 
-#: src/rootmenu.c:811 src/shortcuts.c:196
+#: src/rootmenu.c:809 src/shortcuts.c:195
 msgid "Shortcut"
 msgstr "Skrót"
 
-#: src/rootmenu.c:884
+#: src/rootmenu.c:882
 msgid "Submenu"
 msgstr "Podmenu"
 
-#: src/rootmenu.c:886
+#: src/rootmenu.c:884
 msgid "Include menu file"
 msgstr "Do³±cz plik menu"
 
-#: src/rootmenu.c:888
+#: src/rootmenu.c:886
 msgid "Include dynamic menu"
 msgstr "Do³±cz dynamiczne menu"
 
-#: src/rootmenu.c:890
+#: src/rootmenu.c:888
 msgid "Include directory menu"
 msgstr "Do³±cz menu z katalogu"
 
-#: src/rootmenu.c:892
+#: src/rootmenu.c:890
 msgid "Execute application"
 msgstr "Uruchom aplikacjê"
 
-#: src/rootmenu.c:894
+#: src/rootmenu.c:892
 msgid "Execute shell command"
 msgstr "Wykonaj polecenie pow³oki"
 
-#: src/rootmenu.c:896
+#: src/rootmenu.c:894
 msgid "Refresh screen"
 msgstr "Od¶wie¿ ekran"
 
-#: src/rootmenu.c:898
+#: src/rootmenu.c:896
 msgid "(Re)start window manager"
 msgstr "Uruchom (ponownie) zarz±dcê okien"
 
-#: src/rootmenu.c:900
+#: src/rootmenu.c:898
 msgid "Exit Window Maker"
 msgstr "Zakoñcz Window Makera"
 
-#: src/rootmenu.c:902
+#: src/rootmenu.c:900
 msgid "Exit session"
 msgstr "Zakoñcz sesjê"
 
-#: src/rootmenu.c:904
+#: src/rootmenu.c:902
 msgid "Workspace menu"
 msgstr "Menu pulpitu"
 
-#: src/rootmenu.c:906
+#: src/rootmenu.c:904
 msgid "Arrange miniwindows"
 msgstr "Rozmieszczaj miniokna"
 
-#: src/rootmenu.c:908
+#: src/rootmenu.c:906
 msgid "Hide other windows"
 msgstr "Ukryj inne okna"
 
-#: src/rootmenu.c:910
+#: src/rootmenu.c:908
 msgid "Show all windows"
 msgstr "Poka¿ wszystkie okna"
 
-#: src/rootmenu.c:912
+#: src/rootmenu.c:910
 msgid "Save session"
-msgstr "Zachowaj sesjê"
+msgstr "Zapisz sesjê"
 
-#: src/rootmenu.c:914
+#: src/rootmenu.c:912
 msgid "Discard session data"
 msgstr "Zignoruj dane sesji"
 
-#: src/rootmenu.c:916
+#: src/rootmenu.c:914
 msgid "Show info panel"
 msgstr "Poka¿ panel informacyjny"
 
-#: src/rootmenu.c:918
+#: src/rootmenu.c:916
 msgid "Show legal panel"
 msgstr "Poka¿ panel o prawach autorskich"
 
-#: src/rootmenu.c:1522
+#: src/rootmenu.c:1520
 msgid "Insert new command"
 msgstr "Wstaw nowe polecenie"
 
-#: src/rootmenu.c:1528
+#: src/rootmenu.c:1526
 msgid "Insert new submenu"
 msgstr "Wstaw nowe podmenu"
 
-#: src/rootmenu.c:1535
+#: src/rootmenu.c:1533
 msgid "Insert GNOME menu"
 msgstr "Wstaw menu GNOME"
 
-#: src/rootmenu.c:1544
+#: src/rootmenu.c:1542
 msgid "Insert KDE menu"
 msgstr "Wstaw menu KDE"
 
-#: src/rootmenu.c:1552
+#: src/rootmenu.c:1550
 msgid "Insert RedHat menu"
 msgstr "Wstaw menu RedHata"
 
-#: src/rootmenu.c:1560
+#: src/rootmenu.c:1558
 msgid "Insert Debian menu"
 msgstr "Wstaw menu Debiana"
 
-#: src/rootmenu.c:1568
+#: src/rootmenu.c:1566
 msgid "Insert default menu"
 msgstr "Wstaw domy¶lne menu"
 
-#: src/rootmenu.c:1578
+#: src/rootmenu.c:1576
 msgid "Cut item/submenu"
 msgstr "Wytnij pozycjê/podmenu"
 
-#: src/rootmenu.c:1584
+#: src/rootmenu.c:1582
 msgid "Paste item/submenu"
 msgstr "Wklej pozycjê/podmenu"
 
-#: src/rootmenu.c:1594
+#: src/rootmenu.c:1592
 msgid "Expand submenus"
 msgstr "Rozwiñ wszystkie podmenu"
 
-#: src/rootmenu.c:1600
+#: src/rootmenu.c:1598
 msgid "Collapse submenus"
 msgstr "Zwiñ wszystkie podmenu"
 
 #.
 #. *  Fileselection dialog window
 #.
-#: src/rootmenu.c:1777
+#: src/rootmenu.c:1775
 msgid "Menu file selection"
 msgstr "Wybór pliku menu"
 
-#: src/rootmenu.c:1886
+#: src/rootmenu.c:1884
 #, c-format
 msgid "Output of command '%s'"
 msgstr "Wynik polecenia '%s'"
 
-#: src/rootmenu.c:1889
+#: src/rootmenu.c:1887
 #, c-format
 msgid "Imported file '%s'"
 msgstr "Importowany plik '%s'"
 
-#: src/rootmenu.c:2002
+#: src/rootmenu.c:2000
 msgid ""
 "Can't execute dynamic menu command.\n"
 "Please check `stderr' for more details."
@@ -514,12 +518,12 @@ msgstr ""
 "Nie mo¿na wykonaæ polecenia dynamicznego menu.\n"
 "Sprawd¼ `stderr', aby uzyskaæ wiêcej szczegó³ów."
 
-#: src/rootmenu.c:2179 src/wmconfig.c:130
+#: src/rootmenu.c:2177 src/wmconfig.c:130
 #, c-format
 msgid "Can't read file '%s'"
 msgstr "Nie mo¿na odczytaæ pliku '%s'"
 
-#: src/rootmenu.c:2205
+#: src/rootmenu.c:2203
 #, c-format
 msgid ""
 "Can't convert old style menu\n"
@@ -532,7 +536,7 @@ msgstr ""
 "do nowego formatu.\n"
 "Sprawd¼ `stderr', aby uzyskaæ wiêcej szczegó³ów."
 
-#: src/rootmenu.c:2218
+#: src/rootmenu.c:2216
 #, c-format
 msgid ""
 "Can't parse generated menu file\n"
@@ -543,24 +547,52 @@ msgstr ""
 "`%s'.\n"
 "Sprawd¼ sk³adniê w tym pliku."
 
-#: src/simple.c:218
+#: src/simple.c:235
 msgid "Font"
 msgstr "Czcionka"
 
-#: src/simple.c:310
+#: src/simple.c:304
+msgid "Color of title text"
+msgstr "Kolor tekstu na pasku tytu³owym"
+
+#: src/simple.c:311 src/texture.c:2776
+msgid "Solid color"
+msgstr "Jednolity kolor"
+
+#: src/simple.c:312
+msgid "Drop shadow"
+msgstr "Cieniowany"
+
+#: src/simple.c:317
+msgid "A solid color or a drop shadow."
+msgstr "Jednolity kolor lub cieniowany."
+
+#: src/simple.c:332
+msgid "Foreground"
+msgstr "Pierwszy plan"
+
+#: src/simple.c:336
+msgid "Shadow 1"
+msgstr "Cieñ 1"
+
+#: src/simple.c:340
+msgid "Shadow 2"
+msgstr "Cieñ 2"
+
+#: src/simple.c:391
 #, c-format
 msgid "Undefined boolean value '%s' converted to true."
 msgstr "Niezdefiniowana warto¶æ logiczna '%s' zmieniona na 'prawda'."
 
-#: src/simple.c:457
+#: src/simple.c:647
 msgid "Font selection"
 msgstr "Wybór czcionki"
 
-#: src/texture.c:238
+#: src/texture.c:235
 msgid "Workspace"
 msgstr "Pulpit"
 
-#: src/texture.c:245
+#: src/texture.c:242
 msgid ""
 "For each workspace a different texture can be specified. The texture of the "
 "default workspace is used if the texture type is set to 'default' for a "
@@ -570,40 +602,40 @@ msgstr ""
 "konkretnego pulpitu zostanie wybrany 'domy¶lny' rodzaj tekstury, to u¿yta "
 "zostanie tekstura domy¶lnego pulpitu."
 
-#: src/texture.c:271
+#: src/texture.c:268
 msgid ""
 "A solid color, a pixmap, a gradient, or a gradient combined with a pixmap. "
 "If 'None' is selected, then the root background is not changed by Window "
 "Maker. If 'Default' is selected, then the texture of the default workspace "
 "is used"
 msgstr ""
-"Jednolity kolor, pixmapa, gradient lub gradient po³±czony z pixmap±. Je¶li "
+"Jednolity kolor, piksmapa, gradient lub gradient po³±czony z piksmap±. Je¶li "
 "'Brak', g³ówne t³o nie jest zmieniane przez Window Makera. W przypadku, gdy "
 "wybrano rodzaj 'Domy¶lny', u¿yta zostanie tekstura domy¶lnego pulpitu."
 
-#: src/texture.c:283
+#: src/texture.c:280
 msgid ""
 "A solid color, a pixmap, a gradient, or a gradient combined with a pixmap."
-msgstr "Jednolity kolor, pixmapa, gradient lub gradient po³±czony z pixmap±."
+msgstr "Jednolity kolor, piksmapa, gradient lub gradient po³±czony z piksmap±."
 
-#: src/texture.c:294
+#: src/texture.c:291
 msgid ""
 "A solid color, a pixmap, a gradient, or a gradient combined with a pixmap. "
 "If 'None' is selected, then the root background is not changed by Window "
 "Maker."
 msgstr ""
-"Jednolity kolor, pixmapa, gradient lub gradient po³±czony z pixmap±. Je¶li "
+"Jednolity kolor, piksmapa, gradient lub gradient po³±czony z piksmap±. Je¶li "
 "'Brak', g³ówne t³o nie jest zmieniane przez Window Makera."
 
-#: src/texture.c:305
+#: src/texture.c:302
 msgid "Type"
 msgstr "Rodzaj"
 
-#: src/texture.c:517 src/texture.c:2818
+#: src/texture.c:511 src/texture.c:2778
 msgid "Pixmap"
-msgstr "Pixmapa"
+msgstr "Piksmapa"
 
-#: src/texture.c:524
+#: src/texture.c:518
 msgid ""
 "Centered: The pixmap will be shown centered.\n"
 "Tiled: The pixmap will be tiled in the destination.\n"
@@ -611,53 +643,45 @@ msgid ""
 "Scaled (x:y): The pixmap will be scaled to adapt to the destination's size "
 "but will maintain aspect ratio."
 msgstr ""
-"Wy¶rodkowana: Pixmapa zostanie wy¶rodkowana na ekranie.\n"
-"S±siaduj±ca: Powielone pixmapy zostan± u³o¿one jedna przy drugiej.\n"
-"Skalowana: Pixmapa zostanie dostosowana do rozmiarów ekranu.\n"
-"Skalowana (x:y): Pixmapa zostanie dostosowana do rozmiarów ekranu z "
+"Wy¶rodkowana: Piksmapa zostanie wy¶rodkowana na ekranie.\n"
+"S±siaduj±ca: Powielone piksmapy zostan± u³o¿one jedna przy drugiej.\n"
+"Skalowana: Piksmapa zostanie dostosowana do rozmiarów ekranu.\n"
+"Skalowana (x:y): Piksmapa zostanie dostosowana do rozmiarów ekranu z "
 "zachowaniem oryginalnych proporcji."
 
-#: src/texture.c:538
+#: src/texture.c:532
 msgid ""
 "Centered: The pixmap will be shown centered.\n"
 "Tiled: The pixmap will be tiled in the destination.\n"
 "Scaled: The pixmap will be scaled to adapt to the destination's size."
 msgstr ""
-"Wy¶rodkowana: Pixmapa zostanie wy¶rodkowana na ekranie.\n"
-"S±siaduj±ca: Powielone pixmapy zostan± u³o¿one jedna przy drugiej.\n"
-"Skalowana: Pixmapa zostanie dostosowana do rozmiarów ekranu."
+"Wy¶rodkowana: Piksmapa zostanie wy¶rodkowana na ekranie.\n"
+"S±siaduj±ca: Powielone piksmapy zostan± u³o¿one jedna przy drugiej.\n"
+"Skalowana: Piksmapa zostanie dostosowana do rozmiarów ekranu."
 
-#: src/texture.c:596 src/texture.c:703
+#: src/texture.c:590 src/texture.c:671
 msgid ""
 "Filename of the pixmap. <RETURN> checks if the pixmap filename is valid."
 msgstr ""
-"Nazwa pliku pixmapy. <RETURN> sprawdza, czy nazwa pliku jest prawid³owa."
+"Nazwa pliku piksmapy. <RETURN> sprawdza, czy nazwa pliku jest prawid³owa."
 
-#: src/texture.c:621 src/texture.c:724
+#: src/texture.c:615 src/texture.c:692
 msgid "Use file browser to select pixmap."
-msgstr "U¿yj przegl±darki plików, aby wybraæ pixmapê."
+msgstr "U¿yj przegl±darki plików, aby wybraæ piksmapê."
 
-#: src/texture.c:624 src/texture.c:727
+#: src/texture.c:618 src/texture.c:695
 msgid "Previews..."
 msgstr "Podgl±dy..."
 
-#: src/texture.c:629 src/texture.c:732
+#: src/texture.c:623 src/texture.c:700
 msgid "Use preview browser to select pixmap."
-msgstr "U¿yj przegl±darki podgl±dów, aby wybraæ pixmapê."
+msgstr "U¿yj przegl±darki podgl±dów, aby wybraæ piksmapê."
 
-#: src/texture.c:646 src/texture.c:738
-msgid "Themes.org..."
-msgstr "Themes.org..."
-
-#: src/texture.c:651 src/texture.c:743
-msgid "Select graphics from http://themes.org."
-msgstr "Wybierz grafiki z http://themes.org."
-
-#: src/texture.c:763 src/texture.c:1101 src/texture.c:2817
+#: src/texture.c:720 src/texture.c:1058 src/texture.c:2777
 msgid "Gradient"
 msgstr "Wype³nienie gradientowe"
 
-#: src/texture.c:774
+#: src/texture.c:731
 msgid ""
 "Horizontal: A gradient going from left to right.\n"
 "Vertical: A gradient going from top to bottom.\n"
@@ -671,83 +695,83 @@ msgstr ""
 "dolnego lewego rogu ekranu.\n"
 "Zawsze od koloru 1 do koloru 2"
 
-#: src/texture.c:791
+#: src/texture.c:748
 msgid "Color 1: "
 msgstr "Kolor 1: "
 
-#: src/texture.c:802
+#: src/texture.c:759
 msgid "Color 2: "
 msgstr "Kolor 2: "
 
-#: src/texture.c:813
+#: src/texture.c:770
 msgid "Opacity:"
 msgstr "Krycie:"
 
-#: src/texture.c:827
+#: src/texture.c:784
 msgid ""
 "Opacity of the pixmap. If set to zero, only the pixmap is visible (and vice "
 "versa)."
 msgstr ""
-"Poziom krycia pixmapy. W przypadku, gdy ustawione jest '0', widoczna jest "
-"tylko pixmapa (i odwrotnie)."
+"Poziom krycia piksmapy. W przypadku, gdy ustawione jest '0', widoczna jest "
+"tylko piksmapa (i odwrotnie)."
 
-#: src/texture.c:848
+#: src/texture.c:805
 msgid "Default color"
 msgstr "Domy¶lny kolor"
 
-#: src/texture.c:858
+#: src/texture.c:815
 msgid ""
 "This color is used as solid color, if a gradient can't be drawn, or during "
 "the pixmap scaling/tiling process."
 msgstr ""
 "Kolor u¿yty jako jednolity kolor, w przypadku gdy nie zosta³o u¿yte "
-"wype³nienie gradientowe lub w trakcie skalowania/rozmieszczania pixmap."
+"wype³nienie gradientowe lub w trakcie skalowania/rozmieszczania piksmap."
 
-#: src/texture.c:881 src/texture.c:2823
+#: src/texture.c:838 src/texture.c:2783
 msgid "Bilinear gradient"
 msgstr "Dwuliniowe wype³nienie gradientowe"
 
-#: src/texture.c:898
+#: src/texture.c:855
 msgid "Color of the upper left corner."
 msgstr "Kolor górnego, lewego rogu."
 
-#: src/texture.c:901
+#: src/texture.c:858
 msgid "Color of the upper right corner."
 msgstr "Kolor górnego, prawego rogu."
 
-#: src/texture.c:904
+#: src/texture.c:861
 msgid "Color of the lower left corner."
 msgstr "Kolor dolnego, lewego rogu."
 
-#: src/texture.c:907
+#: src/texture.c:864
 msgid "Color of the lower right corner."
 msgstr "Kolor dolnego, prawego rogu."
 
-#: src/texture.c:953
+#: src/texture.c:910
 msgid "Fading vertical gradient"
 msgstr "Zanikaj±ce pionowe wype³nienie gradientowe"
 
-#: src/texture.c:969 src/texture.c:1023
+#: src/texture.c:926 src/texture.c:980
 msgid "First color of gradient."
 msgstr "Pierwszy kolor wype³nienia gradientowego."
 
-#: src/texture.c:972 src/texture.c:1026
+#: src/texture.c:929 src/texture.c:983
 msgid "Last color of gradient."
 msgstr "Ostatni kolor wype³nienia gradientowego."
 
-#: src/texture.c:1006 src/texture.c:2825
+#: src/texture.c:963 src/texture.c:2785
 msgid "Waves gradient"
 msgstr "Faliste wype³nienie gradientowe"
 
-#: src/texture.c:1040
+#: src/texture.c:997
 msgid "Number of sine layers."
 msgstr "Liczba warstw sinusoid."
 
-#: src/texture.c:1056
+#: src/texture.c:1013
 msgid "Frequency range of sine layers."
 msgstr "Zakres czêstotliwo¶ci sinusoid w warstwach."
 
-#: src/texture.c:1106
+#: src/texture.c:1063
 msgid ""
 "Horizontal: A gradient going from left to right.\n"
 "Vertical: A gradient going from top to bottom.\n"
@@ -761,27 +785,27 @@ msgstr ""
 "dolnego, lewego rogu ekranu.\n"
 "Zawsze od pierwszego do ostatniego koloru."
 
-#: src/texture.c:1159
+#: src/texture.c:1116
 msgid "Insert"
 msgstr "Wstaw"
 
-#: src/texture.c:1160
+#: src/texture.c:1117
 msgid "Append"
 msgstr "Do³±cz"
 
-#: src/texture.c:1161
+#: src/texture.c:1118
 msgid "Remove selected color from gradient color list."
 msgstr "Usuwa zaznaczony kolor z listy kolorów gradientowych."
 
-#: src/texture.c:1163
+#: src/texture.c:1120
 msgid "Insert a new color before current color."
 msgstr "Wstawia nowy kolor przed bie¿±cym kolorem."
 
-#: src/texture.c:1164
+#: src/texture.c:1121
 msgid "Append a new color after the last color."
 msgstr "Do³±cza nowy kolor po ostatnim kolorze."
 
-#: src/texture.c:1357
+#: src/texture.c:1314
 #, c-format
 msgid ""
 "Texture `%s' not yet supported or wrong number of arguments.\n"
@@ -791,236 +815,60 @@ msgstr ""
 "argumentów.\n"
 "Zmieniam na (jednolity, czarny) ..."
 
-#: src/texture.c:1890
+#: src/texture.c:1835
 msgid "Color selection"
 msgstr "Wybór koloru"
 
 #.
 #. *  Fileselection dialog window
 #.
-#: src/texture.c:2319
+#: src/texture.c:2278
 msgid "Pixmap file browser"
-msgstr "Przegl±darka pixmap"
+msgstr "Przegl±darka piksmap"
 
-#: src/texture.c:2816
-msgid "Solid color"
-msgstr "Jednolity kolor"
-
-#: src/texture.c:2819
+#: src/texture.c:2779
 msgid "Textured gradient"
 msgstr "Teksturowane wype³nienie gradientowe"
 
-#: src/texture.c:2820
+#: src/texture.c:2780
 msgid "None"
 msgstr "Brak"
 
-#: src/texture.c:2821 src/tileofday.c:374
+#: src/texture.c:2781
 msgid "Default"
 msgstr "Domy¶lny"
 
-#: src/texture.c:2824
+#: src/texture.c:2784
 msgid "Fading gradient"
 msgstr "Zanikaj±ce wype³niene gradientowe"
 
-#: src/texture.c:2828
+#: src/texture.c:2788
 msgid "Scaled"
 msgstr "Skalowana"
 
-#: src/texture.c:2829
+#: src/texture.c:2789
 msgid "Tiled"
 msgstr "S±siaduj±ca"
 
-#: src/texture.c:2830
+#: src/texture.c:2790
 msgid "Centered"
 msgstr "Wy¶rodkowana"
 
-#: src/texture.c:2831
+#: src/texture.c:2791
 msgid "Scaled (x:y)"
 msgstr "Skalowana (x:y)"
 
-#: src/texture.c:2833
+#: src/texture.c:2793
 msgid "Horizontal"
 msgstr "Poziomo"
 
-#: src/texture.c:2834
+#: src/texture.c:2794
 msgid "Vertical"
 msgstr "Pionowo"
 
-#: src/texture.c:2835
+#: src/texture.c:2795
 msgid "Diagonal"
 msgstr "Uko¶nie"
-
-#: src/tileofday.c:261
-msgid "Periodically get pixmap at"
-msgstr "Okresowo pobieraj pixmapê o"
-
-#: src/tileofday.c:269
-msgid ""
-"Add/remove entry in your crontab file to automatically get pixmap at "
-"specified time and day."
-msgstr ""
-"Dodaje/usuwa wpis w twoim pliku crontaba dotycz±cy automatycznego pobierania "
-"pixmapy w okre¶lonym dniu, o okre¶lonym czasie."
-
-#: src/tileofday.c:284
-msgid "Date offset [days]"
-msgstr "Przesuniêcie [w dniach]"
-
-#: src/tileofday.c:294
-msgid ""
-"When getting `bars' on a daily basis, you can specify an offset in days "
-"(today - offset). So you can get different `bars' for different attributes."
-msgstr ""
-"W przypadku okre¶lenia dni pobierania `pasków tytu³owych', mo¿esz wyznaczyæ "
-"przesuniêcie w dniach (dzi¶ - przesuniêcie), z jak± bêd± pobierane "
-"poszczególne atrybuty. W ten sposób mo¿esz otrzymaæ ró¿ne atrybuty dla "
-"ró¿nych pasków."
-
-#: src/tileofday.c:309
-msgid "Hour:"
-msgstr "Godzina:"
-
-#: src/tileofday.c:327
-msgid "* matches every hour"
-msgstr "* oznacza `co godzinê'"
-
-#: src/tileofday.c:343
-msgid "Minute:"
-msgstr "Minuta:"
-
-#: src/tileofday.c:381
-msgid "Set a default time for cronjob based on the selected tile."
-msgstr "Ustawia domy¶lny czas zadania dla crona w oparciu o wybrany kafel."
-
-#: src/tileofday.c:388
-msgid "Day of week:"
-msgstr "Dzieñ tygodnia:"
-
-#: src/tileofday.c:407
-msgid "* matches every day"
-msgstr "* oznacza `codziennie'"
-
-#: src/tileofday.c:427
-msgid "Use current pixmap"
-msgstr "U¿yj aktualnej pixmapy"
-
-#: src/tileofday.c:436 src/tileofday.c:965
-msgid "Get new pixmap"
-msgstr "Pobierz now± pixmapê"
-
-#: src/tileofday.c:440
-msgid "Get new pixmap via HTTP request - this may take some time ..."
-msgstr "Pobiera now± pixmapê przez HTTP - mo¿e to trochê potrwaæ ..."
-
-#: src/tileofday.c:508
-#, c-format
-msgid ""
-"Attribute %s:\n"
-"Can't use texture type `%s'\n"
-"with http://themes.org cronjob\n"
-"Removing crontab entry ..."
-msgstr ""
-"Atrybut %s:\n"
-"Nie mo¿na u¿yæ tekstury `%s'\n"
-"z http://themes.org przy pomocy crona\n"
-"Usuwanie wpisu z pliku crontab ..."
-
-#: src/tileofday.c:530
-#, c-format
-msgid ""
-"Attribute %s: pixmap value of\n"
-"cronjob [%s] doesn't match value\n"
-"of WindowMaker file [%s].\n"
-"Removing crontab entry ..."
-msgstr ""
-"Atrybut %s: ustawienia pixmapy\n"
-"z zadania crona [%s] nie pasuj±\n"
-"do ustawieñ w pliku WindowMakera [%s].\n"
-"Usuwanie wpisu z pliku crontab ..."
-
-#: src/tileofday.c:567 src/tileofday.c:589
-msgid "Can't connect to crontab utility."
-msgstr "Nie mo¿na nawi±zaæ po³±czenia z crontabem."
-
-#: src/tileofday.c:627 src/tileofday.c:642
-msgid "No, keep this line"
-msgstr "Nie, pozostaw tê liniê"
-
-#: src/tileofday.c:628 src/tileofday.c:643
-msgid "Yes, remove this line"
-msgstr "Tak, usuñ tê liniê"
-
-#: src/tileofday.c:630
-#, c-format
-msgid ""
-"Crontable entry\n"
-"%scalls gettile.pl but doesn't contain valid entry with 10 fields\n"
-"\n"
-"Should I delete this line from your crontable?"
-msgstr ""
-"Wpis w tabeli cron\n"
-"%s wo³a gettile.pl lecz nie jest poprawnym wpisem z 10-oma polami\n"
-"\n"
-"Czy mam usun±æ tê liniê z twojej tabeli cron?"
-
-#: src/tileofday.c:645
-#, c-format
-msgid ""
-"Crontable entry\n"
-"%s\n"
-"calls gettile.pl but doesn't contain valid entry with 11 fields\n"
-"\n"
-"Should I delete this line from your crontable?"
-msgstr ""
-"Wpis w tabeli cron\n"
-"%s\n"
-"wo³a gettile.pl lecz nie jest poprawnym wpisem z 11-oma polami\n"
-"\n"
-"Czy mam usun±æ tê liniê z twojej tabeli cron?"
-
-#: src/tileofday.c:699
-msgid "Can't write to temporary crontab file."
-msgstr "Nie mo¿na zapisaæ tymczasowego pliku crontaba."
-
-#: src/tileofday.c:733 src/tileofday.c:922 src/tileofday.c:1056
-#, c-format
-msgid ""
-"Can't find pixmap\n"
-"`%s' in PixmapPath\n"
-"(requested by attribute '%s`)."
-msgstr ""
-"Nie mo¿na znale¼æ pixmapy\n"
-"`%s' w PixmapPath\n"
-"(wymagane przez atrybut '%s`)."
-
-#: src/tileofday.c:743
-msgid "Can't replace crontab file."
-msgstr "Nie mo¿na zamieniæ pliku crontab."
-
-#: src/tileofday.c:749
-msgid "Crontab file changed."
-msgstr "Plik crontab zosta³ zmieniony."
-
-#: src/tileofday.c:873
-#, c-format
-msgid ""
-"Can't generate tile template `%s'\n"
-"in neither of your PixmapPath directories.\n"
-"Please ensure that you have write access\n"
-"for at least one directory."
-msgstr ""
-"Nie mo¿na wygenerowaæ szablonu kafla `%s'\n"
-"w ¿adnym z katalogów podanych w PixmapPath.\n"
-"Upewnij siê, ¿e masz prawo pisania przynajmiej\n"
-"do jednego z tych katalogów."
-
-#: src/tileofday.c:1018
-msgid ""
-"Can't receive pixmap from http://themes.org/.\n"
-"Please check `stderr' for more details."
-msgstr ""
-"Nie mo¿na uzyskaæ pixmapy z http://themes.org/.\n"
-"Sprawd¼ `stderr', aby uzyskaæ wiêcej szczegó³ów."
 
 #: src/themes.c:217
 msgid "Theme"
@@ -1030,7 +878,7 @@ msgstr "Temat"
 msgid "Path"
 msgstr "¦cie¿ka"
 
-#: src/themes.c:234 src/themes.c:2262
+#: src/themes.c:234 src/themes.c:2266
 msgid "Open"
 msgstr "Otwórz"
 
@@ -1038,15 +886,15 @@ msgstr "Otwórz"
 msgid "Open selected theme."
 msgstr "Otwiera zaznaczony temat."
 
-#: src/themes.c:241 src/themes.c:2271
+#: src/themes.c:241 src/themes.c:2275
 msgid "Save..."
-msgstr "Zachowaj..."
+msgstr "Zapisz..."
 
 #: src/themes.c:244
 msgid "Save current wmakerconf settings as a theme pack."
-msgstr "Zachowuje aktualne ustawienia wmakerconfa jako zestaw tematyczny."
+msgstr "Zapisuje aktualne ustawienia wmakerconfa jako zestaw tematyczny."
 
-#: src/themes.c:251 src/themes.c:2279
+#: src/themes.c:251 src/themes.c:2283
 msgid "Set"
 msgstr "Ustaw"
 
@@ -1055,7 +903,7 @@ msgid "Open selected theme, update wmakerconf, and save wmakerconf settings."
 msgstr ""
 "Otwiera zaznaczony temat, uaktualnia i zapisuje ustawienia wmakerconfa."
 
-#: src/themes.c:259 src/themes.c:2287
+#: src/themes.c:259 src/themes.c:2291
 msgid "Preview"
 msgstr "Podgl±d"
 
@@ -1063,7 +911,7 @@ msgstr "Podgl±d"
 msgid "Preview the selected theme."
 msgstr "Podgl±d zaznaczonego tematu."
 
-#: src/themes.c:271 src/themes.c:2297
+#: src/themes.c:271 src/themes.c:2301
 msgid "Remove..."
 msgstr "Usuñ..."
 
@@ -1071,7 +919,7 @@ msgstr "Usuñ..."
 msgid "Remove themes with associated files and directories."
 msgstr "Usuwa tematy ³±cznie z powi±zanymi z nimi plikami i katalogami."
 
-#: src/themes.c:280 src/themes.c:2303
+#: src/themes.c:280 src/themes.c:2307
 msgid "Install..."
 msgstr "Instaluj..."
 
@@ -1102,7 +950,7 @@ msgstr "Atrybut %s nie jest jeszcze wspierany."
 
 #: src/themes.c:769
 msgid "Save a theme"
-msgstr "Zachowaj temat"
+msgstr "Zapisz temat"
 
 #: src/themes.c:781 src/themes.c:1795
 msgid "Install path"
@@ -1159,7 +1007,7 @@ msgstr "Usuñ zaznaczone pliki tematów"
 
 #: src/themes.c:1575
 msgid "Theme pixmaps"
-msgstr "Pixmapy tematu"
+msgstr "Piksmapy tematu"
 
 #: src/themes.c:1784 src/themes.c:1961
 msgid "Install themes"
@@ -1193,7 +1041,7 @@ msgstr "Nie podano prefiksu instalacji."
 msgid "Skip"
 msgstr "Pomiñ"
 
-#: src/themes.c:2149 src/themes.c:2160
+#: src/themes.c:2153 src/themes.c:2164
 msgid ""
 "Can't unpack theme file.\n"
 "Please check `stderr' for more details."
@@ -1201,7 +1049,7 @@ msgstr ""
 "Nie mo¿na rozpakowaæ pliku tematu.\n"
 "Sprawd¼ `stderr', aby uzyskaæ wiêcej szczegó³ów."
 
-#: src/themes.c:2521
+#: src/themes.c:2525
 #, c-format
 msgid ""
 "Can't make directory `%s'.\n"
@@ -1210,7 +1058,7 @@ msgstr ""
 "Nie mo¿na utworzyæ katalogu `%s'.\n"
 "Sprawd¼ `stderr', aby uzyskaæ wiêcej szczegó³ów."
 
-#: src/themes.c:2544
+#: src/themes.c:2548
 #, c-format
 msgid ""
 "Can't generate preview `%s'.\n"
@@ -1219,20 +1067,30 @@ msgstr ""
 "Nie mo¿na wygenerowæ podgl±du dla `%s'.\n"
 "Sprawd¼ `stderr', aby uzyskaæ wiêcej szczegó³ów."
 
-#: src/window.c:272 src/wmconfig.c:134 src/wmconfig.c:138
+#: src/window.c:285 src/wmconfig.c:134 src/wmconfig.c:138
 #, c-format
 msgid "'%s': parse error."
 msgstr "'%s': b³±d interpretacji."
 
-#: src/window.c:442
+#: src/window.c:455
 msgid "Colors"
 msgstr "Kolory"
 
-#: src/window.c:461
+#: src/window.c:474
 msgid "Texture"
 msgstr "Tekstury"
 
-#: src/window.c:903
+#: src/window.c:833
+msgid ""
+"Directory $HOME/.wmakerconf does not exist yet.\n"
+"This directory is used to store the previews of all images.\n"
+"Should I generate this directory and the image previews now?"
+msgstr ""
+"Katalog $HOME/.wmakerconf jeszcze nie istnieje.\n"
+"Katalog ten jest wykorzystywany do przechowywania podgl±dów obrazków.\n"
+"Stworzyæ teraz ten katalog i wygenerowaæ podgl±dy obrazków?"
+
+#: src/window.c:937
 #, c-format
 msgid ""
 "Can't find pixmap\n"
@@ -1240,12 +1098,12 @@ msgid ""
 "in PixmapPath. Please update\n"
 "your PixmapPath attribute."
 msgstr ""
-"Nie mo¿na znale¼æ pixmapy\n"
+"Nie mo¿na znale¼æ piksmapy\n"
 "'%s`\n"
 "w PixmapPath. Uaktualnij\n"
 "zawarto¶æ PixmapPath."
 
-#: src/window.c:980
+#: src/window.c:1014
 #, c-format
 msgid ""
 "Unable to display pixmap\n"
@@ -1253,34 +1111,34 @@ msgid ""
 "(format not supported).\n"
 "See stderr for subsequent messages."
 msgstr ""
-"Nie mo¿na wy¶wietliæ pixmapy\n"
+"Nie mo¿na wy¶wietliæ piksmapy\n"
 "'%s`\n"
 "(format nie obs³ugiwany).\n"
 "Zobacz `stderr', aby uzyskaæ pozosta³e informacje."
 
-#: src/window.c:986
+#: src/window.c:1020
 #, c-format
 msgid "Can't display pixmap '%s`."
-msgstr "Nie mo¿na wy¶wietliæ pixmapy '%s`."
+msgstr "Nie mo¿na wy¶wietliæ piksmapy '%s`."
 
-#: src/window.c:1023
+#: src/window.c:1049
 msgid ""
 "Some values are modified.\n"
 "Do you want to save them before quitting?"
 msgstr ""
 "Niektóre ustawienia zosta³y zmienione.\n"
-"Czy chcesz je zachowaæ przed wyj¶ciem?"
+"Czy chcesz je zapisaæ przed zakoñczeniem?"
 
-#: src/window.c:1054
+#: src/window.c:1080
 msgid "Save before quitting?"
-msgstr "Zachowaæ przed wyj¶ciem?"
+msgstr "Zapisaæ przed zakoñczeniem?"
 
-#: src/window.c:1151
+#: src/window.c:1170
 #, c-format
 msgid "Window Maker config file '%s' saved."
-msgstr "Plik konfiguracyjny Window Makera '%s' zachowany."
+msgstr "Plik konfiguracyjny Window Makera '%s' zapisany."
 
-#: src/window.c:1157
+#: src/window.c:1176
 #, c-format
 msgid ""
 "Can't write to Window Maker file\n"
@@ -1312,3 +1170,149 @@ msgstr "Nowy plik konfiguracyjny WindowMakera `%s' utworzony."
 #, c-format
 msgid "Can't generate configuration file `%s'."
 msgstr "Nie mo¿na wygenerowaæ pliku konfiguracyjnego `%s'."
+
+#~ msgid "Themes.org..."
+#~ msgstr "Themes.org..."
+
+#~ msgid "Select graphics from http://themes.org."
+#~ msgstr "Wybierz grafiki z http://themes.org."
+
+#~ msgid "Periodically get pixmap at"
+#~ msgstr "Okresowo pobieraj piksmapê o"
+
+#~ msgid ""
+#~ "Add/remove entry in your crontab file to automatically get pixmap at "
+#~ "specified time and day."
+#~ msgstr ""
+#~ "Dodaje/usuwa wpis w twoim pliku crontaba dotycz±cy automatycznego pobierania "
+#~ "piksmapy w okre¶lonym dniu, o okre¶lonym czasie."
+
+#~ msgid "Date offset [days]"
+#~ msgstr "Przesuniêcie [w dniach]"
+
+#~ msgid ""
+#~ "When getting `bars' on a daily basis, you can specify an offset in days "
+#~ "(today - offset). So you can get different `bars' for different attributes."
+#~ msgstr ""
+#~ "W przypadku okre¶lenia dni pobierania `pasków tytu³owych', mo¿esz wyznaczyæ "
+#~ "przesuniêcie w dniach (dzi¶ - przesuniêcie), z jak± bêd± pobierane "
+#~ "poszczególne atrybuty. W ten sposób mo¿esz otrzymaæ ró¿ne atrybuty dla "
+#~ "ró¿nych pasków."
+
+#~ msgid "Hour:"
+#~ msgstr "Godzina:"
+
+#~ msgid "* matches every hour"
+#~ msgstr "* oznacza `co godzinê'"
+
+#~ msgid "Minute:"
+#~ msgstr "Minuta:"
+
+#~ msgid "Set a default time for cronjob based on the selected tile."
+#~ msgstr "Ustawia domy¶lny czas zadania dla crona w oparciu o wybrany kafel."
+
+#~ msgid "Day of week:"
+#~ msgstr "Dzieñ tygodnia:"
+
+#~ msgid "* matches every day"
+#~ msgstr "* oznacza `codziennie'"
+
+#~ msgid "Use current pixmap"
+#~ msgstr "U¿yj aktualnej piksmapy"
+
+#~ msgid "Get new pixmap"
+#~ msgstr "Pobierz now± piksmapê"
+
+#~ msgid "Get new pixmap via HTTP request - this may take some time ..."
+#~ msgstr "Pobiera now± piksmapê przez HTTP - mo¿e to trochê potrwaæ ..."
+
+#~ msgid ""
+#~ "Attribute %s:\n"
+#~ "Can't use texture type `%s'\n"
+#~ "with http://themes.org cronjob\n"
+#~ "Removing crontab entry ..."
+#~ msgstr ""
+#~ "Atrybut %s:\n"
+#~ "Nie mo¿na u¿yæ tekstury `%s'\n"
+#~ "z http://themes.org przy pomocy crona\n"
+#~ "Usuwanie wpisu z pliku crontab ..."
+
+#~ msgid ""
+#~ "Attribute %s: pixmap value of\n"
+#~ "cronjob [%s] doesn't match value\n"
+#~ "of WindowMaker file [%s].\n"
+#~ "Removing crontab entry ..."
+#~ msgstr ""
+#~ "Atrybut %s: ustawienia piksmapy\n"
+#~ "z zadania crona [%s] nie pasuj±\n"
+#~ "do ustawieñ w pliku WindowMakera [%s].\n"
+#~ "Usuwanie wpisu z pliku crontab ..."
+
+#~ msgid "Can't connect to crontab utility."
+#~ msgstr "Nie mo¿na nawi±zaæ po³±czenia z crontabem."
+
+#~ msgid "No, keep this line"
+#~ msgstr "Nie, pozostaw tê liniê"
+
+#~ msgid "Yes, remove this line"
+#~ msgstr "Tak, usuñ tê liniê"
+
+#~ msgid ""
+#~ "Crontable entry\n"
+#~ "%scalls gettile.pl but doesn't contain valid entry with 10 fields\n"
+#~ "\n"
+#~ "Should I delete this line from your crontable?"
+#~ msgstr ""
+#~ "Wpis w tabeli cron\n"
+#~ "%s wo³a gettile.pl lecz nie jest poprawnym wpisem z 10-oma polami\n"
+#~ "\n"
+#~ "Czy mam usun±æ tê liniê z twojej tabeli cron?"
+
+#~ msgid ""
+#~ "Crontable entry\n"
+#~ "%s\n"
+#~ "calls gettile.pl but doesn't contain valid entry with 11 fields\n"
+#~ "\n"
+#~ "Should I delete this line from your crontable?"
+#~ msgstr ""
+#~ "Wpis w tabeli cron\n"
+#~ "%s\n"
+#~ "wo³a gettile.pl lecz nie jest poprawnym wpisem z 11-oma polami\n"
+#~ "\n"
+#~ "Czy mam usun±æ tê liniê z twojej tabeli cron?"
+
+#~ msgid "Can't write to temporary crontab file."
+#~ msgstr "Nie mo¿na zapisaæ tymczasowego pliku crontaba."
+
+#~ msgid ""
+#~ "Can't find pixmap\n"
+#~ "`%s' in PixmapPath\n"
+#~ "(requested by attribute '%s`)."
+#~ msgstr ""
+#~ "Nie mo¿na znale¼æ piksmapy\n"
+#~ "`%s' w PixmapPath\n"
+#~ "(wymagane przez atrybut '%s`)."
+
+#~ msgid "Can't replace crontab file."
+#~ msgstr "Nie mo¿na zamieniæ pliku crontab."
+
+#~ msgid "Crontab file changed."
+#~ msgstr "Plik crontab zosta³ zmieniony."
+
+#~ msgid ""
+#~ "Can't generate tile template `%s'\n"
+#~ "in neither of your PixmapPath directories.\n"
+#~ "Please ensure that you have write access\n"
+#~ "for at least one directory."
+#~ msgstr ""
+#~ "Nie mo¿na wygenerowaæ szablonu kafla `%s'\n"
+#~ "w ¿adnym z katalogów podanych w PixmapPath.\n"
+#~ "Upewnij siê, ¿e masz prawo pisania przynajmiej\n"
+#~ "do jednego z tych katalogów."
+
+#~ msgid ""
+#~ "Can't receive pixmap from http://themes.org/.\n"
+#~ "Please check `stderr' for more details."
+#~ msgstr ""
+#~ "Nie mo¿na uzyskaæ piksmapy z http://themes.org/.\n"
+#~ "Sprawd¼ `stderr', aby uzyskaæ wiêcej szczegó³ów."

@@ -3,9 +3,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: wmakerconf-data 0.60.0\n"
-"POT-Creation-Date: 1999-08-28 23:53+0200\n"
-"PO-Revision-Date: 1999-08-29 13:54+0200\n"
+"Project-Id-Version: wmakerconf-data 0.61.0\n"
+"POT-Creation-Date: 1999-10-10 12:28+0200\n"
+"PO-Revision-Date: 1999-10-11 13:54+0200\n"
 "Last-Translator: Piotr Czerwiñski <pius@pld.org.pl>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -272,13 +272,34 @@ msgstr "W³±cz wyg³adzanie skalowanych obrazków stanowi±cych t³o pulpitu."
 msgid "If set then disable marching ants animation of selected mini windows."
 msgstr "Wy³±cz animowane zaznaczenie pomniejszonych okien."
 
-#. Info: WorkspaceNameDisplayPosition
+#. Info: Attraction
 #: WMWmakerconf.gettext:308
+msgid ""
+"If set then a window - when it is moved - is attracted by the borders of "
+"visibile windows (or screen). The strength of attraction is controlled by "
+"the value of `EdgeResistance'."
+msgstr ""
+"W³±czenie tej opcji powoduje, ¿e okno w trakcie przesuwania przyci±gane jest "
+"do brzegów innych widocznych okien (lub ekranu). Si³a tego przyci±gania "
+"kontrolowana jest przez warto¶æ w polu `EdgeResistance'."
+
+
+#. Info: EdgeResistance
+#: WMWmakerconf.gettext:316
+msgid ""
+"Resistance for stopping windows from moving outside of the screen. The "
+"number represents the number of pixels of resistance."
+msgstr ""
+"Liczba piksli stanowi±ca margines przy zapobieganiu przed wychodzeniem okien "
+"poza brzeg ekranu."
+
+#. Info: WorkspaceNameDisplayPosition
+#: WMWmakerconf.gettext:324
 msgid "Specifies the position of the workspace name indicator."
 msgstr "Pozycja wy¶wietlania nazwy pulpitu."
 
 #. Info: MenuStyle
-#: WMWmakerconf.gettext:317
+#: WMWmakerconf.gettext:333
 msgid ""
 "Specifies the style of the menu texture.\n"
 "Normal: one texture per item, with bevels in each item.\n"
@@ -294,7 +315,7 @@ msgstr ""
 "Flat: pojedyncza tekstura bez wciêæ rozdzielaj±cych."
 
 #. Info: IconPosition
-#: WMWmakerconf.gettext:325
+#: WMWmakerconf.gettext:341
 msgid ""
 "Position of icon box. ('t' top, 'b' bottom, 'l' left, 'r' right, 'h' "
 "horizontal, 'v' vertical)"
@@ -303,14 +324,14 @@ msgstr ""
 "'h' poziomo, 'v' pionowo)"
 
 #. Info: AdvanceToNewWorkspace
-#: WMWmakerconf.gettext:333
+#: WMWmakerconf.gettext:349
 msgid ""
 "If set then generate a new workspace if you try to advance from the last "
 "workspace."
 msgstr "Przy przechodzeniu z ostatniego pulpitu na nastêpny twórz nowy pulpit."
 
 #. Info: CycleWorkspaces
-#: WMWmakerconf.gettext:341
+#: WMWmakerconf.gettext:357
 msgid ""
 "If set then jump to the first workspace if you try to advance from the last "
 "workspace."
@@ -319,7 +340,7 @@ msgstr ""
 "pierwszy."
 
 #. Info: DontLinkWorkspaces
-#: WMWmakerconf.gettext:349
+#: WMWmakerconf.gettext:365
 msgid ""
 "If set do not automatically switch to the next or previous workspace when a "
 "window is dragged to the edge of the screen."
@@ -328,7 +349,7 @@ msgstr ""
 "przesuwania okna do brzegu ekranu."
 
 #. Info: DisableWSMouseActions
-#: WMWmakerconf.gettext:357
+#: WMWmakerconf.gettext:373
 msgid ""
 "If set then you can use the KFM mouse popup menus from KDE. When not set it "
 "keeps you from 'touching' the root window with the mouse. In other words, "
@@ -340,57 +361,57 @@ msgstr ""
 "g³ównego WindowMakera (opcja startowa)."
 
 #. Info: SaveSessionOnExit
-#: WMWmakerconf.gettext:365
+#: WMWmakerconf.gettext:381
 msgid "If set then autosave the session state on exit."
-msgstr "Zapisuj automatycznie stan sesji przy wyj¶ciu."
+msgstr "Zapisuj automatycznie stan sesji przed zakoñczeniem."
 
 #. Info: StickyIcons
-#: WMWmakerconf.gettext:373
+#: WMWmakerconf.gettext:389
 msgid "If not set then minimized windows are workspace specific."
 msgstr ""
 "W³±czenie tej opcji powoduje, ¿e pomniejszone okna nie s± powi±zane z "
 "konkretnym pulpitem."
 
 #. Info: DisableSound
-#: WMWmakerconf.gettext:381
+#: WMWmakerconf.gettext:397
 msgid ""
 "If set then disable sound at runtime without the need of killing the sound "
 "server."
 msgstr "Wy³±cz d¼wiêk przy starcie bez konieczno¶ci zabijania serwera d¼wiêku."
 
 #. Info: DisableDithering
-#: WMWmakerconf.gettext:389
+#: WMWmakerconf.gettext:405
 msgid ""
 "If set then gradients and pixmaps etc. are not dithered in low color mode "
 "(startup option)."
 msgstr ""
-"Nie poddawaj ditheringowi gradientów, pixmap, etc. w trybie zmniejszonej "
+"Nie poddawaj ditheringowi gradientów, piksmap, etc. w trybie zmniejszonej "
 "liczby kolorów (opcja startowa)."
 
 #. Info: DontConfirmKill
-#: WMWmakerconf.gettext:397
+#: WMWmakerconf.gettext:413
 msgid "If set then disable confirmation panel for Kill."
 msgstr "Wy³±cz panel potwierdzenia dla polecenia Zabij."
 
 #. Info: SelectWindowsMouseButton
-#: WMWmakerconf.gettext:405
+#: WMWmakerconf.gettext:421
 msgid ""
 "The mouse button to select multiple windows with the rubberband in the root "
 "window."
 msgstr "Klawisz myszy do zaznaczenia wielu okien."
 
 #. Info: WindowListMouseButton
-#: WMWmakerconf.gettext:413
+#: WMWmakerconf.gettext:429
 msgid "The mouse button to pop up the window list."
 msgstr "Klawisz myszy do wy¶wietlenia listy okien."
 
 #. Info: ApplicationMenuMouseButton
-#: WMWmakerconf.gettext:421
+#: WMWmakerconf.gettext:437
 msgid "The mouse button to activate the application menu."
 msgstr "Klawisz myszy do wy¶wietlenia menu aplikacji."
 
 #. Info: FocusMode
-#: WMWmakerconf.gettext:429
+#: WMWmakerconf.gettext:445
 msgid ""
 "This option specifies how windows should be focused or how mouse movements "
 "or clicks should affect focuses (startup option).\n"
@@ -408,7 +429,7 @@ msgstr ""
 "pozostaje aktywne."
 
 #. Info: ColormapMode
-#: WMWmakerconf.gettext:437
+#: WMWmakerconf.gettext:453
 msgid ""
 "On lower color displays not all colors may be available to applications as "
 "they want them. Normally the most colors are given to the application that "
@@ -431,7 +452,7 @@ msgstr ""
 "nie traci przyznanych mu kolorów."
 
 #. Info: ResizeDisplay
-#: WMWmakerconf.gettext:445
+#: WMWmakerconf.gettext:461
 msgid ""
 "Specifies how to display the geometry box when resizing the window.\n"
 "Corner: Geometry display box appears in the top left.\n"
@@ -447,7 +468,7 @@ msgstr ""
 "Line: Wymiary okien podane s± przy pomocy linii przy krawêdziach okna."
 
 #. Info: MoveDisplay
-#: WMWmakerconf.gettext:453
+#: WMWmakerconf.gettext:469
 msgid ""
 "Specifies how to display the geometry box when moving the window.\n"
 "Corner: Geometry display box appears in the top left.\n"
@@ -463,11 +484,12 @@ msgstr ""
 "Line: Wspó³rzêdne okien podane s± przy pomocy linii przy krawêdziach okien."
 
 #. Info: WindowPlacement
-#: WMWmakerconf.gettext:461
+#: WMWmakerconf.gettext:477
 msgid ""
 "Specifies how newly mapped windows should be placed.\n"
 "Cascade: Normal cascading effect.\n"
 "Auto: Puts the new window in the best free space.\n"
+"Smart: Improved algorithm to put the new window in the best free space.\n"
 "Manual: When the window is created you are given an outline, you have to "
 "choose where you want the window and then click to place it.\n"
 "Random: Puts it a random place."
@@ -475,12 +497,13 @@ msgstr ""
 "Sposób w jaki nowo tworzone okna powinny byæ rozmieszczane.\n"
 "Cascade: Efekt kaskady.\n"
 "Auto: Nowe okno umieszczane jest w najkorzystniejszym wolnym miejscu.\n"
+"Smart: Ulepszony algorytm wybierania najkorzystniejszego wolnego miejsca.\n"
 "Manual: Zamiast ca³ego okna tworzone s± jego kontury, które musisz przesun±æ "
 "w wybrane miejsce i klikn±æ mysz±, aby je tam pozostawiæ.\n"
 "Random: Nowe okno umieszczane jest w ca³kowicie przypadkowym miejscu."
 
 #. Info: WindowPlaceOrigin
-#: WMWmakerconf.gettext:469
+#: WMWmakerconf.gettext:485
 msgid ""
 "Offset (in pixels) of all windows in auto or cascade placement mode before "
 "placing them on screen. First is horizontal direction and second is "
@@ -493,7 +516,7 @@ msgstr ""
 "wymagaj± specjalnej pozycji na ekranie."
 
 #. Info: TitleJustify
-#: WMWmakerconf.gettext:477
+#: WMWmakerconf.gettext:493
 msgid ""
 "Justification of text in the window title bars.\n"
 "Center: Centered text.\n"
@@ -506,27 +529,37 @@ msgstr ""
 "Right: Wyrównany do prawej."
 
 #. Info: PixmapPath
-#: WMWmakerconf.gettext:485
+#: WMWmakerconf.gettext:501
 msgid ""
 "Whenever WindowMaker is given a relative path to find a texture pixmap in, "
 "it searches each of these paths in order for that pixmap."
 msgstr ""
 "Za ka¿dym razem, gdy podano WindowMakerowi wzglêdn± ¶cie¿kê dostêpu do "
 "tekstury, przeszukiwana jest ka¿da z podanych tu ¶cie¿ek w celu odnalezienia "
-"w³a¶ciwej pixmapy."
+"w³a¶ciwej piksmapy."
+
+#. Title: PixmapPath
+#: WMWmakerconf.gettext:503
+msgid "Pixmap search paths"
+msgstr "¦cie¿ki do piksmap"
 
 #. Info: IconPath
-#: WMWmakerconf.gettext:503
+#: WMWmakerconf.gettext:521
 msgid ""
 "Whenever WindowMaker is given a relative path to find a icon pixmap in, it "
 "searches each of these paths in order for that pixmap."
 msgstr ""
 "Za ka¿dym razem, gdy podano WindowMakerowi wzglêdn± ¶cie¿kê dostêpu do "
 "ikony, przeszukiwana jest ka¿da z podanych tu ¶cie¿ek w celu odnalezienia "
-"w³a¶ciwej pixmapy."
+"w³a¶ciwej piksmapy."
+
+#. Title: IconPath
+#: WMWmakerconf.gettext:523
+msgid "Icon search paths"
+msgstr "¦cie¿ki do ikon"
 
 #. Info: ThemePath
-#: WMWmakerconf.gettext:521
+#: WMWmakerconf.gettext:541
 msgid ""
 "Wmakerconf searches each of these paths in order for the list of available "
 "themes."
@@ -534,269 +567,246 @@ msgstr ""
 "Wmakerconf przeszukuje ka¿d± z podanych tu ¶cie¿ek w celu odnalezienia listy "
 "dostêpnych tematów."
 
+#. Title: ThemePath
+#: WMWmakerconf.gettext:543
+msgid "Theme search paths"
+msgstr "¦cie¿ki do tematów"
+
 #. Info: RootMenuKey
-#: WMWmakerconf.gettext:533
+#: WMWmakerconf.gettext:555
 msgid "The key to pop up the root menu."
 msgstr "Klawisz do wy¶wietlenia g³ównego menu."
 
 #. Info: WindowListKey
-#: WMWmakerconf.gettext:541
+#: WMWmakerconf.gettext:563
 msgid "The key to pop up the window list."
 msgstr "Klawisz do wy¶wietlenia listy okien."
 
 #. Info: WindowMenuKey
-#: WMWmakerconf.gettext:549
+#: WMWmakerconf.gettext:571
 msgid "The key to pop up the window commands menu for the focused window."
 msgstr "Klawisz do wy¶wietlenia menu poleceñ dla aktywnego okna."
 
 #. Info: ClipLowerKey
-#: WMWmakerconf.gettext:557
+#: WMWmakerconf.gettext:579
 msgid "The key to lower the clip."
 msgstr "Klawisz do upuszczania Spinacza."
 
 #. Info: ClipRaiseKey
-#: WMWmakerconf.gettext:565
+#: WMWmakerconf.gettext:587
 msgid "The key to raise the clip."
 msgstr "Klawisz do podnoszenia Spinacza."
 
 #. Info: ClipRaiseLowerKey
-#: WMWmakerconf.gettext:573
+#: WMWmakerconf.gettext:595
 msgid "The key to raise or lower the clip."
 msgstr "Klawisz do podnoszenia lub upuszczania Spinacza."
 
 #. Info: MiniaturizeKey
-#: WMWmakerconf.gettext:581
+#: WMWmakerconf.gettext:603
 msgid "The key to iconify a window."
 msgstr "Klawisz do pomniejszania okna do ikony."
 
 #. Info: MaximizeKey
-#: WMWmakerconf.gettext:589
+#: WMWmakerconf.gettext:611
 msgid "The key to maximize the focused window to it's full size."
 msgstr "Klawisz do powiêkszania aktywnego okna do jego pe³nych rozmiarów."
 
 #. Info: VMaximizeKey
-#: WMWmakerconf.gettext:597
+#: WMWmakerconf.gettext:619
 msgid "The key to maximize the focused window to it's full vertical size."
 msgstr "Klawisz do powiêkszania aktywnego okna do jego pe³nej wysoko¶ci."
 
 #. Info: MoveResizeKey
-#: WMWmakerconf.gettext:605
+#: WMWmakerconf.gettext:627
 msgid "The key to move or resize the focused window."
 msgstr "Klawisz do zmiany pozycji lub rozmiaru aktywnego okna."
 
 #. Info: LowerKey
-#: WMWmakerconf.gettext:613
+#: WMWmakerconf.gettext:635
 msgid "The key to lower the focused window to the bottom."
 msgstr "Klawisz do upuszczania aktywnego okna na spód."
 
 #. Info: RaiseKey
-#: WMWmakerconf.gettext:621
+#: WMWmakerconf.gettext:643
 msgid "The key to raise the focused window to the top."
 msgstr "Klawisz do podnoszenia aktywnego okna na wierzch."
 
 #. Info: RaiseLowerKey
-#: WMWmakerconf.gettext:629
+#: WMWmakerconf.gettext:651
 msgid "The key to raise or lower the window under the mouse pointer."
 msgstr ""
 "Klawisz do podnoszenia i upuszczania okna znajduj±cego siê pod wska¼nikiem "
 "myszy."
 
 #. Info: FocusNextKey
-#: WMWmakerconf.gettext:637
+#: WMWmakerconf.gettext:659
 msgid "The key to switch input focus to the next window."
 msgstr "Klawisz do prze³±czenia na nastêpne okno w tryb wstawiania."
 
 #. Info: FocusPrevKey
-#: WMWmakerconf.gettext:645
+#: WMWmakerconf.gettext:667
 msgid "The key to switch input focus to the previous window."
 msgstr "Klawisz do prze³±czenia na poprzednie okno w tryb wstawiania."
 
 #. Info: ShadeKey
-#: WMWmakerconf.gettext:653
+#: WMWmakerconf.gettext:675
 msgid "The key to shade the focused window."
 msgstr "Klawisz do zwiniêcia aktywnego okna."
 
 #. Info: CloseKey
-#: WMWmakerconf.gettext:661
+#: WMWmakerconf.gettext:683
 msgid "The key to close the focused window."
 msgstr "Klawisz do zamkniêcia aktywnego okna."
 
 #. Info: HideKey
-#: WMWmakerconf.gettext:669
+#: WMWmakerconf.gettext:691
 msgid "The key to hide an application (if supported)."
 msgstr "Klawisz do ukrycia aplikacji (je¶li wspierane)."
 
 #. Info: SelectKey
-#: WMWmakerconf.gettext:677
+#: WMWmakerconf.gettext:699
 msgid "The key to select a window."
 msgstr "Klawisz do zaznaczenia okna."
 
 #. Info: NextWorkspaceKey
-#: WMWmakerconf.gettext:685
+#: WMWmakerconf.gettext:707
 msgid "The key to switch to the next workspace."
 msgstr "Klawisz do prze³±czenia na nastêpny pulpit."
 
 #. Info: PrevWorkspaceKey
-#: WMWmakerconf.gettext:693
+#: WMWmakerconf.gettext:715
 msgid "The key to switch to the previous workspace."
 msgstr "Klawisz do prze³±czenia na poprzedni pulpit."
 
 #. Info: NextWorkspaceLayerKey
-#: WMWmakerconf.gettext:701
+#: WMWmakerconf.gettext:723
 msgid "The key to switch to the next 10 workspace set."
 msgstr "Klawisz do prze³±czenia na nastêpny zestaw 10-ciu pulpitów."
 
 #. Info: PrevWorkspaceLayerKey
-#: WMWmakerconf.gettext:709
+#: WMWmakerconf.gettext:731
 msgid "The key to switch to the previous 10 workspace set."
 msgstr "Klawisz do prze³±czenia na poprzedni zestaw 10-ciu pulpitów."
 
 #. Info: WindowShortcut1Key
-#: WMWmakerconf.gettext:717
-msgid ""
-"The key to switch to user selected window 1. To assign a shortcut to a "
-"window use the 'Options->Select Shortcut' submenu in the window commands "
-"menu. The shortcut will do the same as clicking in an entry in the window "
-"list menu."
-msgstr ""
-"Klawisz do prze³±czenia na wybrane przez u¿ytkownika okno 1. W celu "
-"przypisania skrótu do okna u¿yj polecenia 'Opcje->Wybierz Skrót' w menu "
-"poleceñ okna. Skrót daje taki sam efekt jak wybranie pozycji z listy okien."
+#: WMWmakerconf.gettext:739
+msgid "The key to switch to user selected window 1."
+msgstr "Klawisz do prze³±czenia na wybrane przez u¿ytkownika okno 1."
 
 #. Info: WindowShortcut2Key
-#: WMWmakerconf.gettext:725
-msgid ""
-"The key to switch to user selected window 2. To assign a shortcut to a "
-"window use the 'Options->Select Shortcut' submenu in the window commands "
-"menu. The shortcut will do the same as clicking in an entry in the window "
-"list menu."
-msgstr ""
-"Klawisz do prze³±czenia na wybrane przez u¿ytkownika okno 2. W celu "
-"przypisania skrótu do okna u¿yj polecenia 'Opcje->Wybierz Skrót' w menu "
-"poleceñ okna. Skrót daje taki sam efekt jak wybranie pozycji z listy okien."
+#: WMWmakerconf.gettext:747
+msgid "The key to switch to user selected window 2."
+msgstr "Klawisz do prze³±czenia na wybrane przez u¿ytkownika okno 2."
 
 #. Info: WindowShortcut3Key
-#: WMWmakerconf.gettext:733
-msgid ""
-"The key to switch to user selected window 3. To assign a shortcut to a "
-"window use the 'Options->Select Shortcut' submenu in the window commands "
-"menu. The shortcut will do the same as clicking in an entry in the window "
-"list menu."
-msgstr ""
-"Klawisz do prze³±czenia na wybrane przez u¿ytkownika okno 3. W celu "
-"przypisania skrótu do okna u¿yj polecenia 'Opcje->Wybierz Skrót' w menu "
-"poleceñ okna. Skrót daje taki sam efekt jak wybranie pozycji z listy okien."
+#: WMWmakerconf.gettext:755
+msgid "The key to switch to user selected window 3."
+msgstr "Klawisz do prze³±czenia na wybrane przez u¿ytkownika okno 3."
 
 #. Info: WindowShortcut4Key
-#: WMWmakerconf.gettext:741
-msgid ""
-"The key to switch to user selected window 4. To assign a shortcut to a "
-"window use the 'Options->Select Shortcut' submenu in the window commands "
-"menu. The shortcut will do the same as clicking in an entry in the window "
-"list menu."
-msgstr ""
-"Klawisz do prze³±czenia na wybrane przez u¿ytkownika okno 4. W celu "
-"przypisania skrótu do okna u¿yj polecenia 'Opcje->Wybierz Skrót' w menu "
-"poleceñ okna. Skrót daje taki sam efekt jak wybranie pozycji z listy okien."
+#: WMWmakerconf.gettext:763
+msgid "The key to switch to user selected window 4."
+msgstr "Klawisz do prze³±czenia na wybrane przez u¿ytkownika okno 4."
 
 #. Info: Workspace1Key
-#: WMWmakerconf.gettext:749
+#: WMWmakerconf.gettext:771
 msgid "The key to switch to workspace 1."
 msgstr "Klawisz do prze³±czenia na pulpit 1."
 
 #. Info: Workspace2Key
-#: WMWmakerconf.gettext:757
+#: WMWmakerconf.gettext:779
 msgid "The key to switch to workspace 2."
 msgstr "Klawisz do prze³±czenia na pulpit 2."
 
 #. Info: Workspace3Key
-#: WMWmakerconf.gettext:765
+#: WMWmakerconf.gettext:787
 msgid "The key to switch to workspace 3."
 msgstr "Klawisz do prze³±czenia na pulpit 3."
 
 #. Info: Workspace4Key
-#: WMWmakerconf.gettext:773
+#: WMWmakerconf.gettext:795
 msgid "The key to switch to workspace 4."
 msgstr "Klawisz do prze³±czenia na pulpit 4."
 
 #. Info: Workspace5Key
-#: WMWmakerconf.gettext:781
+#: WMWmakerconf.gettext:803
 msgid "The key to switch to workspace 5."
 msgstr "Klawisz do prze³±czenia na pulpit 5."
 
 #. Info: Workspace6Key
-#: WMWmakerconf.gettext:789
+#: WMWmakerconf.gettext:811
 msgid "The key to switch to workspace 6."
 msgstr "Klawisz do prze³±czenia na pulpit 6."
 
 #. Info: Workspace7Key
-#: WMWmakerconf.gettext:797
+#: WMWmakerconf.gettext:819
 msgid "The key to switch to workspace 7."
 msgstr "Klawisz do prze³±czenia na pulpit 7."
 
 #. Info: Workspace8Key
-#: WMWmakerconf.gettext:805
+#: WMWmakerconf.gettext:827
 msgid "The key to switch to workspace 8."
 msgstr "Klawisz do prze³±czenia na pulpit 8."
 
 #. Info: Workspace9Key
-#: WMWmakerconf.gettext:813
+#: WMWmakerconf.gettext:835
 msgid "The key to switch to workspace 9."
 msgstr "Klawisz do prze³±czenia na pulpit 9."
 
 #. Info: Workspace10Key
-#: WMWmakerconf.gettext:821
+#: WMWmakerconf.gettext:843
 msgid "The key to switch to workspace 10."
 msgstr "Klawisz do prze³±czenia na pulpit 10."
 
 #. Info: ModifierKey
-#: WMWmakerconf.gettext:829
+#: WMWmakerconf.gettext:851
 msgid "The modifier to use as the \"Meta\" key. (startup option)"
 msgstr "Klawisz u¿ywany jako \"Meta\". (opcja startowa)"
 
 #. Info: WindowTitleFont
-#: WMWmakerconf.gettext:849
+#: WMWmakerconf.gettext:871
 msgid "The font to use for window titles."
 msgstr "Czcionka dla pasków tytu³owych okien."
 
 #. Info: MenuTitleFont
-#: WMWmakerconf.gettext:857
+#: WMWmakerconf.gettext:879
 msgid "The font to use for menu window titles."
 msgstr "Czcionka dla menu pasków tytu³owych okien."
 
 #. Info: MenuTextFont
-#: WMWmakerconf.gettext:865
+#: WMWmakerconf.gettext:887
 msgid "The font to use for menu item text."
 msgstr "Czcionka dla pozycji w menu."
 
 #. Info: IconTitleFont
-#: WMWmakerconf.gettext:873
+#: WMWmakerconf.gettext:895
 msgid "The font to use for the icon title."
 msgstr "Czcionka dla paska tytu³owego ikony."
 
 #. Info: ClipTitleFont
-#: WMWmakerconf.gettext:881
+#: WMWmakerconf.gettext:903
 msgid ""
 "The font to use for the workspace name and number in the clip's main icon."
 msgstr "Czcionka dla nazwy pulpitu i numeru na g³ównej ikonie Spinacza."
 
 #. Info: DisplayFont
-#: WMWmakerconf.gettext:889
+#: WMWmakerconf.gettext:911
 msgid "The font to use for text in things like WindowMaker dialogs etc."
 msgstr "Czcionka wykorzystywana w dialogach WindowMakera, itp."
 
 #. Info: ColormapSize
-#: WMWmakerconf.gettext:897
+#: WMWmakerconf.gettext:919
 msgid "Size of dithering colormap in colors per channel (startup option)."
 msgstr "Rozmiar ditheringu mapy kolorów w kolorach na kana³ (opcja startowa)."
 
 #. Info: IconSize
-#: WMWmakerconf.gettext:905
+#: WMWmakerconf.gettext:927
 msgid "Width and height of icons (startup option)."
 msgstr "Szeroko¶æ i wysoko¶æ ikon (opcja startowa)."
 
 #. Info: RaiseDelay
-#: WMWmakerconf.gettext:913
+#: WMWmakerconf.gettext:935
 msgid ""
 "Delay in milliseconds before a newly focused window is raised. 0 disables "
 "this feature."
@@ -805,133 +815,124 @@ msgstr ""
 "wy³±cza ten efekt."
 
 #. Info: MenuScrollSpeed
-#: WMWmakerconf.gettext:921
+#: WMWmakerconf.gettext:943
 msgid "Speed of menu scrolling."
 msgstr "Szybko¶æ przewijania menu."
 
 #. Info: IconSlideSpeed
-#: WMWmakerconf.gettext:929
+#: WMWmakerconf.gettext:951
 msgid "Speed of icon slide."
 msgstr "Szybko¶æ przesuwania siê ikony."
 
 #. Info: ShadeSpeed
-#: WMWmakerconf.gettext:937
+#: WMWmakerconf.gettext:959
 msgid "Speed of window shading."
 msgstr "Szybko¶æ zwijania okna."
 
 #. Info: IconificationStyle
-#: WMWmakerconf.gettext:945
+#: WMWmakerconf.gettext:967
 msgid "Style of miniaturization animation."
 msgstr "Wygl±d animacji pomniejszania."
 
 #. Info: DoubleClickTime
-#: WMWmakerconf.gettext:953
+#: WMWmakerconf.gettext:975
 msgid "The time for the double click to be considered so."
 msgstr "Czas, w jakim podwójne klikniêcie jest za takie uwa¿ane."
 
-#. Info: EdgeResistance
-#: WMWmakerconf.gettext:961
-msgid ""
-"Resistance for stopping windows from moving outside of the screen. The "
-"number represents the number of pixels of resistance."
-msgstr ""
-"Liczba piksli stanowi±ca margines przy zapobieganiu przed wychodzeniem okien "
-"poza brzeg ekranu."
-
 #. Info: MenuTitleColor
-#: WMWmakerconf.gettext:969
+#: WMWmakerconf.gettext:983
 msgid "The color of the text on a menu title."
 msgstr "Kolor tekstu na pasku tytu³owym menu."
 
 #. Title: MenuTitleColor
-#: WMWmakerconf.gettext:971 WMWmakerconf.gettext:1021
-#: WMWmakerconf.gettext:1041 WMWmakerconf.gettext:1051
-#: WMWmakerconf.gettext:1061
+#: WMWmakerconf.gettext:985 WMWmakerconf.gettext:1035
+#: WMWmakerconf.gettext:1055 WMWmakerconf.gettext:1065
+#: WMWmakerconf.gettext:1075
 msgid "Text"
 msgstr "Tekst"
 
 #. Info: MenuTextColor
-#: WMWmakerconf.gettext:979
+#: WMWmakerconf.gettext:993
 msgid "The color of the text on a menu item."
 msgstr "Kolor tekstu pozycji menu."
 
 #. Title: MenuTextColor
-#: WMWmakerconf.gettext:981
+#: WMWmakerconf.gettext:995
 msgid "Text (normal)"
 msgstr "Tekst (normalny)"
 
 #. Info: MenuDisabledColor
-#: WMWmakerconf.gettext:989
+#: WMWmakerconf.gettext:1003
 msgid "The color of the text on a disabled menu item."
 msgstr "Kolor tekstu nieaktywnej pozycji menu."
 
 #. Title: MenuDisabledColor
-#: WMWmakerconf.gettext:991
+#: WMWmakerconf.gettext:1005
 msgid "Text (disabled)"
 msgstr "Tekst (pod¶wietlony)"
 
 #. Info: HighlightTextColor
-#: WMWmakerconf.gettext:999
+#: WMWmakerconf.gettext:1013
 msgid "The color of the text on a menu highlight."
 msgstr "Kolor t³a pod¶wietlonej pozycji menu."
 
 #. Title: HighlightTextColor
-#: WMWmakerconf.gettext:1001
+#: WMWmakerconf.gettext:1015
 msgid "Text (highlight)"
 msgstr "Tekst (pod¶wietlony)"
 
 #. Info: HighlightColor
-#: WMWmakerconf.gettext:1009
+#: WMWmakerconf.gettext:1023
 msgid "The background color of a menu highlight."
 msgstr "Kolor t³a pod¶wietlonej pozycji menu."
 
 #. Title: HighlightColor
-#: WMWmakerconf.gettext:1011
+#: WMWmakerconf.gettext:1025
 msgid "Background (highlight)"
 msgstr "T³o (pod¶wietlone)"
 
 #. Info: IconTitleColor
-#: WMWmakerconf.gettext:1019
+#: WMWmakerconf.gettext:1033
 msgid "The color of the text on the icon title."
 msgstr "Kolor tekstu na pasku tytu³owym ikony."
 
 #. Info: IconTitleBack
-#: WMWmakerconf.gettext:1029
+#: WMWmakerconf.gettext:1043
 msgid "The background color of the icon title."
 msgstr "Kolor t³a paska tytu³owego ikony."
 
 #. Title: IconTitleBack
-#: WMWmakerconf.gettext:1031
+#: WMWmakerconf.gettext:1045
 msgid "Background"
 msgstr "T³o"
 
 #. Info: FTitleColor
-#: WMWmakerconf.gettext:1039
+#: WMWmakerconf.gettext:1053
 msgid "The color of the text on a focused window title."
 msgstr "Kolor tekstu na pasku tytu³owym aktywnego okna."
 
 #. Info: PTitleColor
-#: WMWmakerconf.gettext:1049
+#: WMWmakerconf.gettext:1063
 msgid "The color of the text on the title of the parent of the focused window."
 msgstr "Kolor tekstu na pasku tytu³owym okna macierzystego dla aktywnego okna."
 
 #. Info: UTitleColor
-#: WMWmakerconf.gettext:1059
+#: WMWmakerconf.gettext:1073
 msgid "The color of text on an unfocused window title."
 msgstr "Kolor tekstu na pasku tytu³owym nieaktywnego okna."
 
 #. Info: ClipTitleColor
-#: WMWmakerconf.gettext:1069
+#: WMWmakerconf.gettext:1083
 msgid "The color of the workspace name and number on the clip's main icon."
 msgstr "Kolor nazwy pulpitu i numeru na g³ównej ikonie Spinacza."
 
 #. Title: ClipTitleColor
-#: WMWmakerconf.gettext:1071
+#: WMWmakerconf.gettext:1085
 msgid "Text (active)"
 msgstr "Tekst (aktywny)"
 
 #. Info: CClipTitleColor
-#: WMWmakerconf.gettext:1079
+#: WMWmakerconf.gettext:1093
 msgid ""
 "The color of the workspace name and number on the clip's main icon when the "
 "clip is collapsed."
@@ -940,11 +941,51 @@ msgstr ""
 "wygaszony."
 
 #. Title: CClipTitleColor
-#: WMWmakerconf.gettext:1081
+#: WMWmakerconf.gettext:1095
 msgid "Text (collapsed)"
 msgstr "Tekst (wygaszony)"
 
 #. Info: WorkspaceSpecificBack
-#: WMWmakerconf.gettext:1105
+#: WMWmakerconf.gettext:1119
 msgid "The style of the root window."
 msgstr "Wygl±d g³ównego okna."
+
+#~ msgid ""
+#~ "The key to switch to user selected window 1. To assign a shortcut to a "
+#~ "window use the 'Options->Select Shortcut' submenu in the window commands "
+#~ "menu. The shortcut will do the same as clicking in an entry in the window "
+#~ "list menu."
+#~ msgstr ""
+#~ "Klawisz do prze³±czenia na wybrane przez u¿ytkownika okno 1. W celu "
+#~ "przypisania skrótu do okna u¿yj polecenia 'Opcje->Wybierz Skrót' w menu "
+#~ "poleceñ okna. Skrót daje taki sam efekt jak wybranie pozycji z listy okien."
+
+#~ msgid ""
+#~ "The key to switch to user selected window 2. To assign a shortcut to a "
+#~ "window use the 'Options->Select Shortcut' submenu in the window commands "
+#~ "menu. The shortcut will do the same as clicking in an entry in the window "
+#~ "list menu."
+#~ msgstr ""
+#~ "Klawisz do prze³±czenia na wybrane przez u¿ytkownika okno 2. W celu "
+#~ "przypisania skrótu do okna u¿yj polecenia 'Opcje->Wybierz Skrót' w menu "
+#~ "poleceñ okna. Skrót daje taki sam efekt jak wybranie pozycji z listy okien."
+
+#~ msgid ""
+#~ "The key to switch to user selected window 3. To assign a shortcut to a "
+#~ "window use the 'Options->Select Shortcut' submenu in the window commands "
+#~ "menu. The shortcut will do the same as clicking in an entry in the window "
+#~ "list menu."
+#~ msgstr ""
+#~ "Klawisz do prze³±czenia na wybrane przez u¿ytkownika okno 3. W celu "
+#~ "przypisania skrótu do okna u¿yj polecenia 'Opcje->Wybierz Skrót' w menu "
+#~ "poleceñ okna. Skrót daje taki sam efekt jak wybranie pozycji z listy okien."
+
+#~ msgid ""
+#~ "The key to switch to user selected window 4. To assign a shortcut to a "
+#~ "window use the 'Options->Select Shortcut' submenu in the window commands "
+#~ "menu. The shortcut will do the same as clicking in an entry in the window "
+#~ "list menu."
+#~ msgstr ""
+#~ "Klawisz do prze³±czenia na wybrane przez u¿ytkownika okno 4. W celu "
+#~ "przypisania skrótu do okna u¿yj polecenia 'Opcje->Wybierz Skrót' w menu "
+#~ "poleceñ okna. Skrót daje taki sam efekt jak wybranie pozycji z listy okien."
