@@ -1,7 +1,7 @@
 Summary:	This is a GTK-based configuration tool for WindowMaker
 Summary(pl):	Oparty na GTK konfigurator dla WindowMakera
 Name:		wmakerconf
-Version:	1.99.0
+Version:	1.99.1
 Release:	1
 Group:		X11/Window Managers/Tools
 Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
@@ -48,6 +48,7 @@ make CFLAGS="$RPM_OPT_FLAGS"
 rm -rf $RPM_BUILD_ROOT
 make install prefix=$RPM_BUILD_ROOT/usr/X11R6
 install -d $RPM_BUILD_ROOT/{usr/X11R6/share/pixmaps,etc/X11/wmconfig}
+
 install $RPM_SOURCE_DIR/wmakerconf.xpm $RPM_BUILD_ROOT/usr/X11R6/share/pixmaps
 install %{SOURCE1} $RPM_BUILD_ROOT/etc/X11/wmconfig/wmakerconf
 
@@ -62,9 +63,10 @@ rm -rf $RPM_BUILD_ROOT
 %config(missingok) /etc/X11/wmconfig/wmakerconf
 
 %attr(755,root,root) /usr/X11R6/bin/*
+
+%dir /usr/X11R6/share/wmakerconf
 %attr(755,root,root) /usr/X11R6/share/wmakerconf/*.sh
 %attr(755,root,root) /usr/X11R6/share/wmakerconf/*.pl
-%dir /usr/X11R6/share/wmakerconf
 /usr/X11R6/share/wmakerconf/*.xpm
 /usr/X11R6/share/wmakerconf/*.jpg
 /usr/X11R6/share/wmakerconf/MANUAL
