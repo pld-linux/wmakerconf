@@ -1,0 +1,328 @@
+--- wmakerconf-2.8.1/src/rootmenu.c.orig	Fri Oct 26 16:16:29 2001
++++ wmakerconf-2.8.1/src/rootmenu.c	Fri Oct 26 16:23:09 2001
+@@ -976,7 +976,7 @@
+    }
+    else					/* leaf */
+    {
+-      item_t	*new = item_constructor (text, WM_EXEC, NULL, NULL);
++      item_t	*Itemnew = item_constructor (text, WM_EXEC, NULL, NULL);
+       char	*action;
+       int	an;
+       
+@@ -987,84 +987,84 @@
+ 	 if (n >= 4)			/* name SHORTCUT shortcutdef COMMAND */
+ 	 {
+ 	    pl = PLGetArrayElement (menu, 2);
+-	    new->shortcut = g_strdup (PLGetString (pl));
++	    Itemnew->shortcut = g_strdup (PLGetString (pl));
+ 	    pl = PLGetArrayElement (menu, 3);
+ 	    if (n >= 5)			/* ... COMMAND OPTIONS */
+-	       new->arg = g_strdup (PLGetString (PLGetArrayElement (menu, 4)));
++	       Itemnew->arg = g_strdup (PLGetString (PLGetArrayElement (menu, 4)));
+ 	 }
+ 	 else
+ 	 {
+-	    item_destructor (new);
++	    item_destructor (Itemnew);
+ 	    return NULL;		/* ERROR */
+ 	 }
+       }
+       else if (n >= 3)		/* ... COMMAND OPTIONS */
+-	 new->arg = g_strdup (PLGetString (PLGetArrayElement (menu, 2)));
++	 Itemnew->arg = g_strdup (PLGetString (PLGetArrayElement (menu, 2)));
+ 
+       action = PLGetString (pl);
+ 	 
+-      new->action = WM_MENU;
++      Itemnew->action = WM_MENU;
+       for (an = 0; an < WM_LAST; an++)
+ 	 if (streq (action, cmd_id [an]))
+ 	 {
+-	    new->action = an;
++	    Itemnew->action = an;
+ 	    break;
+ 	 }
+-      if (new->action == WM_MENU)
++      if (Itemnew->action == WM_MENU)
+       {
+-	 item_destructor (new);
++	 item_destructor (Itemnew);
+ 	 return NULL;			/* ERROR */
+       }
+ 
+-      if (new->action == WM_OPEN_MENU
+-	  || new->action == WM_INCLUDE
+-	  || new->action == WM_PIPE)	/* check type of command  */
++      if (Itemnew->action == WM_OPEN_MENU
++	  || Itemnew->action == WM_INCLUDE
++	  || Itemnew->action == WM_PIPE)	/* check type of command  */
+       {
+-	 if (!new->arg)			/* ERROR */
++	 if (!Itemnew->arg)			/* ERROR */
+ 	 {
+-	    item_destructor (new);
++	    item_destructor (Itemnew);
+ 	    return NULL;		/* ERROR */
+ 	 }
+-	 if (new->shortcut)		/* not allowed */
++	 if (Itemnew->shortcut)		/* not allowed */
+ 	 {
+-	    Free (new->shortcut);
+-	    new->shortcut = NULL;
++	    Free (Itemnew->shortcut);
++	    Itemnew->shortcut = NULL;
+ 	 }
+-	 if (new->arg [0] == '|')	/* WM_PIPE */
++	 if (Itemnew->arg [0] == '|')	/* WM_PIPE */
+ 	 {
+ 	    char *arg;
+ 
+-	    for (arg = new->arg + 1; *arg == ' '; arg++)
++	    for (arg = Itemnew->arg + 1; *arg == ' '; arg++)
+ 	       ;
+ 	    if (!*arg)			/* ERROR */
+ 	    {
+-	       item_destructor (new);
++	       item_destructor (Itemnew);
+ 	       return NULL;		/* ERROR */
+ 	    }
+ 	    arg = g_strdup (arg);
+-	    Free (new->arg);
+-	    new->arg    = arg;
+-	    new->action = WM_PIPE;
++	    Free (Itemnew->arg);
++	    Itemnew->arg    = arg;
++	    Itemnew->action = WM_PIPE;
+ 	 }
+ 	 else
+ 	 {
+-	    if (strchr (new->arg, ' '))	/* include list of directories */
++	    if (strchr (Itemnew->arg, ' '))	/* include list of directories */
+ 	    {
+-	       new->action = WM_OPEN_MENU;
++	       Itemnew->action = WM_OPEN_MENU;
+ 	    }
+ 	    else
+ 	    {
+-	       char *path = expand_tilde (new->arg);
++	       char *path = expand_tilde (Itemnew->arg);
+ 	       DIR  *dir;
+ 	 
+ 	       if ((dir = opendir (path))) /* include one directory */
+ 	       {
+ 		  closedir (dir);
+-		  new->action = WM_OPEN_MENU;
++		  Itemnew->action = WM_OPEN_MENU;
+ 	       }
+ 	       else			/* include single file */
+ 	       {
+-		  new->action = WM_INCLUDE;
++		  Itemnew->action = WM_INCLUDE;
+ 	       }
+ 	    }
+ 	 }
+@@ -1072,8 +1072,8 @@
+       node = gtk_ctree_insert_node (GTK_CTREE (menu_tree), parent, sibling,
+ 				    &text, 8, NULL, NULL, NULL, NULL, TRUE, TRUE);
+       gtk_ctree_node_set_row_data_full (GTK_CTREE (menu_tree), node,
+-					(gpointer) new, item_destructor);
+-      set_item_pixmap (node, new);
++					(gpointer) Itemnew, item_destructor);
++      set_item_pixmap (node, Itemnew);
+    }
+ 
+    return node;
+@@ -1097,15 +1097,15 @@
+ item_constructor (const char *name, action_e action, const char *arg,
+ 		  const char *shortcut)
+ {
+-   item_t *new   = Calloc (1, sizeof (item_t));
++   item_t *Itemnew   = Calloc (1, sizeof (item_t));
+ 
+    assert (name);
+-   new->name     = g_strdup (name);
+-   new->action   = action;
+-   new->shortcut = g_strdup (shortcut);
+-   new->arg      = g_strdup (arg);
++   Itemnew->name     = g_strdup (name);
++   Itemnew->action   = action;
++   Itemnew->shortcut = g_strdup (shortcut);
++   Itemnew->arg      = g_strdup (arg);
+ 
+-   return new;
++   return Itemnew;
+ }
+ 
+ static void
+@@ -1633,9 +1633,9 @@
+    else
+    {
+       item_t *old = gtk_ctree_node_get_row_data (ctree, cnode);
+-      item_t *new = item_constructor (old->name, old->action, old->arg,
++      item_t *Itemnew = item_constructor (old->name, old->action, old->arg,
+ 				      old->shortcut);
+-      gnode->data = new;
++      gnode->data = Itemnew;
+       return TRUE;
+    }
+ }
+@@ -1841,7 +1841,7 @@
+ {
+    proplist_t	*menu;
+    GtkCTreeNode *node = (GTK_CLIST (menu_tree)->selection)->data;
+-   GtkCTreeNode *new;
++   GtkCTreeNode *Itemnew;
+    item_t	*item_old = gtk_ctree_node_get_row_data (GTK_CTREE (menu_tree),
+ 							 node);
+    char		*filename;
+@@ -1881,11 +1881,11 @@
+       return;				/* ERROR */
+    
+    gtk_clist_freeze (GTK_CLIST (menu_tree));
+-   new = build_tree (GTK_CTREE_ROW (node)->parent, node, menu);
++   Itemnew = build_tree (GTK_CTREE_ROW (node)->parent, node, menu);
+ 
+    PLRelease (menu);
+ 
+-   item_new = gtk_ctree_node_get_row_data (GTK_CTREE (menu_tree), new);
++   item_new = gtk_ctree_node_get_row_data (GTK_CTREE (menu_tree), Itemnew);
+    Free (item_new->name);
+    if (data)
+       item_new->name = g_strdup_printf (_("Output of command '%s'"),
+@@ -1901,17 +1901,17 @@
+       GdkBitmap	*mask_closed, *mask_opened;
+       gboolean	is_leaf, expanded;
+ 
+-      gtk_ctree_get_node_info (GTK_CTREE (menu_tree), new, &old, &spacing,
++      gtk_ctree_get_node_info (GTK_CTREE (menu_tree), Itemnew, &old, &spacing,
+ 			       &closed, &mask_closed, &opened, &mask_opened,
+ 			       &is_leaf, &expanded);
+-      gtk_ctree_set_node_info (GTK_CTREE (menu_tree), new, item_new->name,
++      gtk_ctree_set_node_info (GTK_CTREE (menu_tree), Itemnew, item_new->name,
+ 			       spacing, closed, mask_closed, opened, mask_opened,
+ 			       is_leaf, expanded);
+    }
+    remove_node (widget, NULL);
+    
+    gtk_clist_thaw (GTK_CLIST (menu_tree));
+-   gtk_ctree_select (GTK_CTREE (menu_tree), new);
++   gtk_ctree_select (GTK_CTREE (menu_tree), Itemnew);
+    
+    gtk_entry_select_region (GTK_ENTRY (itemlabel_entry), 0, -1);
+    gtk_widget_grab_focus (itemlabel_entry);
+--- wmakerconf-2.8.1/src/themebrowser.c.orig	Fri Oct 26 16:24:15 2001
++++ wmakerconf-2.8.1/src/themebrowser.c	Fri Oct 26 17:39:21 2001
+@@ -1004,28 +1004,28 @@
+ 			    &is_leaf, &expanded);
+    if (theme)
+    {
+-      char *new = g_strdup (dirname);
++      char *mynew = g_strdup (dirname);
+       
+-      if (strlen (new) > strlen (".themed")
+-	  && streq (new + strlen (new) - strlen (".themed"), ".themed"))
++      if (strlen (mynew) > strlen (".themed")
++	  && streq (mynew + strlen (mynew) - strlen (".themed"), ".themed"))
+       {
+ 	 info->suffix = ".themed";
+-	 *(new + strlen (new) - strlen (".themed")) = 0;
++	 *(mynew + strlen (mynew) - strlen (".themed")) = 0;
+       }
+       
+-      if (strlen (new) > strlen (".style")
+-	  && streq (new + strlen (new) - strlen (".style"), ".style"))
++      if (strlen (mynew) > strlen (".style")
++	  && streq (mynew + strlen (mynew) - strlen (".style"), ".style"))
+       {
+ 	 info->suffix = ".style";
+-	 *(new + strlen (new) - strlen (".style")) = 0;
++	 *(mynew + strlen (mynew) - strlen (".style")) = 0;
+       }
+       
+-      info->name = g_strdup (new);
+-      gtk_ctree_set_node_info (tree, root, new, 8,
++      info->name = g_strdup (mynew);
++      gtk_ctree_set_node_info (tree, root, mynew, 8,
+ 			       p_array [P_GNUSTEP].pixmap,
+ 			       p_array [P_GNUSTEP].mask,
+ 			       NULL, NULL, FALSE, expanded);
+-      g_free (new);
++      g_free (mynew);
+    }
+    else
+    {
+@@ -1049,12 +1049,8 @@
+  */
+ {
+    themeinfo_t *info = (themeinfo_t *) data;
+-
+-   if (info->name)
+-      Free (info->name);
+-   if (info->suffix)
+-      Free (info->suffix);
+-   Free (info);
++   if (info)
++       Free(info);
+ }
+ 
+ /*****************************************************************************
+--- wmakerconf-2.8.1/src/wmconfig.c.orig	Fri Oct 26 16:28:31 2001
++++ wmakerconf-2.8.1/src/wmconfig.c	Fri Oct 26 16:30:23 2001
+@@ -207,21 +207,21 @@
+       orig_rootmenu = read_proplist (text);
+       if (orig_rootmenu)
+       {
+-	 char		*new   = g_strconcat (text, ".bak", NULL);
++	 char		*snew   = g_strconcat (text, ".bak", NULL);
+ 	 proplist_t	*porig = PLGetFilename (orig_rootmenu);
+-	 proplist_t	*pnew  = PLMakeString (new);
++	 proplist_t	*pnew  = PLMakeString (snew);
+ 	 
+ 	 /*
+ 	  *  Generate backup file "'path'.bak"
+ 	  */
+ 	 PLSetFilename (orig_rootmenu, pnew);
+ 	 if (PLSave (orig_rootmenu, YES))
+-	    message (_("Backupfile `%s' generated."), new);
++	    message (_("Backupfile `%s' generated."), snew);
+ 	 else
+-	    error (_("Can't write backupfile `%s'."), new);
++	    error (_("Can't write backupfile `%s'."), snew);
+ 	 PLSetFilename (orig_rootmenu, porig);
+ 	 PLRelease (pnew);
+-	 Free (new);
++	 Free (snew);
+       }
+       Free (text);
+    }
+@@ -293,7 +293,7 @@
+    {
+       char		*orig;		/* original filename */
+       proplist_t	*porig;		/* original fname in PropList format */
+-      char		*new;		/* backup filename */
++      char		*snew;		/* backup filename */
+       proplist_t	*pnew;		/* backup fname in PropList format */
+ 
+       /*
+@@ -301,16 +301,16 @@
+        */
+       porig = PLGetFilename (windowmaker);
+       orig  = PLGetString (porig);
+-      new   = g_strconcat (orig, ".bak", NULL);
+-      pnew  = PLMakeString (new);
++      snew  = g_strconcat (orig, ".bak", NULL);
++      pnew  = PLMakeString (snew);
+       PLSetFilename (windowmaker, pnew);
+       if (PLSave (windowmaker, YES))
+-	 message (_("Backupfile `%s' generated."), new);
++	 message (_("Backupfile `%s' generated."), snew);
+       else
+-	 error (_("Can't write backupfile `%s'."), new);
++	 error (_("Can't write backupfile `%s'."), snew);
+       PLSetFilename (windowmaker, porig);
+       PLRelease (pnew);
+-      Free (new);
++      Free (snew);
+ 
+       PLSetFilename (global_windowmaker, porig);
+       PLMergeDictionaries(global_windowmaker, windowmaker);
