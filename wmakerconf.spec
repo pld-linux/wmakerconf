@@ -78,7 +78,6 @@ gettextize --copy --force
 automake; (cd data; automake)
 aclocal
 autoconf
-LDFLAGS="-s"; export LDFLAGS
 %configure \
 	--with-wmakerdataprefix=%{_datadir} \
 	--with-wmakeretcprefix=%{_sysconfdir} \
