@@ -40,7 +40,7 @@ BuildRoot:	/tmp/%{name}-%{version}-root
 
 %define		_prefix		/usr/X11R6
 %define		_sysconfdir	/etc/X11
-%define		_applnkdir	/usr/X11R6/share/applnk
+%define		_applnkdir	%{_datadir}/applnk
 
 %description
 wmakerconf is a GTK+ based configuration tool for the window manager
