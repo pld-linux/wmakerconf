@@ -24,7 +24,7 @@ BuildRequires:	automake
 BuildRequires:	gettext-devel
 BuildRequires:	gtk+-devel >= 1.2.0
 BuildRequires:	imlib-devel
-BuildRequires:	libPropList-devel >= 0.8.3
+# BuildRequires:	libPropList-devel >= 0.8.3
 BuildRequires:	libjpeg-devel
 BuildRequires:	libpng >= 1.0.8
 BuildRequires:	libtiff-devel
