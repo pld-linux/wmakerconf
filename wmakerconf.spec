@@ -89,16 +89,6 @@ rm -rf $RPM_BUILD_ROOT
 %lang(ru) /usr/X11R6/share/locale/ru/LC_MESSAGES/*
 %lang(tr) /usr/X11R6/share/locale/tr/LC_MESSAGES/*
 
-%attr(755,root,root) /usr/X11R6/bin/*
-%attr(755,root,root) /usr/X11R6/share/wmakerconf/*.sh
-%attr(755,root,root) /usr/X11R6/share/wmakerconf/*.pl
-/usr/X11R6/share/wmakerconf/*.xpm
-/usr/X11R6/share/wmakerconf/*.jpg
-/usr/X11R6/share/wmakerconf/MANUAL
-/usr/X11R6/share/wmakerconf/WMWmakerconf
-/usr/X11R6/share/wmakerconf/wmaker-version
-/usr/X11R6/share/pixmaps/wmakerconf.xpm
-
 %changelog
 * Mon Apr 19 1999 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
   [1.99.2-1]
