@@ -32,8 +32,8 @@ Requires:	WindowMaker
 Requires:	wmakerconf-data
 BuildRoot:	/tmp/%{name}-%{version}-root
 
-%define _prefix         /usr/X11R6
-%define _sysconfdir     /etc/X11
+%define		_prefix		/usr/X11R6
+%define		_sysconfdir	/etc/X11
 
 %description
 wmakerconf is a GTK+ based configuration tool for the window manager
@@ -77,8 +77,14 @@ cp %{SOURCE2} po/pl.po
 cp %{SOURCE3} data/po/pl.po
 
 %build
-%GNUconfigure -- --prefix=%{_prefix} --with-wmakerdataprefix=%{_datadir} --with-wmakeretcprefix=%{_sysconfdir} --enable-themes-org
-
+automake
+aclocal
+autoconf
+%configure \
+	--prefix=%{_prefix} \
+	--with-wmakerdataprefix=%{_datadir} \
+	--with-wmakeretcprefix=%{_sysconfdir} \
+	--enable-themes-org
 make
 
 cd data
