@@ -1,8 +1,10 @@
 Summary:	This is a GTK-based configuration tool for WindowMaker
+Summary(es):	Herramienta de configuración basada en GTK para WindowMaker
 Summary(pl):	Oparty na GTK konfigurator dla WindowMakera
+Summary(pt_BR):	Ferramenta de configuração baseada no GTK para o WindowMaker
 Name:		wmakerconf
 Version:	2.8.1
-Release:	1
+Release:	5
 License:	GPL
 Group:		X11/Window Managers/Tools
 Group(de):	X11/Fenstermanager/Werkzeuge
@@ -11,8 +13,12 @@ Group(fr):	X11/Gestionnaires De Fenêtres
 Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
 Source0:	http://ulli.on.openave.net/wmakerconf/%{name}-%{version}.tar.bz2
 Source1:	%{name}.desktop
+Source2:	%{name}.png
 Patch0:		%{name}-subdir.patch
 Patch1:		%{name}-DESTDIR.patch
+Patch2:		%{name}-charset.patch
+Patch3:		%{name}-misc.patch
+Patch4:		%{name}-ia64+mkstemp.patch
 Icon:		wmakerconf.xpm
 URL:		http://ulli.on.openave.net/wmakerconf/
 BuildRequires:	libPropList-devel >= 0.8.3
@@ -26,11 +32,12 @@ BuildRequires:	zlib-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gettext-devel
-BuildRequires:	libwmfun-devel >= 0.0.2
+#BuildRequires:	libwmfun-devel >= 0.0.2
 BuildRequires:	imlib-devel
 Requires:	WindowMaker >= 0.62.1
 Requires:	wmakerconf-data >= 0.64.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+Obsoletes:	wmakerconf-data
 
 %define		_prefix		/usr/X11R6
 %define		_sysconfdir	/etc/X11
@@ -43,40 +50,48 @@ dialog, file selection dialog, etc. Tooltips with short description of
 every attribute. New attributes can be simply integrated by changing
 the wmakerconf proplist
 
+%description -l es
+Herramienta de configuración basada en GTK+ para el administrador de
+ventanas Window Maker. Soporta todos los atributos del Window Maker:
+navegador para selección de fuentes, navegador para visualizar
+pixmaps, caja de diálogo para selección de colores, caja de diálogo
+para accesos directos, caja de diálogo para selección de archivos,...
+Trucos en todos los atributos. Nuevos atributos se pueden integrar de
+forma sencilla, cambiando la lista de propiedades del wmakerconf.
+
 %description -l pl
 wmakerconf jest opartym na GTK+ narzêdziem konfiguracyjnym dla
 WindowMakera. Umo¿liwia zmianê czcionek, ikon, kolorów i pozosta³ych
 atrybutów przy pomocy prostych narzêdzi dialogowych.
 
-%package data
-Version:	0.64.1
-Summary:	Data files for GTK-based configuration tool for Window Maker
-Summary(pl):	Pliki danych dla opartego na GTK konfiguratora WindowMakera
-Group:		X11/Window Managers/Tools
-Group(de):	X11/Fenstermanager/Werkzeuge
-Group(es):	X11/Administraadores De Ventanas
-Group(fr):	X11/Gestionnaires De Fenêtres                                                                      
-Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
-
-%description data
-Data files containing information relating to the latest version of
-WindowMaker for use by wmakerconf, the WindowMaker configuration tool
-
-%description -l pl
-Pakiet zawiera pliki danych dotycz±ce najnowszej wersji WindowMakera,
-u¿ywane przez program wmakerconf -- narzêdzie konfiguracyjne tego
-zarz±dcy okien.
+%description -l pt_BR
+Ferramenta de configuração baseada em GTK+ para o gerenciador de
+janelas Window Maker. Suporta todos os atributos do Window Maker:
+navegador para seleção de fontes, navegador para visualização de
+pixmaps, caixa de diálogo para seleção de cores, caixa de diálogo para
+atalhos, caixa de diálogo para seleção de arquivos, ... Dicas em todos
+os atributos. Novos atributos podem ser integrados de forma simples,
+mudando a lista de propriedades do wmakerconf.
 
 %prep
 %setup -q 
 %patch0 -p0
 %patch1 -p1
+%patch2 -p1
+%patch3 -p1
+%patch4 -p1
 
 %build
+rm -f missing
 gettextize --copy --force
 aclocal
 autoconf
-automake -a -c; (cd data; automake -a -c)
+automake -a -c
+(cd data
+rm -f missing
+aclocal
+autoconf
+automake -a -c)
 %configure \
 	--with-wmakerdataprefix=%{_datadir} \
 	--with-wmakeretcprefix=%{_sysconfdir} \
@@ -90,18 +105,17 @@ cd data
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT/{%{_datadir}/pixmaps,%{_applnkdir}/Utilities}
+install -d $RPM_BUILD_ROOT/{%{_pixmapsdir},%{_applnkdir}/Settings/WindowMaker}
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
-%{__make} -C data DESTDIR=$RPM_BUILD_ROOT install
+%{__make} install -C data DESTDIR=$RPM_BUILD_ROOT
 
-install $RPM_SOURCE_DIR/wmakerconf.xpm $RPM_BUILD_ROOT%{_datadir}/pixmaps
-install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Utilities
+install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Settings/WindowMaker
+install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 
 gzip -9nf AUTHORS ChangeLog NEWS README TODO
 
-%find_lang %{name}
-%find_lang %{name}-data
+%find_lang %{name} --all-name
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -109,17 +123,13 @@ rm -rf $RPM_BUILD_ROOT
 %files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc *.gz
-%{_applnkdir}/Utilities/wmakerconf.desktop
-
 %attr(755,root,root) %{_bindir}/*
 %dir %{_datadir}/%{name}
 %attr(755,root,root) %{_datadir}/%{name}/*.sh
 %attr(755,root,root) %{_datadir}/%{name}/*.pl
 %{_datadir}/%{name}/*.xpm
 %{_datadir}/%{name}/MANUAL
-%{_pixmapsdir}/%{name}.xpm
-
-%files data -f %{name}-data.lang
-%defattr(644,root,root,755)
 %{_datadir}/%{name}/WMWmakerconf
 %{_datadir}/%{name}/wmaker-version
+%{_applnkdir}/Settings/WindowMaker/wmakerconf.desktop
+%{_pixmapsdir}/*
