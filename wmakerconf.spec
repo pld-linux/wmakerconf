@@ -1,7 +1,7 @@
 Summary:	This is a GTK-based configuration tool for WindowMaker
 Summary(pl):	Oparty na GTK konfigurator dla WindowMakera
 Name:		wmakerconf
-Version:	1.99.1
+Version:	1.99.2
 Release:	1
 Group:		X11/Window Managers/Tools
 Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
