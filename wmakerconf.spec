@@ -33,6 +33,7 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gettext-devel
 BuildRequires:	libwmfun-devel >= 0.0.2
+BuildRequires:	imlib-devel
 Requires:	WindowMaker >= 0.51.0
 Requires:	wmakerconf-data <= 0.61.1
 BuildRoot:	/tmp/%{name}-%{version}-root
