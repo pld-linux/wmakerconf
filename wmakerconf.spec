@@ -9,11 +9,12 @@ Group(de):	X11/Fenstermanager/Werkzeuge
 Group(es):	X11/Administraadores De Ventanas
 Group(fr):	X11/Gestionnaires De Fenêtres
 Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
-Source0:	http://members.linuxstart.com/~ulli/wmakerconf/%{name}-%{version}.tar.bz2
+Source0:	http://ulli.on.openave.net/wmakerconf/%{name}-%{version}.tar.bz2
 Source1:	%{name}.desktop
 Patch0:		%{name}-subdir.patch
 Patch1:		%{name}-DESTDIR.patch
 Icon:		wmakerconf.xpm
+URL:		http://ulli.on.openave.net/wmakerconf/
 BuildRequires:	libPropList-devel >= 0.8.3
 BuildRequires:	gtk+-devel >= 1.2.0
 BuildRequires:	libjpeg-devel
@@ -107,7 +108,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc {AUTHORS,ChangeLog,NEWS,README,TODO}.gz
+%doc *.gz
 %{_applnkdir}/Utilities/wmakerconf.desktop
 
 %attr(755,root,root) %{_bindir}/*
