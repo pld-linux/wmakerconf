@@ -17,19 +17,18 @@ Patch3:		%{name}-misc.patch
 Patch4:		%{name}-ia64+mkstemp.patch
 Icon:		wmakerconf.xpm
 URL:		http://ulli.on.openave.net/wmakerconf/
-BuildRequires:	libPropList-devel >= 0.8.3
-BuildRequires:	gtk+-devel >= 1.2.0
-BuildRequires:	libjpeg-devel
-BuildRequires:	libpng >= 1.0.8
-BuildRequires:	libtiff-devel
-BuildRequires:	libungif-devel
 BuildRequires:	WindowMaker-devel >= 0.51.0
-BuildRequires:	zlib-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gettext-devel
-#BuildRequires:	libwmfun-devel >= 0.0.2
+BuildRequires:	gtk+-devel >= 1.2.0
 BuildRequires:	imlib-devel
+BuildRequires:	libjpeg-devel
+BuildRequires:	libpng >= 1.0.8
+BuildRequires:	libPropList-devel >= 0.8.3
+BuildRequires:	libtiff-devel
+BuildRequires:	libungif-devel
+BuildRequires:	zlib-devel
 Requires:	WindowMaker >= 0.62.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	wmakerconf-data
