@@ -2,17 +2,17 @@ Summary:	This is a GTK-based configuration tool for WindowMaker
 Summary(pl):	Oparty na GTK konfigurator dla WindowMakera
 Name:		wmakerconf
 Version:	2.5
-Release: 6
+Release:	7
 License:	GPL
 Group:		X11/Window Managers/Tools
 Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
 Source0:	http://members.linuxstart.com/~ulli/wmakerconf/%{name}-%{version}.tar.bz2
-Source1:	wmakerconf.desktop
-Source2:	wmakerconf.pl.po
-Source3:	wmakerconf-data.pl.po
-Patch0:		wmakerconf-data-locale.patch
-Patch1:		wmakerconf-subdir.patch
-Patch2:		wmakerconf-DESTDIR.patch
+Source1:	%{name}.desktop
+Source2:	%{name}.pl.po
+Source3:	%{name}-data.pl.po
+Patch0:		%{name}-data-locale.patch
+Patch1:		%{name}-subdir.patch
+Patch2:		%{name}-DESTDIR.patch
 Icon:		wmakerconf.xpm
 BuildRequires:	libPropList-devel >= 0.8.3
 BuildRequires:	gtk+-devel >= 1.2.0
@@ -28,8 +28,8 @@ BuildRequires:	automake
 BuildRequires:	gettext-devel
 BuildRequires:	libwmfun-devel >= 0.0.2
 BuildRequires:	imlib-devel
-Requires:	WindowMaker >= 0.51.0
-Requires:	wmakerconf-data <= 0.61.1-5
+Requires:	WindowMaker >= 0.62.1
+Requires:	wmakerconf-data >= 0.62.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
@@ -37,30 +37,28 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 wmakerconf is a GTK+ based configuration tool for the window manager
-WindowMaker.
-Support of all WindowMaker attributes: Font selection browser, pixmap
-preview browser, color selection dialog, shortcut dialog, file selection
-dialog, etc. 
-Tooltips with short description of every attribute.
-New attributes can be simply integrated by changing the wmakerconf proplist
+WindowMaker. Support of all WindowMaker attributes: Font selection
+browser, pixmap preview browser, color selection dialog, shortcut
+dialog, file selection dialog, etc. Tooltips with short description of
+every attribute. New attributes can be simply integrated by changing
+the wmakerconf proplist
 
 %description -l pl
-wmakerconf jest opartym na GTK+ narzêdziem konfiguracyjnym dla WindowMakera.
-Umo¿liwia zmianê czcionek, ikon, kolorów i pozosta³ych atrybutów przy
-pomocy prostych narzêdzi dialogowych. 
+wmakerconf jest opartym na GTK+ narzêdziem konfiguracyjnym dla
+WindowMakera. Umo¿liwia zmianê czcionek, ikon, kolorów i pozosta³ych
+atrybutów przy pomocy prostych narzêdzi dialogowych.
 
 %package data
-Version:	0.61.1
+Version:	0.62.1
 Summary:	Data files for GTK-based configuration tool for Window Maker
 Summary(pl):	Pliki danych dla opartego na GTK konfiguratora WindowMakera
-Group:          X11/Window Managers/Tools
-Group(pl):      X11/Zarz±dcy Okien/Narzêdzia
+Group:		X11/Window Managers/Tools
+Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
 Requires:	WindowMaker = 0.61.1
 
 %description data
 Data files containing information relating to the latest version of
-WindowMaker for use by wmakerconf, the WindowMaker configuration
-tool
+WindowMaker for use by wmakerconf, the WindowMaker configuration tool
 
 %description -l pl
 Pakiet zawiera pliki danych dotycz±ce najnowszej wersji WindowMakera,
