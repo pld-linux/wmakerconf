@@ -31,11 +31,10 @@ BuildRequires:	libwmfun-devel >= 0.0.2
 BuildRequires:	imlib-devel
 Requires:	WindowMaker >= 0.51.0
 Requires:	wmakerconf-data <= 0.61.1-5
-BuildRoot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
 %define		_sysconfdir	/etc/X11
-%define		_applnkdir	%{_datadir}/applnk
 
 %description
 wmakerconf is a GTK+ based configuration tool for the window manager
