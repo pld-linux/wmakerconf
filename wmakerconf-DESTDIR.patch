@@ -1,0 +1,12 @@
+diff -Nru wmakerconf-2.3/data/po/Makefile.am wmakerconf-2.3.new/data/po/Makefile.am
+--- wmakerconf-2.3/data/po/Makefile.am	Thu Oct  7 06:58:19 1999
++++ wmakerconf-2.3.new/data/po/Makefile.am	Thu Oct  7 06:57:58 1999
+@@ -66,7 +66,7 @@
+ 	  esac; \
+ 	  echo $$destdir; \
+ 	  lang=`echo $$cat | sed 's/\$(CATOBJEXT)$$//'`; \
+-	  dir=$$destdir/$$lang/LC_MESSAGES; \
++	  dir=$(DESTDIR)$$destdir/$$lang/LC_MESSAGES; \
+ 	  $(mkinstalldirs) $$dir; \
+ 	  if test -r $$cat; then \
+ 	    $(INSTALL_DATA) $$cat $$dir/$(PACKAGE)$(INSTOBJEXT); \
