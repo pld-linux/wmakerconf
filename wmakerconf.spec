@@ -7,10 +7,6 @@ Version:	2.8.1
 Release:	5
 License:	GPL
 Group:		X11/Window Managers/Tools
-Group(de):	X11/Fenstermanager/Werkzeuge
-Group(es):	X11/Administraadores De Ventanas
-Group(fr):	X11/Gestionnaires De Fenêtres
-Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
 Source0:	http://ulli.on.openave.net/wmakerconf/%{name}-%{version}.tar.bz2
 Source1:	%{name}.desktop
 Source2:	%{name}.png
