@@ -10,3 +10,18 @@ diff -Nru wmakerconf-2.3/data/po/Makefile.am wmakerconf-2.3.new/data/po/Makefile
  	  $(mkinstalldirs) $$dir; \
  	  if test -r $$cat; then \
  	    $(INSTALL_DATA) $$cat $$dir/$(PACKAGE)$(INSTOBJEXT); \
+diff -ur wmakerconf-2.8.1/Makefile.am wmakerconf-2.8.1.patched/Makefile.am
+--- wmakerconf-2.8.1/Makefile.am	Fri Mar 16 18:19:23 2001
++++ wmakerconf-2.8.1.patched/Makefile.am	Fri Mar 23 23:06:50 2001
+@@ -22,9 +22,9 @@
+ GNOMEAPP = @GNOMEAPP@
+ 
+ install-data-local: $(srcdir)/wmakerconf.desktop
+-	$(mkinstalldirs) $(GNOMEDIR)
++	$(mkinstalldirs) $(DESTDIR)$(GNOMEDIR)
+ 	@list='$(GNOMEAPP)'; for p in $$list; do \
+ 		echo "$(INSTALL_DATA) $(srcdir)/$$p $(GNOMEDIR)/$$p"; \
+-		$(INSTALL_DATA) $(srcdir)/$$p $(GNOMEDIR)/$$p; \
++		$(INSTALL_DATA) $(srcdir)/$$p $(DESTDIR)$(GNOMEDIR)/$$p; \
+ 	done
+ 
