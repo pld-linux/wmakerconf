@@ -1,7 +1,7 @@
 Summary:	This is a GTK-based configuration tool for WindowMaker
 Summary(pl):	Oparty na GTK konfigurator dla WindowMakera
 Name:		wmakerconf
-Version:	2.2
+Version:	2.3
 Release:	1
 Group:		X11/Window Managers/Tools
 Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
@@ -13,6 +13,7 @@ Source3:	wmakerconf-data.pl.po
 Patch0:		wmakerconf-pl.patch
 Patch1:		wmakerconf-data-pl.patch
 Patch2:		wmakerconf-subdir.patch
+Patch3:		wmakerconf-DESTDIR.patch
 Icon:		wmakerconf.xpm
 BuildRequires:	libPropList-devel
 BuildRequires:	gtk+-devel
@@ -34,6 +35,7 @@ BuildRoot:	/tmp/%{name}-%{version}-root
 
 %define		_prefix		/usr/X11R6
 %define		_sysconfdir	/etc/X11
+%define		_applnkdir	/usr/X11R6/share/applnk
 
 %description
 wmakerconf is a GTK+ based configuration tool for the window manager
@@ -70,15 +72,16 @@ zarz±dcy okien.
 %prep
 %setup -q  
 %patch0 -p0
-%patch1 -p0
+%patch1 -p1
 %patch2 -p0
+%patch3 -p1
 
 cp %{SOURCE2} po/pl.po
 cp %{SOURCE3} data/po/pl.po
 
 %build
 gettextize --copy --force
-automake
+automake; (cd data; automake)
 aclocal
 autoconf
 LDFLAGS="-s"; export LDFLAGS
@@ -89,17 +92,16 @@ LDFLAGS="-s"; export LDFLAGS
 make
 
 cd data
-./configure \
-	--prefix=%{_prefix}
+%configure
 
 make
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT/{%{_datadir}/pixmaps,%{_sysconfdir}/applnk/Utilities}
+install -d $RPM_BUILD_ROOT/{%{_datadir}/pixmaps,%{_applnkdir}/Utilities}
 
 make install DESTDIR=$RPM_BUILD_ROOT
-make -C data prefix=$RPM_BUILD_ROOT%{_prefix} install
+make -C data DESTDIR=$RPM_BUILD_ROOT install
 
 install $RPM_SOURCE_DIR/wmakerconf.xpm $RPM_BUILD_ROOT%{_datadir}/pixmaps
 install %{SOURCE1} $RPM_BUILD_ROOT%{_sysconfdir}/applnk/Utilities
@@ -115,7 +117,7 @@ rm -rf $RPM_BUILD_ROOT
 %files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc {AUTHORS,ChangeLog,NEWS,README,TODO}.gz
-%{_sysconfdir}/applnk/Utilities/wmakerconf.desktop
+%{_applnkdir}/Utilities/wmakerconf.desktop
 
 %attr(755,root,root) %{_bindir}/*
 %dir %{_datadir}/%{name}
