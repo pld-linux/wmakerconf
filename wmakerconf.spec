@@ -1,7 +1,7 @@
 Summary:	This is a GTK-based configuration tool for WindowMaker
 Summary(pl):	Oparty na GTK konfigurator dla WindowMakera
 Name:		wmakerconf
-Version:	2.0
+Version:	2.1
 Release:	1
 Group:		X11/Window Managers/Tools
 Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
@@ -12,6 +12,7 @@ Source2:	wmakerconf.pl.po
 Source3:	wmakerconf-data.pl.po
 Patch0:		wmakerconf-pl.patch
 Patch1:		wmakerconf-data-pl.patch
+Patch2:		wmakerconf-subdir.patch
 Icon:		wmakerconf.xpm
 BuildPrereq:	libPropList-devel >= 0.8.3
 BuildPrereq:	gtk+-devel >= 1.2.0
@@ -29,6 +30,9 @@ BuildPrereq:	gettext
 Requires:	WindowMaker
 Requires:	wmakerconf-data
 BuildRoot:	/tmp/%{name}-%{version}-root
+
+%define _prefix         /usr/X11R6
+%define _sysconfdir     /etc/X11
 
 %description
 wmakerconf is a GTK+ based configuration tool for the window manager
@@ -66,32 +70,36 @@ zarz±dcy okien.
 %setup -q  
 %patch0 -p0
 %patch1 -p0
+%patch2 -p0
 
 cp %{SOURCE2} po/pl.po
 cp %{SOURCE3} data/po/pl.po
 
 %build
-%GNUconfigure -- --prefix=/usr/X11R6 --with-wmakerdataprefix=/usr/X11R6/share --with-wmakeretcprefix=/etc/X11 --enable-themes-org
+%{GNUconfigure} --prefix=%{_prefix} \
+	--with-wmakerdataprefix=%{_datadir} \
+	--with-wmakeretcprefix=%{_sysconfdir} \
+	--enable-themes-org
 
 make
 
 cd data
 ./configure \
-	--prefix=/usr/X11R6
+	--prefix=%{_prefix}
 
 make
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT/{usr/X11R6/share/pixmaps,etc/X11/wmconfig}
+install -d $RPM_BUILD_ROOT/{%{_datadir}/pixmaps,%{_sysconfdir}/wmconfig}
 
 make install DESTDIR=$RPM_BUILD_ROOT
-make -C data prefix=$RPM_BUILD_ROOT/usr/X11R6 install
+make -C data prefix=$RPM_BUILD_ROOT%{_prefix} install
 
-install $RPM_SOURCE_DIR/wmakerconf.xpm $RPM_BUILD_ROOT/usr/X11R6/share/pixmaps
-install %{SOURCE1} $RPM_BUILD_ROOT/etc/X11/wmconfig/wmakerconf
+install $RPM_SOURCE_DIR/wmakerconf.xpm $RPM_BUILD_ROOT%{_datadir}/pixmaps
+install %{SOURCE1} $RPM_BUILD_ROOT%{_sysconfdir}/wmconfig/%{name}
 
-strip $RPM_BUILD_ROOT/usr/X11R6/bin/*
+strip $RPM_BUILD_ROOT%{_bindir}/*
 
 gzip -9nf AUTHORS ChangeLog NEWS README TODO
 
@@ -101,58 +109,65 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc {AUTHORS,ChangeLog,NEWS,README,TODO}.gz
-%config /etc/X11/wmconfig/wmakerconf
+%{_sysconfdir}/wmconfig/%{name}
 
-%lang(ca)    /usr/X11R6/share/locale/ca/LC_MESSAGES/wmakerconf.mo
-%lang(da)    /usr/X11R6/share/locale/da/LC_MESSAGES/wmakerconf.mo
-%lang(de)    /usr/X11R6/share/locale/de/LC_MESSAGES/wmakerconf.mo
-%lang(fi)    /usr/X11R6/share/locale/fi/LC_MESSAGES/wmakerconf.mo
-%lang(fr)    /usr/X11R6/share/locale/fr/LC_MESSAGES/wmakerconf.mo
-%lang(hu)    /usr/X11R6/share/locale/hu/LC_MESSAGES/wmakerconf.mo
-%lang(it)    /usr/X11R6/share/locale/it/LC_MESSAGES/wmakerconf.mo
-%lang(ja)    /usr/X11R6/share/locale/ja/LC_MESSAGES/wmakerconf.mo
-%lang(ko)    /usr/X11R6/share/locale/ko/LC_MESSAGES/wmakerconf.mo
-%lang(no)    /usr/X11R6/share/locale/no/LC_MESSAGES/wmakerconf.mo
-%lang(pl)    /usr/X11R6/share/locale/pl/LC_MESSAGES/wmakerconf.mo
-%lang(pt_BR) /usr/X11R6/share/locale/pt_BR/LC_MESSAGES/wmakerconf.mo
-%lang(ru)    /usr/X11R6/share/locale/ru/LC_MESSAGES/wmakerconf.mo
-%lang(sv)    /usr/X11R6/share/locale/sv/LC_MESSAGES/wmakerconf.mo
+%lang(ca)    %{_datadir}/locale/ca/LC_MESSAGES/%{name}.mo
+%lang(da)    %{_datadir}/locale/da/LC_MESSAGES/%{name}.mo
+%lang(de)    %{_datadir}/locale/de/LC_MESSAGES/%{name}.mo
+%lang(fi)    %{_datadir}/locale/fi/LC_MESSAGES/%{name}.mo
+%lang(fr)    %{_datadir}/locale/fr/LC_MESSAGES/%{name}.mo
+%lang(hu)    %{_datadir}/locale/hu/LC_MESSAGES/%{name}.mo
+%lang(it)    %{_datadir}/locale/it/LC_MESSAGES/%{name}.mo
+%lang(ja)    %{_datadir}/locale/ja/LC_MESSAGES/%{name}.mo
+%lang(ko)    %{_datadir}/locale/ko/LC_MESSAGES/%{name}.mo
+%lang(no)    %{_datadir}/locale/no/LC_MESSAGES/%{name}.mo
+%lang(pl)    %{_datadir}/locale/pl/LC_MESSAGES/%{name}.mo
+%lang(pt_BR) %{_datadir}/locale/pt_BR/LC_MESSAGES/%{name}.mo
+%lang(ru)    %{_datadir}/locale/ru/LC_MESSAGES/%{name}.mo
+%lang(sv)    %{_datadir}/locale/sv/LC_MESSAGES/%{name}.mo
 
-%attr(755,root,root) /usr/X11R6/bin/*
-%dir /usr/X11R6/share/wmakerconf
-%attr(755,root,root) /usr/X11R6/share/wmakerconf/*.sh
-%attr(755,root,root) /usr/X11R6/share/wmakerconf/*.pl
-/usr/X11R6/share/wmakerconf/*.xpm
-/usr/X11R6/share/wmakerconf/*.jpg
-/usr/X11R6/share/wmakerconf/MANUAL
-/usr/X11R6/share/pixmaps/wmakerconf.xpm
+%attr(755,root,root) %{_bindir}/*
+%dir %{_datadir}/%{name}
+%attr(755,root,root) %{_datadir}/%{name}/*.sh
+%attr(755,root,root) %{_datadir}/%{name}/*.pl
+%{_datadir}/%{name}/*.xpm
+%{_datadir}/%{name}/*.jpg
+%{_datadir}/%{name}/MANUAL
+%{_datadir}/pixmaps/%{name}.xpm
 
 %files data
 %defattr(644,root,root,755)
-/usr/X11R6/share/wmakerconf/WMWmakerconf
-/usr/X11R6/share/wmakerconf/wmaker-version
+%{_datadir}/%{name}/WMWmakerconf
+%{_datadir}/%{name}/wmaker-version
 
-%lang(ca)    /usr/X11R6/share/locale/ca/LC_MESSAGES/wmakerconf-data.mo
-%lang(cz)    /usr/X11R6/share/locale/cz/LC_MESSAGES/wmakerconf-data.mo
-%lang(da)    /usr/X11R6/share/locale/da/LC_MESSAGES/wmakerconf-data.mo
-%lang(de)    /usr/X11R6/share/locale/de/LC_MESSAGES/wmakerconf-data.mo
-%lang(el)    /usr/X11R6/share/locale/el/LC_MESSAGES/wmakerconf-data.mo
-%lang(es)    /usr/X11R6/share/locale/es/LC_MESSAGES/wmakerconf-data.mo
-%lang(fi)    /usr/X11R6/share/locale/fi/LC_MESSAGES/wmakerconf-data.mo
-%lang(fr)    /usr/X11R6/share/locale/fr/LC_MESSAGES/wmakerconf-data.mo
-%lang(hu)    /usr/X11R6/share/locale/hu/LC_MESSAGES/wmakerconf-data.mo
-%lang(it)    /usr/X11R6/share/locale/it/LC_MESSAGES/wmakerconf-data.mo
-%lang(ja)    /usr/X11R6/share/locale/ja/LC_MESSAGES/wmakerconf-data.mo
-%lang(ko)    /usr/X11R6/share/locale/ko/LC_MESSAGES/wmakerconf-data.mo
-%lang(no)    /usr/X11R6/share/locale/no/LC_MESSAGES/wmakerconf-data.mo
-%lang(pl)    /usr/X11R6/share/locale/pl/LC_MESSAGES/wmakerconf-data.mo
-%lang(pt_BR) /usr/X11R6/share/locale/pt_BR/LC_MESSAGES/wmakerconf-data.mo
-%lang(ro)    /usr/X11R6/share/locale/ro/LC_MESSAGES/wmakerconf-data.mo
-%lang(ru)    /usr/X11R6/share/locale/ru/LC_MESSAGES/wmakerconf-data.mo
-%lang(sv)    /usr/X11R6/share/locale/sv/LC_MESSAGES/wmakerconf-data.mo
-%lang(tr)    /usr/X11R6/share/locale/tr/LC_MESSAGES/wmakerconf-data.mo
+%lang(ca)    %{_datadir}/locale/ca/LC_MESSAGES/%{name}-data.mo
+%lang(cz)    %{_datadir}/locale/cz/LC_MESSAGES/%{name}-data.mo
+%lang(da)    %{_datadir}/locale/da/LC_MESSAGES/%{name}-data.mo
+%lang(de)    %{_datadir}/locale/de/LC_MESSAGES/%{name}-data.mo
+%lang(el)    %{_datadir}/locale/el/LC_MESSAGES/%{name}-data.mo
+%lang(es)    %{_datadir}/locale/es/LC_MESSAGES/%{name}-data.mo
+%lang(fi)    %{_datadir}/locale/fi/LC_MESSAGES/%{name}-data.mo
+%lang(fr)    %{_datadir}/locale/fr/LC_MESSAGES/%{name}-data.mo
+%lang(hu)    %{_datadir}/locale/hu/LC_MESSAGES/%{name}-data.mo
+%lang(it)    %{_datadir}/locale/it/LC_MESSAGES/%{name}-data.mo
+%lang(ja)    %{_datadir}/locale/ja/LC_MESSAGES/%{name}-data.mo
+%lang(ko)    %{_datadir}/locale/ko/LC_MESSAGES/%{name}-data.mo
+%lang(no)    %{_datadir}/locale/no/LC_MESSAGES/%{name}-data.mo
+%lang(pl)    %{_datadir}/locale/pl/LC_MESSAGES/%{name}-data.mo
+%lang(pt_BR) %{_datadir}/locale/pt_BR/LC_MESSAGES/%{name}-data.mo
+%lang(ro)    %{_datadir}/locale/ro/LC_MESSAGES/%{name}-data.mo
+%lang(ru)    %{_datadir}/locale/ru/LC_MESSAGES/%{name}-data.mo
+%lang(sv)    %{_datadir}/locale/sv/LC_MESSAGES/%{name}-data.mo
+%lang(tr)    %{_datadir}/locale/tr/LC_MESSAGES/%{name}-data.mo
 
 %changelog
+* Mon May 17 1999 Piotr Czerwiñski <pius@pld.org.pl>
+  [2.1-1]
+- updated to 2.1,
+- added wmakerconf-subdir.patch,
+- added using more rpm macros,
+- minor changes.
+
 * Sat May  8 1999 Piotr Czerwiñski <pius@pld.org.pl>
   [2.0-1]
 - updated to 2.0,
