@@ -3,13 +3,12 @@ Summary(es):	Herramienta de configuración basada en GTK para WindowMaker
 Summary(pl):	Oparty na GTK konfigurator dla WindowMakera
 Summary(pt_BR):	Ferramenta de configuração baseada no GTK para o WindowMaker
 Name:		wmakerconf
-Version:	2.8.1
-Release:	7
+Version:	2.9
+Release:	1
 License:	GPL
 Group:		X11/Window Managers/Tools
-#Source0:	http://www.windowmaker.org/pub/contrib/source/wmakerconf/%{name}-%{version}.tar.bz2
-Source0:	%{name}-%{version}.tar.bz2
-# Source0-md5:	1dbd2a586cfd351a264f84bc544f6b7a
+Source0:	http://www.windowmaker.org/pub/contrib/source/wmakerconf/%{name}-%{version}.tar.bz2
+# Source0-md5:	da02991fc9e8e09c99c1d159f45afe1e
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 Patch0:		%{name}-subdir.patch
