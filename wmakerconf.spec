@@ -4,7 +4,7 @@ Summary(pl):	Oparty na GTK konfigurator dla WindowMakera
 Summary(pt_BR):	Ferramenta de configuração baseada no GTK para o WindowMaker
 Name:		wmakerconf
 Version:	2.8.1
-Release:	5
+Release:	6
 License:	GPL
 Group:		X11/Window Managers/Tools
 Source0:	http://ulli.on.openave.net/wmakerconf/%{name}-%{version}.tar.bz2
@@ -31,7 +31,6 @@ BuildRequires:	gettext-devel
 #BuildRequires:	libwmfun-devel >= 0.0.2
 BuildRequires:	imlib-devel
 Requires:	WindowMaker >= 0.62.1
-Requires:	wmakerconf-data >= 0.64.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	wmakerconf-data
 
