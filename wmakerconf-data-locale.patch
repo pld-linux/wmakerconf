@@ -1,0 +1,20 @@
+--- wmakerconf-2.4/data/po/Makefile.am.pius	Sun Dec  5 18:21:41 1999
++++ wmakerconf-2.4/data/po/Makefile.am	Mon Dec  6 19:39:51 1999
+@@ -7,8 +7,8 @@
+ #EXTRA_DIST = ca.po cs.po da.po de.po el.po es.po fi.po fr.po hu.po it.po \
+ #	     ja.po ko.po no.po pl.po pt_BR.po ro.po ru.po sv.po tr.po $(CATALOGS)
+ 
+-CATALOGS   = de.gmo
+-EXTRA_DIST = de.po $(CATALOGS)
++CATALOGS   = de.gmo pl.gmo
++EXTRA_DIST = de.po pl.po $(CATALOGS)
+ 
+ CATOBJEXT  = .gmo
+ INSTOBJEXT = .mo
+@@ -101,4 +101,4 @@
+ 	for file in $$dists; do \
+ 	  ln $(srcdir)/$$file $(distdir) 2> /dev/null \
+ 	    || cp -p $(srcdir)/$$file $(distdir); \
+-	done
+\ No newline at end of file
++	done
