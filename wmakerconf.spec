@@ -2,7 +2,7 @@ Summary:	This is a GTK-based configuration tool for WindowMaker
 Summary(pl):	Oparty na GTK konfigurator dla WindowMakera
 Name:		wmakerconf
 Version:	2.3
-Release:	1
+Release:	2
 Group:		X11/Window Managers/Tools
 Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
 Copyright:	GPL
@@ -15,13 +15,13 @@ Patch1:		wmakerconf-data-pl.patch
 Patch2:		wmakerconf-subdir.patch
 Patch3:		wmakerconf-DESTDIR.patch
 Icon:		wmakerconf.xpm
-BuildRequires:	libPropList-devel
-BuildRequires:	gtk+-devel
+BuildRequires:	libPropList-devel >= 0.8.3
+BuildRequires:	gtk+-devel >= 1.2.0
 BuildRequires:	libjpeg-devel
 BuildRequires:	libpng-devel
 BuildRequires:	libtiff-devel
 BuildRequires:	libungif-devel
-BuildRequires:	WindowMaker-devel
+BuildRequires:	WindowMaker-devel >= 0.51.0
 BuildRequires:	XFree86-devel
 BuildRequires:	xpm-devel
 BuildRequires:	zlib-devel
@@ -29,8 +29,8 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gettext-devel
 BuildRequires:	libwmfun-devel >= 0.0.2
-Requires:	WindowMaker
-Requires:	wmakerconf-data
+Requires:	WindowMaker >= 0.51.0
+Requires:	wmakerconf-data <= 0.61.1
 BuildRoot:	/tmp/%{name}-%{version}-root
 
 %define		_prefix		/usr/X11R6
