@@ -2,12 +2,12 @@ Summary:	This is a GTK-based configuration tool for WindowMaker
 Summary(pl):	Oparty na GTK konfigurator dla WindowMakera
 Name:		wmakerconf
 Version:	2.1
-Release:	1
+Release:	2
 Group:		X11/Window Managers/Tools
 Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
 Copyright:	GPL
 Source0:	http://www-info2.informatik.uni-wuerzburg.de/staff/ulli/wmakerconf/%{name}-%{version}.tar.bz2
-Source1:	wmakerconf.wmconfig
+Source1:	wmakerconf.desktop
 Source2:	wmakerconf.pl.po
 Source3:	wmakerconf-data.pl.po
 Patch0:		wmakerconf-pl.patch
@@ -89,13 +89,13 @@ make
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT/{%{_datadir}/pixmaps,%{_sysconfdir}/wmconfig}
+install -d $RPM_BUILD_ROOT/{%{_datadir}/pixmaps,%{_sysconfdir}/applnk/Utilities}
 
 make install DESTDIR=$RPM_BUILD_ROOT
 make -C data prefix=$RPM_BUILD_ROOT%{_prefix} install
 
 install $RPM_SOURCE_DIR/wmakerconf.xpm $RPM_BUILD_ROOT%{_datadir}/pixmaps
-install %{SOURCE1} $RPM_BUILD_ROOT%{_sysconfdir}/wmconfig/%{name}
+install %{SOURCE1} $RPM_BUILD_ROOT%{_sysconfdir}/applnk/Utilities
 
 strip $RPM_BUILD_ROOT%{_bindir}/*
 
@@ -110,7 +110,7 @@ rm -rf $RPM_BUILD_ROOT
 %files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc {AUTHORS,ChangeLog,NEWS,README,TODO}.gz
-%{_sysconfdir}/wmconfig/%{name}
+%{_sysconfdir}/applnk/Utilities/wmakerconf.desktop
 
 %attr(755,root,root) %{_bindir}/*
 %dir %{_datadir}/%{name}
