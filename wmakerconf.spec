@@ -80,8 +80,8 @@ cp %{SOURCE3} data/po/pl.po
 automake
 aclocal
 autoconf
+LDFLAGS="-s"; export LDFLAGS
 %configure \
-	--prefix=%{_prefix} \
 	--with-wmakerdataprefix=%{_datadir} \
 	--with-wmakeretcprefix=%{_sysconfdir} \
 	--enable-themes-org
@@ -102,8 +102,6 @@ make -C data prefix=$RPM_BUILD_ROOT%{_prefix} install
 
 install $RPM_SOURCE_DIR/wmakerconf.xpm $RPM_BUILD_ROOT%{_datadir}/pixmaps
 install %{SOURCE1} $RPM_BUILD_ROOT%{_sysconfdir}/applnk/Utilities
-
-strip $RPM_BUILD_ROOT%{_bindir}/*
 
 gzip -9nf AUTHORS ChangeLog NEWS README TODO
 
