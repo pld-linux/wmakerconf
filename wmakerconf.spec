@@ -161,75 +161,8 @@ rm -rf $RPM_BUILD_ROOT
 %lang(tr)    %{_datadir}/locale/tr/LC_MESSAGES/%{name}-data.mo
 
 %changelog
-* Mon May 17 1999 Piotr Czerwiñski <pius@pld.org.pl>
+* Thu May 20 1999 Piotr Czerwiñski <pius@pld.org.pl> 
   [2.1-1]
-- updated to 2.1,
-- added wmakerconf-subdir.patch,
-- added using more rpm macros,
-- minor changes.
-
-* Sat May  8 1999 Piotr Czerwiñski <pius@pld.org.pl>
-  [2.0-1]
-- updated to 2.0,
-- added wmakerconf-data subpackage,
-- added "Requires: wmakerconf-data",
-- removed wmakerconf-config.patch (no longer needed),
-- added using %GNUconfigure macro and fixed configure options,
-- added using DESTDIR to make install,
-- added stripping binaries,
-- fixed %config description,
-- added pl locales for wmakerconf and wmakerconf-data.
-
-* Mon Apr 19 1999 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
-  [1.99.2-1]
-- recompiles on new rpm.
-
-* Sun Apr 11 1999 Piotr Czerwiñski <pius@pld.org.pl>
-  [1.99.0-1]
-- upgraded to 1.99.0,
-- removed --disable-gtktest and --disable-imlibtest
-  from configure options by Artur Frysiak <wiget@pld.org.pl>,
-- fixed passing $RPM_OPT_FLAGS during compile,
-- added '%dir /usr/X11R6/share/wmakerconf' in %files,
-- cosmetic changes for common l&f.
-
-* Thu Mar 18 1999 Piotr Czerwiñski <pius@pld.org.pl>
-  [1.8.3-1]
-- upgraded to 1.8.3.
-
-* Wed Mar 17 1999 Piotr Czerwiñski <pius@pld.org.pl>
-  [1.8-1]
-- upgraded to 1.8,
-- added more requirements,
-- added wmakerconf-config.patch,
-- added --with-wmakersysdir=/etc/X11/WindowMaker and
-  --with-wmakerprefix=/usr/X11R6 to configure options,
-- removed --with-wmakerdir=DIR from configure options (no longer in use),
-- added wmakerconf.wmconfig file,
-- added more locales,
-- minor changes in all sections.
-
-* Tue Mar  2 1999 Piotr Czerwiñski <pius@pld.org.pl>
-  [1.7-1]
-- upgraded to 1.7,
-- updated data files for WindowMaker >= 0.51,
-- added Polish summary, group and description,
-- added --disable-imlibtest,
-- added gzipping doc files,
-- rewritten %files section,
-- added %lang macro for /usr/X11R6/share/locale/*/LC_MESSAGES/*,
-- major changes.
-
-* Fri Nov  6 1998 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
-  [1.1.2-1d]
-- added -q %setup parameter,
-- removed Source1 (wmakerconf-libPropList.tar.gz) this is now in separated
-  package,
-- changed install prefix to /usr/X11R6,
-- changed Buildroot to /tmp/%%{name}-%%{version}-root,
-- added using %%{name} and %%{version} in Source,
-- added full %attr description in %files,
-- changed install prefix to /usr/X11R6.
-
-* Fri Sep 18 1998 Cristian Gafton <gafton@redhat.com>
-- packaged for 5.2 to be used with WindowMaker
+- package is FHS 2.0 compliant,
+- spec file based on RH version; rewritten for PLD use by me
+  and Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>.
