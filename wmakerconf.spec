@@ -4,7 +4,7 @@ Summary(pl):	Oparty na GTK konfigurator dla WindowMakera
 Summary(pt_BR):	Ferramenta de configuração baseada no GTK para o WindowMaker
 Name:		wmakerconf
 Version:	2.8.1
-Release:	6
+Release:	7
 License:	GPL
 Group:		X11/Window Managers/Tools
 Source0:	http://ulli.on.openave.net/wmakerconf/%{name}-%{version}.tar.bz2
@@ -107,8 +107,6 @@ install -d $RPM_BUILD_ROOT/{%{_pixmapsdir},%{_applnkdir}/Settings/WindowMaker}
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Settings/WindowMaker
 install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 
-gzip -9nf AUTHORS ChangeLog NEWS README TODO
-
 %find_lang %{name} --all-name
 
 %clean
@@ -116,7 +114,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc *.gz
+%doc AUTHORS ChangeLog NEWS README TODO
 %attr(755,root,root) %{_bindir}/*
 %dir %{_datadir}/%{name}
 %attr(755,root,root) %{_datadir}/%{name}/*.sh
