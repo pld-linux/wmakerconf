@@ -39,9 +39,9 @@ autoconf
 ./configure \
 	--prefix=/usr/X11R6 \
 	--with-wmakerprefix=/usr/X11R6 \
-	--with-wmakersysdir=/etc/X11/WindowMaker \
-	--disable-gtktest \
-	--disable-imlibtest
+	--with-wmakersysdir=/etc/X11/WindowMaker 
+#	--disable-gtktest \
+#	--disable-imlibtest
 
 make
 
