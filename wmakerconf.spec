@@ -52,12 +52,12 @@ Umo¿liwia zmianê czcionek, ikon, kolorów i pozosta³ych atrybutów przy
 pomocy prostych narzêdzi dialogowych. 
 
 %package data
-Version:	0.61.0
+Version:	0.61.1
 Summary:	Data files for GTK-based configuration tool for Window Maker
 Summary(pl):	Pliki danych dla opartego na GTK konfiguratora WindowMakera
 Group:          X11/Window Managers/Tools
 Group(pl):      X11/Zarz±dcy Okien/Narzêdzia
-Requires:	WindowMaker = 0.61.0
+Requires:	WindowMaker = 0.61.1
 
 %description data
 Data files containing information relating to the latest version of
