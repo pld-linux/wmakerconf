@@ -55,7 +55,7 @@ Summary:	Data files for GTK-based configuration tool for Window Maker
 Summary(pl):	Pliki danych dla opartego na GTK konfiguratora WindowMakera
 Group:          X11/Window Managers/Tools
 Group(pl):      X11/Zarz±dcy Okien/Narzêdzia
-Requires:	WindowMaker = 0.53.0
+Requires:	WindowMaker >= 0.53.0
 
 %description data
 Data files containing information relating to the latest version of
