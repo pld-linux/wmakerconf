@@ -10,10 +10,10 @@ Source0:	http://www-info2.informatik.uni-wuerzburg.de/staff/ulli/wmakerconf/%{na
 Source1:	wmakerconf.wmconfig
 Patch0:		wmakerconf-config.patch
 Icon:		wmakerconf.xpm
-Requires:	WindowMaker >= 0.51.2
-Requires:	libPropList
-Requires:	gtk+ 
-Requires:       perl
+BuildPrereq:	libPropList >= 1.8.3
+BuildPrereq:	gtk+-devel >= 1.0.2
+%requires_pkg   gtk+
+%requires_pkg   WindowMaker
 BuildRoot:	/tmp/%{name}-%{version}-root
 
 %description
