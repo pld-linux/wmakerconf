@@ -46,7 +46,7 @@ pomocy prostych narzêdzi dialogowych.
 
 %build
 autoconf
-./configure \
+./configure %{_target} \
 	--prefix=/usr/X11R6 \
 	--with-wmakerprefix=/usr/X11R6 \
 	--with-wmakersysdir=/etc/X11/WindowMaker 
