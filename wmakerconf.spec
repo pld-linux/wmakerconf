@@ -1,18 +1,17 @@
 Summary:	This is a GTK-based configuration tool for WindowMaker
 Summary(pl):	Oparty na GTK konfigurator dla WindowMakera
 Name:		wmakerconf
-Version:	2.5
-Release:	8
+Version:	2.8.1
+Release:	1
 License:	GPL
 Group:		X11/Window Managers/Tools
+Group(es):	X11/Administraadores De Ventanas
+Group(fr):	X11/Gestionnaires De Fenêtres                                                                      
 Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
 Source0:	http://members.linuxstart.com/~ulli/wmakerconf/%{name}-%{version}.tar.bz2
 Source1:	%{name}.desktop
-Source2:	%{name}.pl.po
-Source3:	%{name}-data.pl.po
-Patch0:		%{name}-data-locale.patch
-Patch1:		%{name}-subdir.patch
-Patch2:		%{name}-DESTDIR.patch
+Patch0:		%{name}-subdir.patch
+Patch1:		%{name}-DESTDIR.patch
 Icon:		wmakerconf.xpm
 BuildRequires:	libPropList-devel >= 0.8.3
 BuildRequires:	gtk+-devel >= 1.2.0
@@ -28,7 +27,7 @@ BuildRequires:	gettext-devel
 BuildRequires:	libwmfun-devel >= 0.0.2
 BuildRequires:	imlib-devel
 Requires:	WindowMaker >= 0.62.1
-Requires:	wmakerconf-data >= 0.62.1
+Requires:	wmakerconf-data >= 0.64.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
@@ -48,12 +47,13 @@ WindowMakera. Umo¿liwia zmianê czcionek, ikon, kolorów i pozosta³ych
 atrybutów przy pomocy prostych narzêdzi dialogowych.
 
 %package data
-Version:	0.62.1
+Version:	0.64.1
 Summary:	Data files for GTK-based configuration tool for Window Maker
 Summary(pl):	Pliki danych dla opartego na GTK konfiguratora WindowMakera
 Group:		X11/Window Managers/Tools
+Group(es):	X11/Administraadores De Ventanas
+Group(fr):	X11/Gestionnaires De Fenêtres                                                                      
 Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
-Requires:	WindowMaker = 0.62.1
 
 %description data
 Data files containing information relating to the latest version of
@@ -66,15 +66,12 @@ zarz±dcy okien.
 
 %prep
 %setup -q 
-%patch0 -p1
-%patch1 -p0
-%patch2 -p1
-
-cp -f %{SOURCE2} po/pl.po
-cp %{SOURCE3} data/po/pl.po
+%patch0 -p0
+%patch1 -p1
 
 %build
 gettextize --copy --force
+touch src/depcomp
 automake; (cd data; automake)
 aclocal
 autoconf
