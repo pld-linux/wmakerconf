@@ -79,12 +79,12 @@ mudando a lista de propriedades do wmakerconf.
 rm -f missing
 gettextize --copy --force
 aclocal
-autoconf
-automake -a -c -f
+%{__autoconf}
+%{__automake}
 (cd data
 rm -f missing
 aclocal
-autoconf
+%{__autoconf}
 automake -a -c)
 %configure \
 	--with-wmakerdataprefix=%{_datadir} \
