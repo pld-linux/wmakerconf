@@ -27,6 +27,7 @@ BuildPrereq:	zlib-devel
 BuildPrereq:	autoconf
 BuildPrereq:	automake
 BuildPrereq:	gettext
+BuildPrereq:	libwmfun
 Requires:	WindowMaker
 Requires:	wmakerconf-data
 BuildRoot:	/tmp/%{name}-%{version}-root
