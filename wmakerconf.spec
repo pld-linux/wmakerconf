@@ -86,12 +86,12 @@ LDFLAGS="-s"; export LDFLAGS
 	--with-wmakerdataprefix=%{_datadir} \
 	--with-wmakeretcprefix=%{_sysconfdir} \
 	--enable-themes-org
-make
+%{__make}
 
 cd data
 %configure
 
-make
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
