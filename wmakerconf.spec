@@ -1,7 +1,7 @@
 Summary:	This is a GTK-based configuration tool for WindowMaker
 Summary(pl):	Oparty na GTK konfigurator dla WindowMakera
 Name:		wmakerconf
-Version:	1.8.3
+Version:	1.99.0
 Release:	1
 Group:		X11/Window Managers/Tools
 Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
@@ -11,8 +11,8 @@ Source1:	wmakerconf.wmconfig
 Patch0:		wmakerconf-config.patch
 Icon:		wmakerconf.xpm
 Requires:	WindowMaker >= 0.51.2
-Requires:	libPropList
-Requires:	gtk+ 
+Requires:	libPropList >= 0.8.3
+Requires:	gtk+ = 1.2.1 
 Requires:       perl
 BuildRoot:	/tmp/%{name}-%{version}-root
 
@@ -40,10 +40,8 @@ autoconf
 	--prefix=/usr/X11R6 \
 	--with-wmakerprefix=/usr/X11R6 \
 	--with-wmakersysdir=/etc/X11/WindowMaker 
-#	--disable-gtktest \
-#	--disable-imlibtest
 
-make
+make CFLAGS="$RPM_OPT_FLAGS"
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -58,13 +56,14 @@ gzip -9nf AUTHORS ChangeLog NEWS README TODO
 rm -rf $RPM_BUILD_ROOT
 
 %files
-%defattr(644, root, root, 755)
-%doc AUTHORS.gz ChangeLog.gz NEWS.gz README.gz TODO.gz
+%defattr(644,root,root,755)
+%doc {AUTHORS,ChangeLog,NEWS,README,TODO}.gz
 %config(missingok) /etc/X11/wmconfig/wmakerconf
 
 %attr(755,root,root) /usr/X11R6/bin/*
 %attr(755,root,root) /usr/X11R6/share/wmakerconf/*.sh
 %attr(755,root,root) /usr/X11R6/share/wmakerconf/*.pl
+%dir /usr/X11R6/share/wmakerconf
 /usr/X11R6/share/wmakerconf/*.xpm
 /usr/X11R6/share/wmakerconf/*.jpg
 /usr/X11R6/share/wmakerconf/MANUAL
@@ -89,6 +88,15 @@ rm -rf $RPM_BUILD_ROOT
 %lang(tr) /usr/X11R6/share/locale/tr/LC_MESSAGES/*
 
 %changelog
+* Sun Apr 11 1999 Piotr Czerwiñski <pius@pld.org.pl>
+  [1.99.0-1]
+- upgraded to 1.99.0,
+- removed --disable-gtktest and --disable-imlibtest 
+  from configure options by Artur Frysiak <wiget@pld.org.pl>,
+- fixed passing RPM_OPT_FLAGS during compile,
+- added '%dir /usr/X11R6/share/wmakerconf' in %files,
+- cosmetic changes for common l&f.
+
 * Thu Mar 18 1999 Piotr Czerwiñski <pius@pld.org.pl>
   [1.8.3-1]
 - upgraded to 1.8.3.
