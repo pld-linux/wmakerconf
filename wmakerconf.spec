@@ -5,8 +5,9 @@ Version:	2.8.1
 Release:	1
 License:	GPL
 Group:		X11/Window Managers/Tools
+Group(de):	X11/Fenstermanager/Werkzeuge
 Group(es):	X11/Administraadores De Ventanas
-Group(fr):	X11/Gestionnaires De Fenêtres                                                                      
+Group(fr):	X11/Gestionnaires De Fenêtres
 Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
 Source0:	http://members.linuxstart.com/~ulli/wmakerconf/%{name}-%{version}.tar.bz2
 Source1:	%{name}.desktop
@@ -51,6 +52,7 @@ Version:	0.64.1
 Summary:	Data files for GTK-based configuration tool for Window Maker
 Summary(pl):	Pliki danych dla opartego na GTK konfiguratora WindowMakera
 Group:		X11/Window Managers/Tools
+Group(de):	X11/Fenstermanager/Werkzeuge
 Group(es):	X11/Administraadores De Ventanas
 Group(fr):	X11/Gestionnaires De Fenêtres                                                                      
 Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
@@ -71,10 +73,9 @@ zarz±dcy okien.
 
 %build
 gettextize --copy --force
-touch src/depcomp
-automake; (cd data; automake)
 aclocal
 autoconf
+automake -a -c; (cd data; automake -a -c)
 %configure \
 	--with-wmakerdataprefix=%{_datadir} \
 	--with-wmakeretcprefix=%{_sysconfdir} \
