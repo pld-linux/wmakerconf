@@ -77,6 +77,7 @@ cp %{SOURCE2} po/pl.po
 cp %{SOURCE3} data/po/pl.po
 
 %build
+gettextize --copy --force
 automake
 aclocal
 autoconf
