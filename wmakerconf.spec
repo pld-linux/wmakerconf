@@ -14,6 +14,7 @@ Requires:	WindowMaker >= 0.51.2
 Requires:	libPropList >= 0.8.3
 Requires:	gtk+ = 1.2.1 
 Requires:       perl
+Obsoletes:	wmakerconf-data
 BuildRoot:	/tmp/%{name}-%{version}-root
 
 %description
