@@ -78,14 +78,14 @@ mudando a lista de propriedades do wmakerconf.
 %build
 rm -f missing
 %{__gettextize}
-aclocal
+%{__aclocal}
 %{__autoconf}
 %{__automake}
 (cd data
 rm -f missing
-aclocal
+%{__aclocal}
 %{__autoconf}
-automake -a -c)
+%{__automake})
 %configure \
 	--with-wmakerdataprefix=%{_datadir} \
 	--with-wmakeretcprefix=%{_sysconfdir} \
