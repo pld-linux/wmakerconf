@@ -33,7 +33,6 @@ Requires:	WindowMaker >= 0.62.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	wmakerconf-data
 
-%define		_prefix		/usr/X11R6
 %define		_sysconfdir	/etc/X11
 
 %description
