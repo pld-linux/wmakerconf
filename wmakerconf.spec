@@ -1,23 +1,18 @@
-%define		ver	2.3
-%define		rel	2
 Summary:	This is a GTK-based configuration tool for WindowMaker
 Summary(pl):	Oparty na GTK konfigurator dla WindowMakera
 Name:		wmakerconf
-Version:	%{ver}.%{rel}
-Release:	3
+Version:	2.4
+Release:	1
 Group:		X11/Window Managers/Tools
 Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
 Copyright:	GPL
-Source0:	http://members.linuxstart.com/~ulli/wmakerconf/%{name}-%{ver}.tar.bz2
+Source0:	http://members.linuxstart.com/~ulli/wmakerconf/%{name}-%{version}.tar.bz2
 Source1:	wmakerconf.desktop
 Source2:	wmakerconf.pl.po
 Source3:	wmakerconf-data.pl.po
-Patch0:		wmakerconf-pl.patch
-Patch1:		wmakerconf-data-pl.patch
-Patch2:		wmakerconf-subdir.patch
-Patch3:		wmakerconf-DESTDIR.patch
-Patch4:		wmakerconf-2.3.1.patch
-Patch5:		wmakerconf-2.3.2.patch
+Patch0:		wmakerconf-data-locale.patch
+Patch1:		wmakerconf-subdir.patch
+Patch2:		wmakerconf-DESTDIR.patch
 Icon:		wmakerconf.xpm
 BuildRequires:	libPropList-devel >= 0.8.3
 BuildRequires:	gtk+-devel >= 1.2.0
@@ -35,7 +30,7 @@ BuildRequires:	gettext-devel
 BuildRequires:	libwmfun-devel >= 0.0.2
 BuildRequires:	imlib-devel
 Requires:	WindowMaker >= 0.51.0
-Requires:	wmakerconf-data <= 0.61.1
+Requires:	wmakerconf-data <= 0.61.1-4
 BuildRoot:	/tmp/%{name}-%{version}-root
 
 %define		_prefix		/usr/X11R6
@@ -75,15 +70,12 @@ u¿ywane przez program wmakerconf -- narzêdzie konfiguracyjne tego
 zarz±dcy okien.
 
 %prep
-%setup -q -n %{name}-%{ver} 
-%patch0 -p0
-%patch1 -p1
-%patch2 -p0
-%patch3 -p1
-%patch4 -p1
-%patch5 -p1
+%setup -q 
+%patch0 -p1
+%patch1 -p0
+%patch2 -p1
 
-cp %{SOURCE2} po/pl.po
+cp -f %{SOURCE2} po/pl.po
 cp %{SOURCE3} data/po/pl.po
 
 %build
@@ -131,7 +123,6 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_datadir}/%{name}/*.sh
 %attr(755,root,root) %{_datadir}/%{name}/*.pl
 %{_datadir}/%{name}/*.xpm
-%{_datadir}/%{name}/*.jpg
 %{_datadir}/%{name}/MANUAL
 %{_datadir}/pixmaps/%{name}.xpm
 
