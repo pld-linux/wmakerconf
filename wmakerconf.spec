@@ -28,7 +28,7 @@ BuildRequires:	zlib-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gettext-devel
-BuildRequires:	libwmfun-devel
+BuildRequires:	libwmfun-devel >= 0.0.2
 Requires:	WindowMaker
 Requires:	wmakerconf-data
 BuildRoot:	/tmp/%{name}-%{version}-root
