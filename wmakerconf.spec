@@ -125,10 +125,3 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %{_datadir}/%{name}/WMWmakerconf
 %{_datadir}/%{name}/wmaker-version
-
-%changelog
-* Thu May 20 1999 Piotr Czerwiñski <pius@pld.org.pl> 
-  [2.1-1]
-- package is FHS 2.0 compliant,
-- spec file based on RH version; rewritten for PLD use by me
-  and Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>.
