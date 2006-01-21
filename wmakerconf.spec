@@ -16,7 +16,6 @@ Patch1:		%{name}-DESTDIR.patch
 Patch2:		%{name}-charset.patch
 Patch3:		%{name}-misc.patch
 Patch4:		%{name}-ia64+mkstemp.patch
-Icon:		wmakerconf.xpm
 #URL:		http://ulli.on.openave.net/wmakerconf/
 BuildRequires:	WindowMaker-devel >= 0.51.0
 BuildRequires:	autoconf
