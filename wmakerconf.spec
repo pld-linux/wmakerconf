@@ -21,13 +21,13 @@ BuildRequires:	WindowMaker-devel >= 0.51.0
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gettext-devel
+BuildRequires:	giflib-devel
 BuildRequires:	gtk+-devel >= 1.2.0
 BuildRequires:	imlib-devel
 # BuildRequires:	libPropList-devel >= 0.8.3
 BuildRequires:	libjpeg-devel
 BuildRequires:	libpng >= 1.0.8
 BuildRequires:	libtiff-devel
-BuildRequires:	libungif-devel
 BuildRequires:	zlib-devel
 Requires:	WindowMaker >= 0.62.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
