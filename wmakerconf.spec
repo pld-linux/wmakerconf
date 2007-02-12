@@ -1,7 +1,7 @@
 Summary:	This is a GTK+-based configuration tool for WindowMaker
-Summary(es):	Herramienta de configuraciÛn basada en GTK+ para WindowMaker
-Summary(pl):	Oparty na GTK+ konfigurator dla WindowMakera
-Summary(pt_BR):	Ferramenta de configuraÁ„o baseada no GTK+ para o WindowMaker
+Summary(es.UTF-8):   Herramienta de configuraci√≥n basada en GTK+ para WindowMaker
+Summary(pl.UTF-8):   Oparty na GTK+ konfigurator dla WindowMakera
+Summary(pt_BR.UTF-8):   Ferramenta de configura√ß√£o baseada no GTK+ para o WindowMaker
 Name:		wmakerconf
 Version:	2.9
 Release:	1
@@ -43,26 +43,26 @@ dialog, file selection dialog, etc. Tooltips with short description of
 every attribute. New attributes can be simply integrated by changing
 the wmakerconf proplist
 
-%description -l es
-Herramienta de configuraciÛn basada en GTK+ para el administrador de
+%description -l es.UTF-8
+Herramienta de configuraci√≥n basada en GTK+ para el administrador de
 ventanas Window Maker. Soporta todos los atributos del Window Maker:
-navegador para selecciÛn de fuentes, navegador para visualizar
-pixmaps, caja de di·logo para selecciÛn de colores, caja de di·logo
-para accesos directos, caja de di·logo para selecciÛn de archivos,...
+navegador para selecci√≥n de fuentes, navegador para visualizar
+pixmaps, caja de di√°logo para selecci√≥n de colores, caja de di√°logo
+para accesos directos, caja de di√°logo para selecci√≥n de archivos,...
 Trucos en todos los atributos. Nuevos atributos se pueden integrar de
 forma sencilla, cambiando la lista de propiedades del wmakerconf.
 
-%description -l pl
-wmakerconf jest opartym na GTK+ narzÍdziem konfiguracyjnym dla
-WindowMakera. Umoøliwia zmianÍ czcionek, ikon, kolorÛw i pozosta≥ych
-atrybutÛw przy pomocy prostych narzÍdzi dialogowych.
+%description -l pl.UTF-8
+wmakerconf jest opartym na GTK+ narzƒôdziem konfiguracyjnym dla
+WindowMakera. Umo≈ºliwia zmianƒô czcionek, ikon, kolor√≥w i pozosta≈Çych
+atrybut√≥w przy pomocy prostych narzƒôdzi dialogowych.
 
-%description -l pt_BR
-Ferramenta de configuraÁ„o baseada em GTK+ para o gerenciador de
+%description -l pt_BR.UTF-8
+Ferramenta de configura√ß√£o baseada em GTK+ para o gerenciador de
 janelas Window Maker. Suporta todos os atributos do Window Maker:
-navegador para seleÁ„o de fontes, navegador para visualizaÁ„o de
-pixmaps, caixa de di·logo para seleÁ„o de cores, caixa de di·logo para
-atalhos, caixa de di·logo para seleÁ„o de arquivos, ... Dicas em todos
+navegador para sele√ß√£o de fontes, navegador para visualiza√ß√£o de
+pixmaps, caixa de di√°logo para sele√ß√£o de cores, caixa de di√°logo para
+atalhos, caixa de di√°logo para sele√ß√£o de arquivos, ... Dicas em todos
 os atributos. Novos atributos podem ser integrados de forma simples,
 mudando a lista de propriedades do wmakerconf.
 
