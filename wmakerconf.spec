@@ -1,7 +1,7 @@
 Summary:	This is a GTK+-based configuration tool for WindowMaker
-Summary(es.UTF-8):   Herramienta de configuración basada en GTK+ para WindowMaker
-Summary(pl.UTF-8):   Oparty na GTK+ konfigurator dla WindowMakera
-Summary(pt_BR.UTF-8):   Ferramenta de configuração baseada no GTK+ para o WindowMaker
+Summary(es.UTF-8):	Herramienta de configuración basada en GTK+ para WindowMaker
+Summary(pl.UTF-8):	Oparty na GTK+ konfigurator dla WindowMakera
+Summary(pt_BR.UTF-8):	Ferramenta de configuração baseada no GTK+ para o WindowMaker
 Name:		wmakerconf
 Version:	2.9
 Release:	1
