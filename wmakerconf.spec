@@ -20,7 +20,7 @@ Patch4:		%{name}-ia64+mkstemp.patch
 BuildRequires:	WindowMaker-devel >= 0.51.0
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	giflib-devel
 BuildRequires:	gtk+-devel >= 1.2.0
 BuildRequires:	imlib-devel
